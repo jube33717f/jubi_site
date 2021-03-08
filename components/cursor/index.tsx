@@ -37,7 +37,7 @@ const Cursor = () => {
         document.removeEventListener("mouseup", onMouseUp);
     };
 
-    const onMouseMove = (e:React.MouseEvent<HTMLElement>) => {
+    const onMouseMove = (e:MouseEvent) => {
         setPosition({ x: e.clientX, y: e.clientY });
     };
 

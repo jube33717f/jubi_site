@@ -4,12 +4,12 @@ import Works from '@components/works'
 import {footer} from './style'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGithubSquare } from '@fortawesome/free-brands-svg-icons'
-const Portfolio = ({active,clickHandler}:{active:string[],clickHandler:(e: React.MouseEvent<HTMLElement>,{index}:{index:number})=>void}) =>(
+const Portfolio = ({active,clickHandler}:{active:string[],clickHandler:({index}:{index:number})=>void}) =>(
 
     <CardContainer color='#F2B27C' about={active[2]}>
         {active[2]=='active'&&<h1 style={{color:'#6D9EEB'}}>PORTFOLIO </h1>||<h4 
-            onClick={(e)=>{
-                clickHandler(e,{index:2})
+            onClick={()=>{
+                clickHandler({index:2})
             }}
             style={{color:'black'}}>P</h4> }
         {active[2]=='active'&&<div >

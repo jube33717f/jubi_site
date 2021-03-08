@@ -8,7 +8,7 @@ import {AiFillGithub} from 'react-icons/ai'
 
 // const ReactTypingEffect = typeof window !== `undefined` ? require("react-typing-effect").default : null
 
-const Me = ({active,clickHandler}:{active:string[],clickHandler:(e: React.MouseEvent<HTMLElement>,{index}:{index:number})=>void}) =>{
+const Me = ({active,clickHandler}:{active:string[],clickHandler:({index}:{index:number})=>void}) =>{
     
  
    
@@ -36,7 +36,7 @@ const Me = ({active,clickHandler}:{active:string[],clickHandler:(e: React.MouseE
     </div>
     ):<h4 
         onClick={(e)=>{
-            clickHandler(e,{index:0})
+            clickHandler({index:0})
         }}
         >J</h4> }
         

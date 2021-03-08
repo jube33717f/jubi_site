@@ -12,7 +12,7 @@ import Image from 'next/image'
 
 {/*  */}
 const ReactTypingEffect = dynamic(()=>import('react-typing-effect'),{ssr:false})
-const Info= ({active,clickHandler}:{active:string[],clickHandler:(e: React.MouseEvent<HTMLElement>,{index}:{index:number})=>void}) =>{
+const Info= ({active,clickHandler}:{active:string[],clickHandler:({index}:{index:number})=>void}) =>{
     const [page,setPage] = useState(0)
     const totalPage = 4
     const nextPage = ()=>{
@@ -26,8 +26,8 @@ const Info= ({active,clickHandler}:{active:string[],clickHandler:(e: React.Mouse
     
     return (<CardContainer color='#57A0C0' about={active[1]}>
         {active[1]=='active'&&<h1 style={{color:'#EB6E51'}}>INFO </h1>||<h4 
-            onClick={(e)=>{
-                clickHandler(e,{index:1})
+            onClick={()=>{
+                clickHandler({index:1})
             }}
             >I</h4> }
             {active[1]=='active'&&<div css={box}>
@@ -50,7 +50,7 @@ const Info= ({active,clickHandler}:{active:string[],clickHandler:(e: React.Mouse
                     <div css={icons}>
                         <a href='https://github.com/jubi33717f'><FontAwesomeIcon style={{color:'#CECECE'}}icon={faGithubSquare}/></a>
                         <a onClick={(e)=>{
-                            clickHandler(e,{index:2})
+                            clickHandler({index:2})
                         }}><FontAwesomeIcon style={{color:'#2B84FF'}}icon={faPaperclip}/></a>
                         <a href='https://www.linkedin.com/in/jubi-chen/'><FontAwesomeIcon style={{color:'#EC2F78'}}icon={faLinkedinIn}/></a>
                         

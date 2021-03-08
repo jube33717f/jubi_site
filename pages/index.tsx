@@ -26,7 +26,7 @@ const homeStyles = css`
 
 const Home=()=> {
     const [shown,setShown] = useState(['active','inactive','inactive','inactive'])
-    const clickTitleHandler = (e: React.MouseEvent<HTMLElement>,{index}:{index:number})=>{
+    const clickTitleHandler = ({index}:{index:number})=>{
         let arr = []
         if(shown[index]=='inactive'){
             arr=['inactive','inactive','inactive','inactive']
