@@ -42,5 +42,8 @@
     "swr": "^0.4.2",
     "textcolor": "^1.0.2",
     "yocto-queue": "^0.1.0"
+  },
+  "devDependencies": {
+    "typescript": "^4.2.3"
   }
 }
