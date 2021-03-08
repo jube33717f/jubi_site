@@ -1,0 +1,52 @@
+{
+  "compilerOptions": {
+    "baseUrl": "./",
+    // "jsxImportSource": "@emotion/react",
+    "paths": {
+      "@components/*": [
+        "components/*"
+      ],
+      "@shared/*": [
+        "shared/*"
+      ],
+      "@layouts/*": [
+        "layouts/*"
+      ],
+      "@fonts/*": [
+        "fonts/*"
+      ],
+      "@public/*": [
+        "public/*"
+      ]
+    },
+    "target": "es5",
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+    "types": [
+      "@emotion/core"
+    ],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "strictNullChecks": true,
+    "forceConsistentCasingInFileNames": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve"
+  },
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}
