@@ -111,13 +111,13 @@ const box=css`
     overflow:hidden;
 `
 const cardStyle = css`
-    width:34em;
+    width:32em;
     top:50%;
     left:50%;
     
     position:absolute;
     animation:${nameAnimation} 1s;
-    transform:translate3d(-17em,-14em,0);
+    transform:translate3d(-16em,-14em,0);
     z-index:1;
     color: rgba(0, 0, 0, 0.87);
     transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
@@ -127,9 +127,8 @@ const cardStyle = css`
     border-radius:0.2em;
     padding:2em;
     background:#60A58F;
-    /* margin-top:10%; */
     overflow:hidden;
-    /* justify-content:center; */
+    
 
 `
 const cardHeader  = css`
@@ -138,6 +137,7 @@ const cardHeader  = css`
     display:block;
     position:absolute;
     overflow:hidden;
+    padding-top:2em;
    
 `
 const cardContent = css `
@@ -145,7 +145,7 @@ const cardContent = css `
     background-position: right bottom;
     background-repeat: no-repeat;
     width:calc(100%-13em);
-    padding-top:2em;
+    padding-top:4em;
     padding-right:2em;
     display:block;
     height:16em;
@@ -155,39 +155,10 @@ const cardContent = css `
     overflow:hidden;
 
 `
-const imgContent = css `
 
-    width:100%;
-    height:100%;
-    /* top:0; */
-    margin-top:-2em;
-    position:absolute;
-    left:0;
-    overflow:hidden;
-    border:#D9EAD3 solid 1em;
-    
-    
-  
-    
-`
-const imgTag = css`
-    position:absolute;
-    background-color:rgba(217,234,211,0.7);
-    
-    height:2em;
-    width:10em;
-    text-align:center;
-    z-index:3;
-    font-variation-settings:"wght" 60; 
-    font-family:var(--font-hard);
-    margin-left:2%;
-    /* transform:translateX(-50%);; */
-    line-height:2em;
-    margin-top:-0.4em;
-    color:#EB6E51;
-`
+
 const text = css`
-    font-size:1.4em;
+    font-size:1.2em;
     font-weight:600;
     color:#663499;
     letter-spacing:0.1em;
@@ -276,4 +247,4 @@ const nextIcon=css`
     animation:${arrowAttention} 2.4s infinite;  
 `
 
-export { imgGrid,sarahEffect,box,imgTag,imgContent,cardStyle,cardHeader,cardContent,icons,cardFooter,text ,previousIcon,previous,next,nextIcon}
+export { imgGrid,sarahEffect,box,cardStyle,cardHeader,cardContent,icons,cardFooter,text ,previousIcon,previous,next,nextIcon}

@@ -1,7 +1,7 @@
 
 import CardContainer from '@layouts/cardContainer'
 import dynamic from 'next/dynamic';
-import {imgGrid,sarahEffect,box,imgTag,imgContent,cardStyle,cardHeader,cardContent,cardFooter,icons,text,previousIcon,previous,next,nextIcon} from './style'
+import {imgGrid,sarahEffect,box,cardStyle,cardHeader,cardContent,cardFooter,icons,text,previousIcon,previous,next,nextIcon} from './style'
 import Badge from '@components/badge'
 import { Card } from 'antd';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -129,7 +129,7 @@ const Info= ({active,clickHandler}:{active:string[],clickHandler:({index}:{index
                         
                     </div>
                 </>}
-                {page===4&&<>
+                {page===5&&<>
                     
                     <div css={imgGrid}>
                      <figure css={sarahEffect}>
