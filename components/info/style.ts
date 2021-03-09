@@ -16,7 +16,7 @@ const imgGrid=css`
         position: relative;
 	    float: left;
 	    overflow: hidden;
-	    margin: 10px 0;
+	    margin: 0 0;
 	    width: 100%;
         height:100%;
 	    background: #3085a3;
@@ -156,7 +156,27 @@ const cardContent = css `
 
 `
 
-
+const footer=css`
+    width:100%;
+    text-align:center;
+    margin-top:0em;
+    color: #6D9EEB;
+    font-family:var(--font-hard);
+    font-size:.7em;
+    font-variation-settings:"wght" 500;
+    line-height:.9em;
+    letter-spacing:.01em;
+    p:nth-of-type(2){
+        :after{
+            height:1px;
+            background-color: #6D9EEB;
+            width:25em;
+            margin:auto;
+            content: "";
+            display: block;
+        }
+    }
+`
 const text = css`
     font-size:1.2em;
     font-weight:600;
@@ -247,4 +267,4 @@ const nextIcon=css`
     animation:${arrowAttention} 2.4s infinite;  
 `
 
-export { imgGrid,sarahEffect,box,cardStyle,cardHeader,cardContent,icons,cardFooter,text ,previousIcon,previous,next,nextIcon}
+export {footer, imgGrid,sarahEffect,box,cardStyle,cardHeader,cardContent,icons,cardFooter,text ,previousIcon,previous,next,nextIcon}

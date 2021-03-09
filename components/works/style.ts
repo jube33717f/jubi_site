@@ -1,11 +1,13 @@
-import {css, keyframes} from '@emotion/react'
+import {css} from '@emotion/react'
 const scroll=css`
     overflow-x: auto;
     overflow: -moz-scrollbars-none;
     ::-webkit-scrollbar { width: 0 !important }
     -ms-overflow-style: none; 
+    margin-top:-0.8em;
 `
 const showcase=css`
+    
     position:relative;
     height:700px;
     /* width:100%; */

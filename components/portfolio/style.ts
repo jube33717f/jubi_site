@@ -5,7 +5,9 @@ import {css, keyframes} from '@emotion/react'
 const footer=css`
     width:100%;
     text-align:center;
-    margin-top:0em;
+    /* position:absolute;
+    bottom:1em; */
+    padding-top:.6em;
     color: #6D9EEB;
     font-family:var(--font-hard);
     font-size:.7em;
@@ -23,4 +25,5 @@ const footer=css`
         }
     }
 `
+
 export {footer}

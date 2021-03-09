@@ -5,15 +5,15 @@ import {ReactNode} from 'react'
 import {css} from '@emotion/react'
 
 const cardStyle = ({color,about}:{color:string,about:string}) =>{
-    const width= about=='active'&&'100%'||(about=='hover'&&'15%')||'5.5rem'
+    const width= about=='active'&&'100%'||(about=='hover'&&'15%')||'5rem'
     return css`
         position:relative;
         background-color:${color};
         width:${width};
-        max-width:calc(100%-16.5rem);
+        max-width:calc(100%-15rem);
         transition:width 0.7s ease-out;
         overflow:none;
-        min-width:5.5rem;
+        min-width:5rem;
         /* overflow:hidden; */
         /* opacity: 0.8; */
         /* &:hover{

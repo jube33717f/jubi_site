@@ -1,7 +1,7 @@
 
 import CardContainer from '@layouts/cardContainer'
 import dynamic from 'next/dynamic';
-import {imgGrid,sarahEffect,box,cardStyle,cardHeader,cardContent,cardFooter,icons,text,previousIcon,previous,next,nextIcon} from './style'
+import {footer,imgGrid,sarahEffect,box,cardStyle,cardHeader,cardContent,cardFooter,icons,text,previousIcon,previous,next,nextIcon} from './style'
 import Badge from '@components/badge'
 import { Card } from 'antd';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -161,7 +161,13 @@ const Info= ({active,clickHandler}:{active:string[],clickHandler:({index}:{index
 
                 
             </Card>
-            
+            <div css={footer}>
+                    
+                   <p>You can view my works here.</p>
+                   <p>Click or tap on each work to see it more detail.</p>
+                    <a href='https://github.com/jubi33717f'><FontAwesomeIcon style={{fontSize:'1.3em'}}icon={faGithubSquare}/></a>
+                    
+            </div>
             </div>}
             
          

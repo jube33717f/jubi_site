@@ -47,8 +47,10 @@ export const globalStyles = css`
         text-decoration: none;
     }
     h1{
+        font-size:1.7em;
+        line-height:1em;
         font-family:var(--font-hard);
-        font-variation-settings: "wght" 600;
+        font-variation-settings: "wght" 500;
         margin-block-start: 0.67em;
         margin-block-end: 0.67em;
         margin-inline-start: 0.67em;

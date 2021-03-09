@@ -4,6 +4,7 @@ import Works from '@components/works'
 import {footer} from './style'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGithubSquare } from '@fortawesome/free-brands-svg-icons'
+
 const Portfolio = ({active,clickHandler}:{active:string[],clickHandler:({index}:{index:number})=>void}) =>(
 
     <CardContainer color='#F2B27C' about={active[2]}>
@@ -12,7 +13,7 @@ const Portfolio = ({active,clickHandler}:{active:string[],clickHandler:({index}:
                 clickHandler({index:2})
             }}
             style={{color:'black'}}>P</h4> }
-        {active[2]=='active'&&<div >
+        {active[2]=='active'&&<div>
             <Works/> 
             <div css={footer}>
                     
