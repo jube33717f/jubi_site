@@ -67,11 +67,11 @@ const Cursor = () => {
     const cursorClasses =()=>{
         // let cx = `${cursor};`+(clicked ? `${cursorClicked};`:'') + (hidden?`${cursorClicked};`:'') + (linkHovered?`${cursorLinkHovered}`:'')
         
-        if(clicked) return css`${cursor};${cursorClicked}`
+        if(clicked) return css`${cursor};${cursorClicked}`;
         
-        if(hidden) return css`${cursor};${cursorHidden}`
+        if(hidden) return css`${cursor};${cursorHidden}`;
         
-        if(linkHovered) return css`${cursor};${cursorLinkHovered}`
+        if(linkHovered) return css`${cursor};${cursorLinkHovered}`;
         
         return css`${cursor}`
     }

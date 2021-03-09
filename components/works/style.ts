@@ -31,6 +31,9 @@ const displayImg = css`
     height:350px;
     width:600px;
     border:rgba(0,0,0,0.05) solid 10px;
+    img{
+        opacity: 0.9;
+    }
     /* :hover{
         transform:scale(2);
         top:175px;
@@ -53,11 +56,9 @@ const displayImg2 = css`
     height:350px;
     width:600px;
     border:rgba(0,0,0,0.05) solid 10px;
-    /* :hover{
-        transform:scale(2);
-        top:175px;
-        z-index:2000;
-    } */
+    img{
+        opacity: 0.9;
+    }
 `
 
 const displayIntro2=css`

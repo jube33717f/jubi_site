@@ -1,6 +1,100 @@
 import {css, keyframes} from '@emotion/react'
 // const Contrast = require('contrast-js');
 
+
+
+/*---image effect--**/
+const imgGrid=css`
+    width:100%;
+    height:100%;
+    top:0;
+    position:absolute;
+    left:0;
+    overflow:hidden;
+    figure{
+        /* border:1em solid #60A58F; */
+        position: relative;
+	    float: left;
+	    overflow: hidden;
+	    margin: 10px 0;
+	    width: 100%;
+        height:100%;
+	    background: #3085a3;
+	    text-align: center;
+	    cursor: pointer;
+        
+        figcaption{
+            padding: 2em;
+            color: #fff;
+            text-transform: uppercase;
+            font-size: 1.25em;
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+            :before :after{
+                pointer-events: none;
+            }
+            h3{
+                font-family:var(--font-hard);
+                letter-spacing: .1em;
+                :after{
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 3px;
+                    background: #fff;
+                    content: '';
+                    -webkit-transition: -webkit-transform 0.35s;
+                    transition: transform 0.35s;
+                     -webkit-transform: translate3d(0,0,0);
+	                transform: translate3d(0,0,0);
+                }
+            }
+        }
+
+    }
+`
+const sarahEffect=css`
+    background: #42b078;
+    img{
+        max-width: none;
+	    width: -webkit-calc(100% + 20px);
+	    width: calc(100% + 20px);
+        opacity: 0.4;
+	    -webkit-transform: translate3d(0,0,0);
+	    transform: translate3d(0,0,0);
+        :hover{
+            opacity:0.8;
+            -webkit-transition: opacity 0.35s, -webkit-transform 0.35s; 
+            transition: opacity 0.35s, transform 0.35s;
+	        -webkit-transform: translate3d(-10px,0,0);
+	        transform: translate3d(-10px,0,0);
+            -webkit-backface-visibility: hidden;
+	        backface-visibility: hidden;
+        }
+        
+    }
+    figcaption {
+	    text-align: left;
+        h3{
+            opacity: 1;
+            -webkit-transform: translate3d(0,0,0);
+            transform: translate3d(0,0,0);
+            
+        }
+    
+    }
+    :hover h3{
+        padding: 1em 0;
+        opacity: 0;
+        -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+        transition: opacity 0.35s, transform 0.35s;
+        -webkit-transform: translate3d(100%,0,0);
+        transform: translate3d(100%,0,0);
+        
+    }
+`
+
 const nameAnimation = keyframes`
     from{
         opacity:0
@@ -65,22 +159,15 @@ const imgContent = css `
 
     width:100%;
     height:100%;
-    top:0;
-    display:flex;
+    /* top:0; */
+    margin-top:-2em;
     position:absolute;
     left:0;
     overflow:hidden;
     border:#D9EAD3 solid 1em;
-    img{
-        position:absolute; 
-        z-index:1;
-    }
-    :hover{
-        position:fixed;
-        transform:scale(1.2);
-        margin-top:0;
-        margin-left:0
-    }
+    
+    
+  
     
 `
 const imgTag = css`
@@ -149,7 +236,8 @@ const cardFooter = css `
     height:4em;
     position:absolute;
     right:1.5em;
-    margin-top:16em;
+    /* bottom:0em; */
+    top:18em;
     
 `
 const previousIcon=css`
@@ -159,13 +247,13 @@ const previousIcon=css`
     font-size:0.8em;
     font-family:var(--font-hard);
     animation:${arrowAttention2} 2.4s infinite;  
-    text-shadow: #D9EAD3 1px 0 10px;
+    /* text-shadow: #D9EAD3 1px 0 10px; */
 `
 const previous=css`
     position:absolute;
     left:5em;
     font-family:var(--font-hard);  
-    text-shadow: #D9EAD3 1px 0 10px;
+    /* text-shadow: #D9EAD3 1px 0 10px; */
    
 `
 
@@ -175,7 +263,7 @@ const next=css`
     right:2em;
     float:right;
     font-family:var(--font-hard);  
-    text-shadow: #D9EAD3 1px 0 10px;
+    /* text-shadow: #D9EAD3 1px 0 10px; */
    
 `
 const nextIcon=css`
@@ -188,4 +276,4 @@ const nextIcon=css`
     animation:${arrowAttention} 2.4s infinite;  
 `
 
-export { box,imgTag,imgContent,cardStyle,cardHeader,cardContent,icons,cardFooter,text ,previousIcon,previous,next,nextIcon}
+export { imgGrid,sarahEffect,box,imgTag,imgContent,cardStyle,cardHeader,cardContent,icons,cardFooter,text ,previousIcon,previous,next,nextIcon}

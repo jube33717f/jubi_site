@@ -1,7 +1,7 @@
 
 import CardContainer from '@layouts/cardContainer'
 import dynamic from 'next/dynamic';
-import {box,imgTag,imgContent,cardStyle,cardHeader,cardContent,cardFooter,icons,text,previousIcon,previous,next,nextIcon} from './style'
+import {imgGrid,sarahEffect,box,imgTag,imgContent,cardStyle,cardHeader,cardContent,cardFooter,icons,text,previousIcon,previous,next,nextIcon} from './style'
 import Badge from '@components/badge'
 import { Card } from 'antd';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -31,17 +31,7 @@ const Info= ({active,clickHandler}:{active:string[],clickHandler:({index}:{index
             }}
             >I</h4> }
             {active[1]=='active'&&<div css={box}>
-            <Card
-                css={cardStyle}
-                // style={{ marginLeft:300,width: 600 }}
-                
-                actions={[
-                    
-               
-                ]}
-            >
-
-
+            <Card css={cardStyle}>
                 {page===0&&<>
                 <div css={cardHeader}>
                     <Badge/>
@@ -71,76 +61,107 @@ const Info= ({active,clickHandler}:{active:string[],clickHandler:({index}:{index
                 </div>
                 </>}
                 {page===1&&<>
-                    <div css={imgContent}>
-                        <Image 
-                            src='/me/tech.jpg'
-                            layout="fill"
-                            loading='lazy'
-                            quality={100}
-                        />
+                    
+                    <div css={imgGrid}>
+                        <figure css={sarahEffect}>
+                            <Image 
+                                src='/me/tech.jpg'
+                                layout="fill"
+                                loading='lazy'
+                                quality={100}
+                            />
+                            <figcaption>
+                                <h3>I know these about frontend...</h3>
+                            </figcaption>
+                        </figure>
+                        
                     </div>
-                    <h3 css={imgTag}>I know these</h3>
+                    <h3>I know these</h3>
                 </>}
                 {page===2&&<>
-                    <div css={imgContent}>
-                        <Image 
-                            src='/me/m1.jpg'
-                            layout="fill"
-                            loading='lazy'
-                            quality={100}
-                        />
+                    <div css={imgGrid}>
+                        <figure css={sarahEffect}>
+                            <Image 
+                                src='/me/m1.jpg'
+                                layout="fill"
+                                loading='lazy'
+                                quality={100}
+                            />
+                            <figcaption>
+                                <h3>Tag + Cats lover</h3>
+                            </figcaption>
+                        </figure>
+                        
                     </div>
-                    <h3 css={imgTag}>Cats lover</h3>
+                    
                 </>}
                 {page===3&&<>
-                    <div css={imgContent}>
-                        <Image 
-                            src='/me/m2.jpg'
-                            layout="fill"
-                            loading='lazy'
-                            quality={100}
-                            
-                        />
+                    <div css={imgGrid}>
+                        <figure css={sarahEffect}>
+                            <Image 
+                                src='/me/m2.jpg'
+                                layout="fill"
+                                loading='lazy'
+                                quality={100}
+                            />
+                            <figcaption>
+                                <h3>Tag + Barista apprentice</h3>
+                            </figcaption>
+                        </figure>
+                        
                     </div>
-                    <h3 css={imgTag}>Make Coffee</h3>
+                    
                 </>}
                 {page===4&&<>
-                    <div css={imgContent}>
-                        <Image 
-                            src='/me/m2.jpg'
-                            layout="fill"
-                            loading='lazy'
-                            quality={100}
-                            
-                        />
+                    
+                       <div css={imgGrid}>
+                        <figure css={sarahEffect}>
+                            <Image 
+                                src='/me/m4.jpg'
+                                layout="fill"
+                                loading='lazy'
+                                quality={100}
+                            />
+                            <figcaption>
+                                <h3>Tag + Adventure</h3>
+                            </figcaption>
+                        </figure>
+                        
                     </div>
-                    <h3 css={imgTag}>Enjoy life</h3>
                 </>}
-                {page===5&&<>
-                    <div css={imgContent}>
-                        <Image 
-                            src='/me/m1.jpg'
-                            layout="fill"
-                            loading='lazy'
-                            quality={100}
-                        />
-                    </div>
-                    <h3 css={imgTag}>Adventure</h3>
-                </>}
-                
-                
-                
-
-
-
-
-
+                {page===4&&<>
+                    
+                    <div css={imgGrid}>
+                     <figure css={sarahEffect}>
+                         <Image 
+                             src='/me/m3.jpg'
+                             layout="fill"
+                             loading='lazy'
+                             quality={100}
+                         />
+                         <figcaption>
+                             <h3>With friends is best</h3>
+                         </figcaption>
+                     </figure>
+                     
+                 </div>
+             </>}
                 <div css={cardFooter}>
-                    {page > 0 ? (<><div css={previousIcon} onClick={previousPage}>←</div><div css={previous} onClick={previousPage}>PREV</div></>):null}
+                    {page > 0 ? (<><div css={previousIcon} onClick={previousPage}>←</div>
+                    <div css={previous} onClick={previousPage}>PREV</div></>):null}
                     {page < totalPage?(<><div  css={next} onClick={nextPage}>NEXT  </div>
                     <div css={nextIcon} onClick={nextPage}> →</div></>):null}
                 </div>
+                
+                
+
+
+
+
+
+                
             </Card>
+            
             </div>}
             
          
