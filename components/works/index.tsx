@@ -29,7 +29,7 @@ const portfolios = [
         img:'filmFinder.jpg',
         link:'',
         github:'https://github.com/unsw-cse-capstone-project/capstone-project-comp9900-h18b-galahad',
-        info:'Film score system based on TMDB api + personal recommendation based on our own machine learning system. Backend part did not deploy. You can still run it locally follow the github introduction.',
+        info:'Film score system based on TMDB api + personal recommendation based on our own machine learning system. Backend part did not deploy. You can still run it locally follow the github Readme introduction.',
         tech:'Fontend: React, Redux, Webpack, SCSS | Backend: Python-Flask | Database: Mongodb'
 
     },
@@ -48,7 +48,7 @@ const portfolios = [
         img:'unihelp.jpg',
         link:'https://unihelp-9323team3.vercel.app/',
         github:'https://github.com/9323Team/frontend',
-        info:'University helping system(backend did not deploy)',
+        info:'University helping system. Backend did not deploy. You can still run it locally follow the github Readme introduction.',
         tech:'Fontend: React, Redux, SCSS Backend: Python-Flask | Database: Dynamodb'
     },
     {
@@ -57,7 +57,7 @@ const portfolios = [
         img:'weatherapp.jpg',
         link:'https://weather-rho.now.sh',
         github:'https://github.com/jubi33717f/weather',
-        info:'Forecast 5 days weather condition on your location',
+        info:'Forecast 5 days weather condition on your location.',
         tech:'Fontend: React, Redux, SCSS'
     },
     {
@@ -75,7 +75,7 @@ const portfolios = [
         img:'hrManagement.jpg',
         link:'https://hr-management-eight.vercel.app',
         github:'https://github.com/jubi33717f/hrManagement',
-        info:'HR management system',
+        info:'HR management system, Admin system + Employee system. Test account could be found in github Readme file.',
         tech:'Fontend: React, Redux, SCSS Backend: Node-Koa | Database: Mongodb'
     }
 ]
