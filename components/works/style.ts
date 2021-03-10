@@ -116,7 +116,7 @@ const contentStyle = css`
 `
 const titleStyle = css`
     color:#6D9EEB;
-    /* margin-top:.1em; */
+    margin-top:.05em;
     /* margin-bottom:.1em; */
     /* padding-bottom:0; */
     font-family:var(--font-hard);
