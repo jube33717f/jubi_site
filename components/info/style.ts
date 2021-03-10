@@ -36,6 +36,8 @@ const imgGrid=css`
             h3{
                 font-family:var(--font-hard);
                 letter-spacing: .1em;
+                color:#fff;
+                margin-top:1em;
                 :after{
                     position: absolute;
                     bottom: 0;

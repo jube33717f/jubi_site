@@ -11,10 +11,10 @@ const emailStyles = css `
     margin-top:calc(100vh - 15rem);
     text-align:center;
     padding-left:2.2rem;
-    line-height:5rem;
+    line-height:9.5rem;
     z-index:1000;
     font-size:2rem;
-  
+    
 
 
 `

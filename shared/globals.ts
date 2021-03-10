@@ -66,6 +66,7 @@ export const globalStyles = css`
         padding-left:10%;
         color:'#410807';
         font-variation-settings:"wght" 600;
+        margin-top:1em;
 
 
     }
