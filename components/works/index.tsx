@@ -8,9 +8,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faLink, faPaperPlane } from '@fortawesome/free-solid-svg-icons'
 import { faGithubSquare } from '@fortawesome/free-brands-svg-icons'
 
-const images = ['filmFinder.jpg','airtasker.jpg','unihelp.jpg','weatherapp.jpg','seddit.jpg','hrManagement.jpg']
-const imagesText = ['Film Finder','Airtasker','Unihelp chatbot','Weather App','Seddit App','Hr Management']
-const date = [' 2020.10',' 2020.5',' 2020.7',' 2020.2',' 2019.12',' 2020.8']
+
 
 
 
