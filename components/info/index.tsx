@@ -3,7 +3,7 @@ import CardContainer from '@layouts/cardContainer'
 import dynamic from 'next/dynamic';
 import {footer,imgGrid,sarahEffect,box,cardStyle,cardHeader,cardContent,cardFooter,icons,text,previousIcon,previous,next,nextIcon} from './style'
 import Badge from '@components/badge'
-import { Card } from 'antd';
+// import { Card } from 'antd';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEnvelopeSquare,faPaperclip} from '@fortawesome/free-solid-svg-icons'
 import { faGithubSquare , faLinkedinIn,} from '@fortawesome/free-brands-svg-icons'
@@ -14,7 +14,7 @@ import Image from 'next/image'
 const ReactTypingEffect = dynamic(()=>import('react-typing-effect'),{ssr:false})
 const Info= ({active,clickHandler}:{active:string[],clickHandler:({index}:{index:number})=>void}) =>{
     const [page,setPage] = useState(0)
-    const totalPage = 4
+    const totalPage = 5
     const nextPage = ()=>{
         if(page === totalPage) return
         setPage(page+1)
@@ -31,7 +31,7 @@ const Info= ({active,clickHandler}:{active:string[],clickHandler:({index}:{index
             }}
             >I</h4> }
             {active[1]=='active'&&<div css={box}>
-            <Card css={cardStyle}>
+            <div css={cardStyle}>
                 {page===0&&<>
                 <div css={cardHeader}>
                     <Badge/>
@@ -160,7 +160,7 @@ const Info= ({active,clickHandler}:{active:string[],clickHandler:({index}:{index
 
 
                 
-            </Card>
+            </div>
             <div css={footer}>
                     
                    <p>You can view my works here.</p>
