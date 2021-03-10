@@ -52,7 +52,7 @@ const Info= ({active,clickHandler}:{active:string[],clickHandler:({index}:{index
                         
                             <ReactTypingEffect
                                 staticText="Nice to meet you 💖"
-                                text={["I am Jubi, a web developer based on Sydney."," Currently focus on front end and always happy to try new techs.","Feel free to leave me messages."]}
+                                text={["I am Jubi, a web developer in Sydney."," Focus on front end and always enthusiastic to try new techs.","Feel free to leave me messages."]}
                                 speed={100}
                                 eraseSpeed={10}
                             />
