@@ -7,7 +7,7 @@ import Article from '@components/article'
 import Me from '@components/me'
 import Info from '@components/info'
 import Portfolio from '@components/portfolio'
-import{useState} from 'react'
+import {useState} from 'react'
 
 const homeStyles = css`
     width:100%;
@@ -25,6 +25,7 @@ const homeStyles = css`
 `
 
 const Home=()=> {
+     
     const [shown,setShown] = useState(['active','inactive','inactive','inactive'])
     const clickTitleHandler = ({index}:{index:number})=>{
         let arr = []

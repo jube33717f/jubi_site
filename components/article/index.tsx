@@ -2,6 +2,7 @@
 import { css } from '@emotion/react'
 import CardContainer from '@layouts/cardContainer'
 import {postIndexList, postIndexItem,postIndexTitleBar} from './style'
+// import WritingList from '@components/writingList'
 
 
 const Article = ({active,clickHandler}:{active:string[],clickHandler:({index}:{index:number})=>void}) =>{
@@ -59,6 +60,7 @@ const Article = ({active,clickHandler}:{active:string[],clickHandler:({index}:{i
                    </li> 
                 </ol>
             </section>}
+            {/* {active[3]=='active'&&<section><WritingList/></section>} */}
         </CardContainer>
     )
 }

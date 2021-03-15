@@ -22,11 +22,13 @@
     "browserslist": "^4.16.1",
     "chalk": "^4.0.0",
     "decompress-response": "^6.0.0",
+    "dotenv": "^8.2.0",
     "find-cache-dir": "^3.3.1",
-    "firebase": "^8.2.10",
+    "firebase": "^8.3.0",
+    "firebase-admin": "^9.5.0",
     "make-dir": "^3.1.0",
     "mimic-response": "^3.1.0",
-    "next": "10.0.7",
+    "next": "^10.0.8",
     "node-sass": "^5.0.0",
     "p-limit": "^2.3.0",
     "picomatch": "^2.2.2",
@@ -41,6 +43,7 @@
     "sharp": "^0.26.3",
     "swr": "^0.4.2",
     "textcolor": "^1.0.2",
+    "webpack": "^5.25.0",
     "yocto-queue": "^0.1.0"
   },
   "devDependencies": {
