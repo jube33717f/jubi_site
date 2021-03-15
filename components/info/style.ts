@@ -279,6 +279,7 @@ const cardFooter = css `
     }
     ${lgm}{
         top:17em;
+        font-size:1em;
     }
     
 `
