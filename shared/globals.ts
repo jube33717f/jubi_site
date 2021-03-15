@@ -11,9 +11,10 @@ export const breakpoints = {
     _lg1:'1024px',
     _lgm:'1200px',
     _lg2:'1367px',
+    _lg3:'1500px'
 }
 const media = (pixels:string )=> `@media (min-width: ${pixels})`
-const { _sm1, _sm2, _sm3, _sm4, _md , _lg1,_lgm, _lg2} = breakpoints
+const { _sm1, _sm2, _sm3, _sm4, _md , _lg1,_lgm, _lg2, _lg3} = breakpoints
 
 export const sm1 = media(_sm1)
 export const sm2 = media(_sm2)
@@ -25,7 +26,7 @@ export const md = media(_md)
 export const lg1 = media(_lg1)
 export const lgm = media(_lgm)
 export const lg2 = media(_lg2)
-
+export const lg3 = media(_lg3)
 export const globalStyles = css`
     /*--here control style variable--**/
     @font-face {

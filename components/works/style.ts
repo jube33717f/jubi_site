@@ -1,5 +1,5 @@
 import {css} from '@emotion/react'
-import {sm1,sm2,sm3,sm4,md,lg1,lgm,lg2} from '../../shared/globals'
+import {sm1,sm2,sm3,sm4,md,lg1,lgm,lg2,lg3} from '../../shared/globals'
 
 
 const scroll=css`
@@ -33,7 +33,7 @@ const showcase=css`
         height:600px;
         width:3605px;
     }
-    ${lg2}{
+    ${lg3}{
         height:700px;
         width:4200px;
     }
@@ -61,7 +61,7 @@ const cases = css`
         height:600px;
         width:515px;
     }
-    ${lg2}{
+    ${lg3}{
         height:700px;
         width:600px;
     }
@@ -91,7 +91,7 @@ const displayImg = css`
         height:300px;
         width:515px;
     }
-    ${lg2}{
+    ${lg3}{
         height:350px;
         width:600px;
     }
@@ -125,7 +125,7 @@ const displayIntro=css`
         height:300px;
         width:515px;
     }
-    ${lg2}{
+    ${lg3}{
         top:350px;
         height:350px;
         width:600px;
@@ -158,7 +158,7 @@ const displayImg2 = css`
         height:300px;
         width:515px;
     }
-    ${lg2}{
+    ${lg3}{
         top:350px;
         height:350px;
         width:600px;
@@ -184,7 +184,7 @@ const displayIntro2=css`
         height:300px;
         width:515px;
     }
-    ${lg2}{
+    ${lg3}{
         height:350px;
         width:600px;
     }
@@ -201,6 +201,9 @@ const intro1 = css`
     letter-spacing: 1px;
     ${md}{
         font-size:1em;
+    }
+    ${lg2}{
+        font-size:1.5em; 
     }
 
 `
@@ -259,7 +262,7 @@ const intro2 = css`
             }
         }
     }
-    ${lg2}{
+    ${lg3}{
         
         transform: rotate(270deg) translate(-50%, 0%);
         p{
@@ -312,7 +315,7 @@ const contentStyle = css`
             font-size:1em;
         }
     }
-    ${lg2}{
+    ${lg3}{
         width:500px;
         
     }
