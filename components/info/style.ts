@@ -58,7 +58,12 @@ const imgGrid=css`
                 font-size:.9em;
             }
             ${lgm}{
+                margin-top:1em;
                 font-size: 1.1em;
+            }
+            ${lg2}{
+                margin-top:1em;
+                font-size: 1.25em;
             }
         }
 
@@ -150,6 +155,11 @@ const cardStyle = css`
         left:62%;
         height:19em;
     }
+    ${lg2}{
+        width:32em;
+        height:20em;
+        left:50%;
+    }
     
 
 `
@@ -185,6 +195,11 @@ const cardContent = css `
         width:14em;
         left:13em;
         padding-top:3em;
+    }
+    ${lg1}{
+        width:calc(100%-13em);
+        left:16em;
+        padding-top:4em;
     }
 `
 
@@ -222,6 +237,9 @@ const text = css`
     ${lgm}{
         font-size:1em;
     }
+    ${lg2}{
+        font-size:1.2em;
+    }
     
     
 `
@@ -241,6 +259,9 @@ const icons = css`
     }
     ${lgm}{
         font-size:1.8em;
+    }
+    ${lg2}{
+        font-size:2em;
     }
 
 `
@@ -281,7 +302,9 @@ const cardFooter = css `
         top:17em;
         font-size:1em;
     }
-    
+    ${lg2}{
+        top:18em;
+    }
 `
 const previousIcon=css`
     left:3em;

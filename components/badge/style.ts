@@ -32,7 +32,7 @@ const badge=css`
 
   }
   ${md}{
-      left:.5em;
+    left:.5em;
     top:3em;
     width: 6em;
     height: 6em; 
@@ -41,6 +41,11 @@ const badge=css`
   ${lgm}{
     width: 9em;
     height: 9em;
+    top:1.5em;
+  }
+  ${lg2}{
+    width: var(--base-size);
+    height: var(--base-size);
   }
 
 ` 
@@ -64,19 +69,19 @@ const text = css`
     transform: rotate(-180deg) translate( calc(- var(--base-size) / 2)) rotate(180deg);
     box-shadow: 0px .5rem 1rem rgba(0,0,0,.5);
     transition: var(--easing);    
-        &:hover{
-            transform: rotate(-45deg) translate(0px) rotate(-315deg);
-            background: rgba(var(--primary-color),.5);
-            width: var(--base-size);
-            letter-spacing: 1rem;
-            line-height: var(--base-size);
-            height: var(--base-size);
-            margin-top:  calc( var(--base-reverse-size) / 2);
-            margin-left:   calc( var(--base-reverse-size) / 2);
-            transition:var(--easing),
-            letter-spacing 1.5s ease-out;
-        
-        }
+    &:hover{
+        transform: rotate(-45deg) translate(0px) rotate(-315deg);
+        background: rgba(var(--primary-color),.5);
+        width: var(--base-size);
+        letter-spacing: 1rem;
+        line-height: var(--base-size);
+        height: var(--base-size);
+        margin-top:  calc( var(--base-reverse-size) / 2);
+        margin-left:   calc( var(--base-reverse-size) / 2);
+        transition:var(--easing),
+        letter-spacing 1.5s ease-out;
+    
+    }
     ${md}{
         width: 3em;
         height: 3em;
@@ -118,6 +123,28 @@ const text = css`
             letter-spacing 1.5s ease-out;
         
         }
+   }
+   ${lg2}{
+        width: calc(var(--base-size) / 2);
+        height: calc(var(--base-size) / 2);
+        line-height: calc(var(--base-size) / 2);
+        font-size: 2rem;
+        font-weight:200;
+        transform: rotate(-180deg) translate( 0em ) rotate(180deg);
+        &:hover{
+            transform: rotate(-45deg) translate(0px) rotate(-315deg);
+            background: rgba(var(--primary-color),.5);
+            width: var(--base-size);
+            letter-spacing: 1rem;
+            line-height: var(--base-size);
+            height: var(--base-size);
+            margin-top:  calc( var(--base-reverse-size) / 2);
+            margin-left:   calc( var(--base-reverse-size) / 2);
+            transition:var(--easing),
+            letter-spacing 1.5s ease-out;
+        
+        }
+
    }
 `
 
