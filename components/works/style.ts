@@ -1,5 +1,5 @@
 import {css} from '@emotion/react'
-import {sm1,sm2,sm3,sm4,md,lg1,lg2} from '../../shared/globals'
+import {sm1,sm2,sm3,sm4,md,lg1,lgm,lg2} from '../../shared/globals'
 
 
 const scroll=css`
@@ -24,7 +24,12 @@ const showcase=css`
         height:400px;
         width:2401px;
     }
+
     ${lg1}{
+        height:500px;
+        width:3003px;
+    }
+    ${lgm}{
         height:600px;
         width:3605px;
     }
@@ -48,6 +53,11 @@ const cases = css`
         width:343px;
     }
     ${lg1}{
+        height:500px;
+        width:429px;
+        
+    }
+    ${lgm}{
         height:600px;
         width:515px;
     }
@@ -73,6 +83,11 @@ const displayImg = css`
         width:343px;
     }
     ${lg1}{
+        height:250px;
+        width:429px;
+    }
+    ${lgm}{
+        
         height:300px;
         width:515px;
     }
@@ -100,6 +115,12 @@ const displayIntro=css`
         width:343px;
     }
     ${lg1}{
+        top:250px;
+        height:250px;
+        width:429px;
+        
+    }
+    ${lgm}{
         top:300px;
         height:300px;
         width:515px;
@@ -127,6 +148,12 @@ const displayImg2 = css`
         width:343px;
     }
     ${lg1}{
+        top:250px;
+        height:250px;
+        width:429px;
+        
+    }
+    ${lgm}{
         top:300px;
         height:300px;
         width:515px;
@@ -149,6 +176,11 @@ const displayIntro2=css`
         width:343px;
     }
     ${lg1}{
+        height:250px;
+        width:429px;
+        
+    }
+    ${lgm}{
         height:300px;
         width:515px;
     }
@@ -203,23 +235,87 @@ const intro2 = css`
         transform: rotate(270deg) translate(10%, 40%);
     }
     ${lg1}{
-        transform: rotate(270deg) translate(-40%, 0%);
+        transform: rotate(270deg) translate(-15%, 17%);
+        p{
+            font-size: 35px;
+            position: relative;
+            top: 50%;
+            display: inline-block;
+            span{
+                display: block;
+                color: rgb(233, 16, 58);
+            }
+    }
+    ${lgm}{
+        transform: rotate(270deg) translate(-35%, 15%);
+        p{
+            font-size: 35px;
+            position: relative;
+            top: 50%;
+            display: inline-block;
+            span{
+                display: block;
+                color: rgb(233, 16, 58);
+            }
+        }
     }
     ${lg2}{
+        
         transform: rotate(270deg) translate(-50%, 0%);
+        p{
+            font-size: 38px;
+            position: relative;
+            top: 50%;
+            display: inline-block;
+            span{
+                display: block;
+                color: rgb(233, 16, 58);
+            }
+        }
+    }
     }
 `
 const contentStyle = css`
     font-family:var(--font-hard);
-    width:500px;
+    /* width:500px; */
    h5{
-       font-size:2em;
-       color:#2C2F40;
+        font-size: 2em;
+        color:#2C2F40;
        svg{
            margin-left:.2em;
            margin-right:1em;
        }
    }
+   ${sm4}{
+       width:270px;
+   }
+   ${md}{
+        width:270px;
+        
+        h5{
+            font-size: 1.3em;
+        }
+        p{
+            font-size:.8em;
+        }
+    }
+    ${lg1}{
+        width:380px;
+        
+    }
+    ${lgm}{
+        width:430px;
+        h5{
+            font-size: 1.5em;
+        }
+        p{
+            font-size:1em;
+        }
+    }
+    ${lg2}{
+        width:500px;
+        
+    }
 `
 const titleStyle = css`
     color:#6D9EEB;
@@ -232,5 +328,19 @@ const titleStyle = css`
     letter-spacing:.1em;
     text-transform: uppercase;
     text-align:left;
+    ${md}{
+        font-size:1.4em;
+        
+        /* h5{
+            font-size: .5em;
+        } */
+    }
+    ${lg1}{
+        font-size:1.5em;
+    }
+    ${lg2}{
+        font-size:2em;
+        
+    }
 `
 export {titleStyle,contentStyle,scroll,intro1,intro2,showcase,cases,displayImg,displayIntro,displayImg2,displayIntro2}
