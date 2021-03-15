@@ -1,6 +1,28 @@
 
 import {css} from '@emotion/react'
+export const breakpoints = {
+    _sm1:'320px',
+    _sm2:'360px',
+    _sm3:'480px',
+    _sm4:'640px',
 
+    _md:'960px',
+
+    _lg1:'1200px',
+    _lg2:'1367px'
+}
+const media = (pixels:string )=> `@media (min-width: ${pixels})`
+const { _sm1, _sm2, _sm3, _sm4, _md , _lg1, _lg2} = breakpoints
+
+export const sm1 = media(_sm1)
+export const sm2 = media(_sm2)
+export const sm3 = media(_sm3)
+export const sm4 = media(_sm4)
+
+export const md = media(_md)
+
+export const lg1 = media(_lg1)
+export const lg2 = media(_lg2)
 
 export const globalStyles = css`
     /*--here control style variable--**/
@@ -22,6 +44,14 @@ export const globalStyles = css`
         --base-reverse-size: -12em;
         --font-art:Caveat;
         --font-hard:Manrope;
+        
+        --breakpoints-small-first: 640px;
+        --breakpoints-small-second: 480px;
+        --breakpoints-small-third: 360px;
+        --breakpoints-small-fourth: 320px;
+        --breakpoints-medium: 1007px;
+        --breakpoints-large-second: 1367px;
+        --breakpoints-large-third: 1024px;
     }
     
     html,
