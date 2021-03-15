@@ -84,6 +84,7 @@ const Info= ({active,clickHandler}:{active:string[],clickHandler:({index}:{index
                             <Image 
                                 src='/me/m1.jpg'
                                 layout="fill"
+                                object-fit='cover'
                                 loading='lazy'
                                 quality={100}
                             />

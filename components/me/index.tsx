@@ -33,7 +33,7 @@ const Me = ({active,clickHandler}:{active:string[],clickHandler:({index}:{index:
                 <figcaption>
                     <div>
                         <h3>JUBI <span>CHEN</span></h3>
-                        <p>INTERESTING   ENTHUSIASTIC FREE INNOCENT</p>
+                        <p>INTERESTING FREE ENTHUSIASTIC NAIVE</p>
                     </div>
                 </figcaption>
             </figure>

@@ -1,4 +1,5 @@
 import {css, keyframes} from '@emotion/react'
+import {sm1,sm2,sm3,sm4,md,lg1,lgm,lg2} from '../../shared/globals'
 // const Contrast = require('contrast-js');
 
 
@@ -52,6 +53,13 @@ const imgGrid=css`
 	                transform: translate3d(0,0,0);
                 }
             }
+            ${md}{
+                margin-top:4em;
+                font-size:.9em;
+            }
+            ${lgm}{
+                font-size: 1.1em;
+            }
         }
 
     }
@@ -76,6 +84,7 @@ const sarahEffect=css`
         }
         
     }
+    
     figcaption {
 	    text-align: left;
         h3{
@@ -114,6 +123,7 @@ const box=css`
 `
 const cardStyle = css`
     width:32em;
+    height:20em;
     top:50%;
     left:50%;
     
@@ -125,11 +135,21 @@ const cardStyle = css`
     transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
     border: 1px solid rgba(0, 0, 0, 0.12);
     
-    height:20em;
+    
     border-radius:0.2em;
     padding:2em;
     background:#60A58F;
     overflow:hidden;
+    ${md}{
+        width:18em;
+        left:82%;
+        height:17em;
+    }
+    ${lgm}{
+        width:25em;
+        left:62%;
+        height:19em;
+    }
     
 
 `
@@ -140,6 +160,7 @@ const cardHeader  = css`
     position:absolute;
     overflow:hidden;
     padding-top:2em;
+    
    
 `
 const cardContent = css `
@@ -155,7 +176,16 @@ const cardContent = css `
     left:16em;
     right:0;
     overflow:hidden;
-
+    ${md}{
+        width:10em;
+        left:10em;
+        padding-top:5em;
+    }
+    ${lgm}{
+        width:14em;
+        left:13em;
+        padding-top:3em;
+    }
 `
 
 const footer=css`
@@ -186,6 +216,12 @@ const text = css`
     letter-spacing:0.1em;
     margin-top:0.5em;
     overflow:hidden;
+    ${md}{
+        font-size:.7em;
+    }
+    ${lgm}{
+        font-size:1em;
+    }
     
     
 `
@@ -199,6 +235,12 @@ const icons = css`
     svg{
        
         padding-right:0.4em;
+    }
+    ${md}{
+        font-size:1.5em;
+    }
+    ${lgm}{
+        font-size:1.8em;
     }
 
 `
@@ -231,6 +273,13 @@ const cardFooter = css `
     right:1.5em;
     /* bottom:0em; */
     top:18em;
+    ${md}{
+        top:19em;
+        font-size:.8em;
+    }
+    ${lgm}{
+        top:17em;
+    }
     
 `
 const previousIcon=css`
@@ -239,7 +288,8 @@ const previousIcon=css`
     font-variation-settings:"wght" 200;
     font-size:0.8em;
     font-family:var(--font-hard);
-    animation:${arrowAttention2} 2.4s infinite;  
+    animation:${arrowAttention2} 2.4s infinite; 
+    
     /* text-shadow: #D9EAD3 1px 0 10px; */
 `
 const previous=css`
@@ -257,7 +307,7 @@ const next=css`
     float:right;
     font-family:var(--font-hard);  
     /* text-shadow: #D9EAD3 1px 0 10px; */
-   
+    
 `
 const nextIcon=css`
     

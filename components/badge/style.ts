@@ -1,6 +1,7 @@
 
 
 import {css} from '@emotion/react'
+import {sm1,sm2,sm3,sm4,md,lg1,lgm,lg2} from '../../shared/globals'
 // @import url(https://fonts.googleapis.com/css?family=Raleway:300);
 
 
@@ -30,6 +31,18 @@ const badge=css`
     background-position: 0% 50%;
 
   }
+  ${md}{
+      left:.5em;
+    top:3em;
+    width: 6em;
+    height: 6em; 
+    
+  }
+  ${lgm}{
+    width: 9em;
+    height: 9em;
+  }
+
 ` 
 const text = css`
     display: block;
@@ -64,6 +77,48 @@ const text = css`
             letter-spacing 1.5s ease-out;
         
         }
+    ${md}{
+        width: 3em;
+        height: 3em;
+        line-height: 3em;
+        font-size: 2rem;
+        font-weight:10;
+        transform: rotate(-180deg) translate( 0em ) rotate(180deg);
+        &:hover{
+            transform: rotate(-45deg) translate(0px) rotate(-315deg);
+            background: rgba(var(--primary-color),.5);
+            width: 6em;
+            letter-spacing: 1rem;
+            line-height: 6em;
+            height: 6em;
+            margin-top:  -3em;
+            margin-left:   -3em;
+            transition:var(--easing),
+            letter-spacing 1.5s ease-out;
+        
+        } 
+    }
+    ${lgm}{
+        width: 4.5em;
+        height: 4.5em;
+        line-height: 4.5em;
+        font-size: 2rem;
+        font-weight:200;
+        transform: rotate(-180deg) translate( 0em ) rotate(180deg);
+        &:hover{
+            transform: rotate(-45deg) translate(0px) rotate(-315deg);
+            background: rgba(var(--primary-color),.5);
+            width: 9em;
+            letter-spacing: 1rem;
+            line-height: 9em;
+            height: 9em;
+            margin-top:  -4.5em;
+            margin-left:   -4.5em;
+            transition:var(--easing),
+            letter-spacing 1.5s ease-out;
+        
+        }
+   }
 `
 
 export {  badge,text}

@@ -1,4 +1,5 @@
 import {css, keyframes} from '@emotion/react'
+import {sm1,sm2,sm3,sm4,md,lg1,lgm,lg2} from '../../shared/globals'
 const header = css`
     display: block;
     white-space: nowrap;
@@ -42,6 +43,36 @@ const bgWrap=css`
                 transform: translate3d(0,-50%,0) translate3d(0,-40px,0);
             }
             
+            
+        }
+        ${md}{
+            h3{
+                font-size:1em;
+            }
+            p{
+                font-size:.6em;
+            }
+            margin-left:-2em;
+        }
+        ${lg1}{
+            p{
+                font-size:.7em;
+                margin-left:0;
+            }
+            
+            
+        }
+        ${lgm}{
+            p{
+                font-size:.9em;
+                margin-left:0;
+            }
+        }
+        ${lg2}{
+            p{
+                font-size:1.2em;
+                margin-left:0;
+            }
         }
         img{
             opacity: 0.8;
