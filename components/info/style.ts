@@ -191,12 +191,13 @@ const cardContent = css `
         left:10em;
         padding-top:5em;
     }
+   
     ${lgm}{
         width:14em;
         left:13em;
         padding-top:3em;
     }
-    ${lg1}{
+    ${lg2}{
         width:calc(100%-13em);
         left:16em;
         padding-top:4em;
