@@ -74,8 +74,13 @@ export const globalStyles = css`
             Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
         background-color:#d4c6bd;
         font-feature-settings: "palt","calt","liga";
-    }
 
+    }
+    ol,ul{
+        list-style: none;
+        font-family:var(--font-hard);
+        display: flex;
+    }
     a {
         color: inherit;
         text-decoration: none;

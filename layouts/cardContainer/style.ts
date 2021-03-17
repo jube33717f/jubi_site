@@ -27,8 +27,11 @@ const cardStyle = ({color,about}:{color:string,about:string}) =>{
 
 const navStatus = css`
     display:none;
+    position:absolute;
     ${sm4}{
         display:block;
+        position:absolute;
+        
     }
 `
 export {cardStyle,navStatus} 
