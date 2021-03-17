@@ -50,6 +50,7 @@ const footer=css`
         }
     }
     ${lg2}{
+        padding-top:.3em;
         font-size:.7em;
         line-height:.9em;
         p:nth-of-type(1){

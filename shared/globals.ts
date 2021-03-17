@@ -14,12 +14,13 @@ export const breakpoints = {
     _lg3:'1500px'
 }
 const media = (pixels:string )=> `@media (min-width: ${pixels})`
+const max_media = (pixels:string )=> `@media (max-width: ${pixels})`
 const { _sm1, _sm2, _sm3, _sm4, _md , _lg1,_lgm, _lg2, _lg3} = breakpoints
 
-export const sm1 = media(_sm1)
-export const sm2 = media(_sm2)
-export const sm3 = media(_sm3)
-export const sm4 = media(_sm4)
+export const sm1 = max_media(_sm1)
+export const sm2 = max_media(_sm2)
+export const sm3 = max_media(_sm3)
+export const sm4 = max_media(_sm4)
 
 export const md = media(_md)
 

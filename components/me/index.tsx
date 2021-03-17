@@ -3,7 +3,6 @@ import CardContainer from '@layouts/cardContainer'
 import {bgWrap,icon} from './style'
 import Email from '@components/email'
 import Image from 'next/image'
-import {AiFillGithub} from 'react-icons/ai'
 
 
 // const ReactTypingEffect = typeof window !== `undefined` ? require("react-typing-effect").default : null
@@ -14,7 +13,7 @@ const Me = ({active,clickHandler}:{active:string[],clickHandler:({index}:{index:
    
    
     return<>
-    {/* <h4 style={{color:'#6D9EEB'}}>jubi chen</h4> */}
+   
     <CardContainer color='#F2E4DA' about={active[0]}>
     <Email/>
     {active[0]=='active'?( <div style={{position:'relative',overflow: 'hidden',}}>
