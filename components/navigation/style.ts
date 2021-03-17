@@ -126,8 +126,9 @@ const navi_page = css`
     -webkit-font-smoothing: antialiased;
     font-size:24px;
     li{
+        z-index:2;
         margin-top: 2.5vh;
-        pointer-events: none;
+        /* pointer-events: none; */
         /* color: #ccc; */
         
         font-variation-settings: "wght" 250;//700
@@ -139,7 +140,7 @@ const navi_page = css`
         transition-property: color,transform,font-variation-settings;
         transition-duration: .4s;
         transition-timing-function: cubic-bezier(.4,.1,.2,1);
-
+        
 
 
     }

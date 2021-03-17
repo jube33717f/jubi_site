@@ -2,8 +2,8 @@
 
 // import styled from '@emotion/styled'
 import {ReactNode} from 'react'
-import PhoneNavigation from '@components/navigation'
-import {cardStyle,navStatus} from './style'
+
+import {cardStyle} from './style'
 
 
 
@@ -19,7 +19,7 @@ type ContainerProps = {
 const CardContainer = ({ color, about, children}: ContainerProps )=>(
     
    <div  css={cardStyle({color, about})}>
-       <div css={navStatus}><PhoneNavigation /></div>
+       
         
         {children}
     </div>
