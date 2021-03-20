@@ -5,6 +5,9 @@ import {footer} from './style'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGithubSquare } from '@fortawesome/free-brands-svg-icons'
 
+
+
+import GitHubIcon from '@material-ui/icons/GitHub';
 const Portfolio = ({active,clickHandler}:{active:string[],clickHandler:({index}:{index:number})=>void}) =>(
 
     <CardContainer color='#F2B27C' about={active[2]}>
@@ -19,7 +22,7 @@ const Portfolio = ({active,clickHandler}:{active:string[],clickHandler:({index}:
                     
                    <p>You can view my works here.</p>
                    <p>Click or tap on each work to see it more detail.</p>
-                    <a href='https://github.com/jubi33717f'><FontAwesomeIcon style={{fontSize:'1.3em'}}icon={faGithubSquare}/></a>
+                    <a href='https://github.com/jubi33717f'><GitHubIcon/></a>
                     
             </div>
         </div>}

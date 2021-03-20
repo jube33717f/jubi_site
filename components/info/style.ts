@@ -1,5 +1,5 @@
 import {css, keyframes} from '@emotion/react'
-import {sm1,sm2,sm3,sm4,md,lg1,lgm,lg2} from '../../shared/globals'
+import {sm1,sm2,sm3,sm4,md,mdm,lg1,lgm,lg2} from '../../shared/globals'
 // const Contrast = require('contrast-js');
 
 
@@ -172,7 +172,7 @@ const cardHeader  = css`
     display:block;
     position:absolute;
     overflow:hidden;
-    padding-top:2em;
+    /* padding-top:2em; */
     
    
 `
@@ -181,29 +181,33 @@ const cardContent = css `
     background-position: right bottom;
     background-repeat: no-repeat;
     width:calc(100%-13em);
-    padding-top:4em;
+    /* padding-top:4em; */
     padding-right:2em;
     display:block;
     height:16em;
     position:absolute;
     left:16em;
     right:0;
+    top:0;
     overflow:hidden;
+    ${mdm}{
+        top:5em;
+    }
     ${md}{
         width:10em;
         left:10em;
-        padding-top:5em;
+        top:5em;
     }
    
     ${lgm}{
         width:14em;
         left:13em;
-        padding-top:3em;
+        padding-top:0em;
     }
     ${lg2}{
         width:calc(100%-13em);
         left:16em;
-        padding-top:4em;
+        padding-top:0em;
     }
 `
 
@@ -252,24 +256,15 @@ const text = css`
 `
 const icons = css`
     /* width:calc(100% - 13em); */
-    height:1em;
+    line-height:1em;
     display:inline-block;
-    font-size:2em;
+    font-size:large;
     overflow:hidden;
 
-    svg{
-       
-        padding-right:0.4em;
+    a{
+        margin-right:.3em;
     }
-    ${md}{
-        font-size:1.5em;
-    }
-    ${lgm}{
-        font-size:1.8em;
-    }
-    ${lg2}{
-        font-size:2em;
-    }
+   
 
 `
 const arrowAttention = keyframes`
@@ -365,7 +360,7 @@ const h1_title = css`
     }
     ${sm3}{
         margin-top:1em;
-        font-size:1.4em;
+        font-size:1.3em;
     }
 
 `
@@ -375,12 +370,9 @@ const handwriting=css`
     margin-top:1em;
     font-variation-settings: "wght" 300;
     letter-spacing:.07em;
-    /* width:410px; */
+    width:410px;
     font-family:var(--font-hard);
     font-size:.5em;
-    ${sm1}{
-        font-size:.4em;
-    }
     /* transform:transitionX(-50%); */
 `
 const phone_box= css`

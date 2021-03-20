@@ -3,6 +3,9 @@ import CardContainer from '@layouts/cardContainer'
 import dynamic from 'next/dynamic';
 import {phone_box,handwriting,h1_title,footer,imgGrid,sarahEffect,box,cardStyle,cardHeader,cardContent,cardFooter,icons,text,previousIcon,previous,next,nextIcon} from './style'
 import Badge from '@components/badge'
+import {
+    GithubFilled
+  } from '@ant-design/icons';
 // import { Card } from 'antd';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEnvelopeSquare,faPaperclip} from '@fortawesome/free-solid-svg-icons'
@@ -10,6 +13,12 @@ import { faGithubSquare , faLinkedinIn,} from '@fortawesome/free-brands-svg-icon
 import {useState} from 'react'
 import Image from 'next/image'
 import CarouselCards from '@components/carousel'
+
+
+import GitHubIcon from '@material-ui/icons/GitHub';
+import AttachFileIcon from '@material-ui/icons/AttachFile';
+import LinkedInIcon from '@material-ui/icons/LinkedIn';
+import EmailIcon from '@material-ui/icons/Email';
 {/*  */}
 const ReactTypingEffect = dynamic(()=>import('react-typing-effect'),{ssr:false})
 const Info= ({active,clickHandler}:{active:string[],clickHandler:({index}:{index:number})=>void}) =>{
@@ -38,13 +47,26 @@ const Info= ({active,clickHandler}:{active:string[],clickHandler:({index}:{index
                 </div>
                 <div css={cardContent}>
                     <div css={icons}>
-                        <a href='https://github.com/jubi33717f'><FontAwesomeIcon style={{color:'#CECECE'}}icon={faGithubSquare}/></a>
+                        <a href='https://github.com/jubi33717f'>
+                            {/* <FontAwesomeIcon style={{color:'#CECECE'}}icon={faGithubSquare}/> */}
+                            {/* <GithubFilled /> */}
+                            <GitHubIcon  style={{color:'#CECECE',fontSize:'2.4rem'}}/>
+                        </a>
                         <a onClick={(e)=>{
                             clickHandler({index:2})
-                        }}><FontAwesomeIcon style={{color:'#2B84FF'}}icon={faPaperclip}/></a>
-                        <a href='https://www.linkedin.com/in/jubi-chen/'><FontAwesomeIcon style={{color:'#EC2F78'}}icon={faLinkedinIn}/></a>
+                        }}>
+                            {/* <FontAwesomeIcon style={{color:'#2B84FF'}}icon={faPaperclip}/> */}
+                            <AttachFileIcon style={{color:'#2B84FF',fontSize:'2.4rem'}}/>
+                        </a>
+                        <a href='https://www.linkedin.com/in/jubi-chen/'>
+                            {/* <FontAwesomeIcon style={{color:'#EC2F78'}}icon={faLinkedinIn}/> */}
+                            <LinkedInIcon style={{color:'#EC2F78',fontSize:'2.4rem'}}/>
+                        </a>
                         
-                        <a href='https://jubi33717f@gmail.com'><FontAwesomeIcon style={{color:'#DB4438'}} icon={faEnvelopeSquare}/></a>
+                        <a href='https://jubi33717f@gmail.com'>
+                            {/* <FontAwesomeIcon style={{color:'#DB4438'}} icon={faEnvelopeSquare}/> */}
+                            <EmailIcon style={{color:'#DB4438',fontSize:'2.4rem'}}/>
+                        </a>
                         
 
                     </div>
@@ -155,13 +177,13 @@ const Info= ({active,clickHandler}:{active:string[],clickHandler:({index}:{index
                 </div>
                                
             </div>
-            <div css={footer}>
+            {/* <div css={footer}>
                     
                    <p>You can view my works here.</p>
                    <p>Click or tap on each work to see it more detail.</p>
-                    <a href='https://github.com/jubi33717f'><FontAwesomeIcon style={{fontSize:'1.3em'}}icon={faGithubSquare}/></a>
+                    <a href='https://github.com/jubi33717f'><FontAwesomeIcon style={{fontSize:'10px'}}icon={faGithubSquare}/></a>
                     
-            </div>
+            </div> */}
             </div>}
 
 
@@ -169,15 +191,15 @@ const Info= ({active,clickHandler}:{active:string[],clickHandler:({index}:{index
             {active[1]=='active'&&<div css={phone_box}>
             <CarouselCards active={active} clickHandler={clickHandler}/>
             
-            <div css={handwriting}>           
-                            <ReactTypingEffect
-                                staticText="Nice to meet you 💖"
-                                text={["I am Jubi, a web developer in Sydney."," Focus on front end and always enthusiastic to try new techs.","Feel free to leave me messages."]}
-                                speed={100}
-                                eraseSpeed={10}
-                            />
+                <div css={handwriting}>           
+                    <ReactTypingEffect
+                        staticText="Nice to meet you 💖"
+                        text={["I am Jubi, a web developer in Sydney."," Focus on front end and always enthusiastic to try new techs.","Feel free to leave me messages."]}
+                        speed={100}
+                        eraseSpeed={10}
+                    />
                         
-                        </div>         
+                </div>         
             </div>}
          
     </CardContainer>)

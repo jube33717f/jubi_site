@@ -5,12 +5,14 @@ import {titleStyle,contentStyle, scroll, intro1, intro2, showcase, cases, displa
 import { Popover } from 'antd';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+
+
 import { faLink, faPaperPlane } from '@fortawesome/free-solid-svg-icons'
 import { faGithubSquare } from '@fortawesome/free-brands-svg-icons'
 
-
-
-
+import GitHubIcon from '@material-ui/icons/GitHub';
+import InsertLinkIcon from '@material-ui/icons/InsertLink';
+import FlightTakeoffIcon from '@material-ui/icons/FlightTakeoff';
 
 const portfolios = [
     {
@@ -83,14 +85,18 @@ const content = (link:string,github:string,info:string,tech:string)=>(
     <div css = {contentStyle}>
        
         <h5>
-            <a href={github}><FontAwesomeIcon icon={faGithubSquare}/></a>
-            <a href={link}><FontAwesomeIcon icon={faLink}/></a>
+            <a href={github}>
+                <GitHubIcon/>
+            </a>
+            <a href={link}>
+                <InsertLinkIcon/>
+            </a>
         </h5>
         <p>Info: {info}</p>
         <p>Tech: {tech}</p>
     </div>
 )
-const title = (title:string)=>(<><FontAwesomeIcon style={{color:'#6D9EEB'}} icon={faPaperPlane}/><h4 css={titleStyle}>{title}</h4></>)
+const title = (title:string)=>(<><FlightTakeoffIcon  style={{color:'#6D9EEB'}} /><h4 css={titleStyle}>{title}</h4></>)
 
 const Works = ()=>{
     

@@ -1,5 +1,6 @@
 import {css} from '@emotion/react'
 import {sm1,sm2,sm3,sm4,md,lg1,lgm,lg2} from '../../shared/globals'
+
 const header = css`
     display: block;
     white-space: nowrap;
@@ -87,10 +88,8 @@ const bgWrap=css`
             font-size: 1.25em;
             -webkit-backface-visibility: hidden;
             backface-visibility: hidden;
-            h3{
-                
-                font-weight:100;
-               
+            h3{        
+                font-weight:100;              
                 span{
                     font-weight:800;
                 }
@@ -141,10 +140,7 @@ const bgWrap=css`
             -webkit-transform: translate3d(0,10px,0);
             font-family:var(--font-hard);
             word-spacing:1em;
-        }
-       
-
-        
+        }       
     }
     /* img{
         opacity:0.5;

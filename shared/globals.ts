@@ -24,6 +24,7 @@ export const sm2 = max_media(_sm2)
 export const sm3 = max_media(_sm3)
 export const sm4 = max_media(_sm4)
 
+export const mdm = max_media(_md)
 export const md = media(_md)
 
 export const lg1 = media(_lg1)
@@ -59,7 +60,7 @@ export const globalStyles = css`
         --breakpoints-large-second: 1367px;
         --breakpoints-large-third: 1024px;
     }
-    
+   
     html,
     body {
         /* cursor: url('/j.png'),pointer; */
@@ -108,8 +109,6 @@ export const globalStyles = css`
         color:'#410807';
         font-variation-settings:"wght" 600;
         margin-top:1em;
-
-
     }
 
     * {
@@ -118,5 +117,6 @@ export const globalStyles = css`
     #__next,main {
         min-height: 100vh;
     }
+     
     
 `

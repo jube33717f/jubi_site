@@ -36,28 +36,37 @@ const carouselStyle = css`
 `
 const meta = css`
     h5{
-        font-size:1.3em;
+        font-size:2rem;
         span{
-            padding:1em;
+            
             position:absolute;
-            right:0;
-            top:280px;
+            /* font-size:3em; */
+            /*padding-left:2em; */
+            left:150px;
+            /* top:270px; */
+            
             a{
-                padding:.4em;
+                padding:.15em;
+                /* font-size:.5rem; */
+                word-spacing:5px
             }
             ${sm3}{
-                top:230px
+                top:250px;
+                padding-top:10px;
+            }
+            ${sm2}{
+                top:250px;
+                padding-top:0px;
             }
             ${sm1}{
                
-                top:190px;
+                top:220px;
+                font-size:1rem!important;
                 
             }
         }
     }
-    p{
-        font-size:1.2em;
-    }
+    
 `
 const card = css`
     width:400px!important;

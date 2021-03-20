@@ -6,6 +6,11 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEnvelopeSquare,faPaperclip} from '@fortawesome/free-solid-svg-icons'
 import { faGithubSquare , faLinkedinIn,} from '@fortawesome/free-brands-svg-icons'
 
+
+import GitHubIcon from '@material-ui/icons/GitHub';
+import AttachFileIcon from '@material-ui/icons/AttachFile';
+import LinkedInIcon from '@material-ui/icons/LinkedIn';
+import EmailIcon from '@material-ui/icons/Email';
 const { Meta } = Card;
 
 const Carousel_cp=()=>(
@@ -66,13 +71,26 @@ const CarouselCards = ({active,clickHandler}:{active:string[],clickHandler:({ind
         <Meta css={meta} title={
         <h5>Jubi Chen
             <span>
-                <a href='https://github.com/jubi33717f'><FontAwesomeIcon style={{color:'#CECECE'}}icon={faGithubSquare}/></a>
-                <a onClick={(e)=>{
-                    clickHandler({index:2})
-                }}><FontAwesomeIcon style={{color:'#2B84FF'}}icon={faPaperclip}/></a>
-                <a href='https://www.linkedin.com/in/jubi-chen/'><FontAwesomeIcon style={{color:'#EC2F78'}}icon={faLinkedinIn}/></a>
+            <a href='https://github.com/jubi33717f'>
+                            {/* <FontAwesomeIcon style={{color:'#CECECE'}}icon={faGithubSquare}/> */}
+                            {/* <GithubFilled /> */}
+                            <GitHubIcon  style={{color:'#CECECE',fontSize:'2rem'}}/>
+                        </a>
+                        <a onClick={(e)=>{
+                            clickHandler({index:2})
+                        }}>
+                            {/* <FontAwesomeIcon style={{color:'#2B84FF'}}icon={faPaperclip}/> */}
+                            <AttachFileIcon style={{color:'#2B84FF',fontSize:'2rem'}}/>
+                        </a>
+                        <a href='https://www.linkedin.com/in/jubi-chen/'>
+                            {/* <FontAwesomeIcon style={{color:'#EC2F78'}}icon={faLinkedinIn}/> */}
+                            <LinkedInIcon style={{color:'#EC2F78',fontSize:'2rem'}}/>
+                        </a>
                         
-                <a href='https://jubi33717f@gmail.com'><FontAwesomeIcon style={{color:'#DB4438'}} icon={faEnvelopeSquare}/></a>
+                        <a href='https://jubi33717f@gmail.com'>
+                            {/* <FontAwesomeIcon style={{color:'#DB4438'}} icon={faEnvelopeSquare}/> */}
+                            <EmailIcon style={{color:'#DB4438',fontSize:'2rem'}}/>
+                        </a>
             </span>
         </h5>
         } description={<p>jubi.vercel.app</p>} />
