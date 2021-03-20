@@ -91,12 +91,12 @@ const content = (link:string,github:string,info:string,tech:string)=>(
     //     <p>Tech: {tech}</p>
     // </div>
 )
-const title = (title:string)=>(<><FontAwesomeIcon style={{color:'#6D9EEB'}} icon={faPaperPlane}/><h4 css={titleStyle}>{title}</h4></>)
+const title = (title:string)=>(<><FontAwesomeIcon style={{color:'#6D9EEB'}} icon={faPaperPlane}/><h4>{title}</h4></>)
 
 const WorksPhone = ()=>{
     
     return (
-        <></>
+        <div css={box}></div>
     )
 }
 export default WorksPhone;
