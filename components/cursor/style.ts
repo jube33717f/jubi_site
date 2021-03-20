@@ -1,5 +1,5 @@
 import {css} from '@emotion/react'
-
+import {sm1,sm2,sm3,sm4,md,lg1,lgm,lg2} from '../../shared/globals'
 const cursor= css`
     width: 40px;
     height: 40px;
@@ -12,6 +12,10 @@ const cursor= css`
     transition-property: background-color, opacity, transform, mix-blend-mode;
     z-index: 9999;
     mix-blend-mode: difference;
+    ${sm4}{
+        width:20px;
+        height:20px;
+    }
     
 ` 
 

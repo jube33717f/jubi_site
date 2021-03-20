@@ -1,6 +1,6 @@
 // import { css } from '@emotion/react'
 import CardContainer from '@layouts/cardContainer'
-import {bgWrap,icon} from './style'
+import {bgWrap} from './style'
 import Email from '@components/email'
 import Image from 'next/image'
 

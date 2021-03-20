@@ -27,6 +27,7 @@ const homeStyles = css`
 const navStatus = css`
     display:none;
     position:absolute;
+    height:100vh;
     ${sm4}{
         display:block;
         position:absolute;
@@ -63,10 +64,11 @@ const Home=()=> {
         </Head>
         
         <main>
-            <div css={homeStyles}>
-                <div css={navStatus} >
+            <div css={navStatus}>
                     <PhoneNavigation clickHandler={clickTitleHandler}/>
                 </div>
+            <div css={homeStyles}>
+                
                 <Me active={shown} clickHandler={clickTitleHandler}/>
                 <Info active={shown} clickHandler={clickTitleHandler}/>
                 <Portfolio active={shown} clickHandler={clickTitleHandler}/>

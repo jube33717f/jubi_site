@@ -1,4 +1,4 @@
-import {css, keyframes} from '@emotion/react'
+import {css} from '@emotion/react'
 import {sm1,sm2,sm3,sm4,md,lg1,lgm,lg2} from '../../shared/globals'
 const header = css`
     display: block;
@@ -152,14 +152,12 @@ const bgWrap=css`
 ` 
 
 
-const icon=css`
-    font-size:0.6em;
-   
-`
 
 
 
 
 
 
-export {header,bgWrap,icon}
+
+
+export {header,bgWrap}

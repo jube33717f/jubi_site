@@ -125,6 +125,9 @@ const box=css`
     position: relative;
     width:100%;
     overflow:hidden;
+    ${sm4}{
+        display:none;
+    }
 `
 const cardStyle = css`
     width:32em;
@@ -224,6 +227,9 @@ const footer=css`
             display: block;
         }
     }
+    ${sm4}{
+        display:none;
+    }
 `
 const text = css`
     font-size:1.2em;
@@ -306,6 +312,9 @@ const cardFooter = css `
     ${lg2}{
         top:18em;
     }
+    ${sm4}{
+        display:none;
+    }
 `
 const previousIcon=css`
     left:3em;
@@ -343,5 +352,25 @@ const nextIcon=css`
     font-family:var(--font-hard);
     animation:${arrowAttention} 2.4s infinite;  
 `
+const h1_title = css`
+    color:#EB6E51;
+    ${sm4}{
+        text-align:center;
+        /* margin-left:30%; */
+        /* transform:translateX(-50%); */
+        margin-top:2em;
+        width:80%;
+        
+    }
 
-export {footer, imgGrid,sarahEffect,box,cardStyle,cardHeader,cardContent,icons,cardFooter,text ,previousIcon,previous,next,nextIcon}
+`
+const handwriting=css`
+    margin:auto;
+    margin-top:8em;
+    font-variation-settings: "wght" 300;
+    letter-spacing:.07em;
+    width:410px;
+    font-family:var(--font-hard);
+    font-size:.5em;
+`
+export {handwriting,h1_title,footer, imgGrid,sarahEffect,box,cardStyle,cardHeader,cardContent,icons,cardFooter,text ,previousIcon,previous,next,nextIcon}

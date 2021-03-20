@@ -47,6 +47,13 @@ const badge=css`
     width: var(--base-size);
     height: var(--base-size);
   }
+  ${sm4}{
+      margin-left:20%;
+      padding:0;
+      top:-1.5em;
+      width:17em;
+      height: 17em;
+  }
 
 ` 
 const text = css`
@@ -145,6 +152,12 @@ const text = css`
         
         }
 
+   }
+   ${sm4}{
+       font-size:1.4em;
+       line-height:6em;
+       letter-spacing:.2em;
+        
    }
 `
 

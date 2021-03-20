@@ -1,7 +1,7 @@
 
 import CardContainer from '@layouts/cardContainer'
 import dynamic from 'next/dynamic';
-import {footer,imgGrid,sarahEffect,box,cardStyle,cardHeader,cardContent,cardFooter,icons,text,previousIcon,previous,next,nextIcon} from './style'
+import {handwriting,h1_title,footer,imgGrid,sarahEffect,box,cardStyle,cardHeader,cardContent,cardFooter,icons,text,previousIcon,previous,next,nextIcon} from './style'
 import Badge from '@components/badge'
 // import { Card } from 'antd';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -9,7 +9,7 @@ import { faEnvelopeSquare,faPaperclip} from '@fortawesome/free-solid-svg-icons'
 import { faGithubSquare , faLinkedinIn,} from '@fortawesome/free-brands-svg-icons'
 import {useState} from 'react'
 import Image from 'next/image'
-
+import CarouselCards from '@components/carousel'
 {/*  */}
 const ReactTypingEffect = dynamic(()=>import('react-typing-effect'),{ssr:false})
 const Info= ({active,clickHandler}:{active:string[],clickHandler:({index}:{index:number})=>void}) =>{
@@ -25,7 +25,7 @@ const Info= ({active,clickHandler}:{active:string[],clickHandler:({index}:{index
     }
     
     return (<CardContainer color='#57A0C0' about={active[1]}>
-        {active[1]=='active'&&<h1 style={{color:'#EB6E51'}}>INFO </h1>||<h4 
+        {active[1]=='active'&&<h1 css={h1_title}>INFO </h1>||<h4 
             onClick={()=>{
                 clickHandler({index:1})
             }}
@@ -106,7 +106,7 @@ const Info= ({active,clickHandler}:{active:string[],clickHandler:({index}:{index
                                 quality={100}
                             />
                             <figcaption>
-                                <h3>Tag + Barista apprentice</h3>
+                                <h3>Tag + </h3>
                             </figcaption>
                         </figure>
                         
@@ -153,14 +153,7 @@ const Info= ({active,clickHandler}:{active:string[],clickHandler:({index}:{index
                     {page < totalPage?(<><div  css={next} onClick={nextPage}>NEXT  </div>
                     <div css={nextIcon} onClick={nextPage}> →</div></>):null}
                 </div>
-                
-                
-
-
-
-
-
-                
+                               
             </div>
             <div css={footer}>
                     
@@ -170,7 +163,22 @@ const Info= ({active,clickHandler}:{active:string[],clickHandler:({index}:{index
                     
             </div>
             </div>}
+
+
+            {/* ===== phone view here ===== */}
+            {active[1]=='active'&&<>
+            <CarouselCards/>
             
+            <div css={handwriting}>           
+                            <ReactTypingEffect
+                                staticText="Nice to meet you 💖"
+                                text={["I am Jubi, a web developer in Sydney."," Focus on front end and always enthusiastic to try new techs.","Feel free to leave me messages."]}
+                                speed={100}
+                                eraseSpeed={10}
+                            />
+                        
+                        </div>         
+            </>}
          
     </CardContainer>)
 }

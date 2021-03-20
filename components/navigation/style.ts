@@ -5,8 +5,8 @@ const naviStyle = css`
     /* position:fixed; */
     position:absolute;
     z-index:1000;
-    width:1.5em;
-    height:1.5em;
+    width:3em;
+    height:3em;
     border-radius:50%;
     text-align:center;
     left: 3.3333333333vw;
