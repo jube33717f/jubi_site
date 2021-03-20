@@ -52,7 +52,7 @@ const PhoneNavigation = ({clickHandler}:{clickHandler:({index}:{index:number})=>
             </li>
             <li>
                 Find me on
-                <span>Github</span>
+                <a href='https://github.com/jubi33717f' target="_blank"><span>Github</span></a>
             </li>
         </ul>
         
