@@ -8,6 +8,9 @@ const scroll=css`
     ::-webkit-scrollbar { width: 0 !important }
     -ms-overflow-style: none; 
     margin-top:-0.8em;
+    ${sm4}{
+        display:none;
+    }
 `
 const showcase=css`
     

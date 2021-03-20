@@ -4,11 +4,7 @@ import Image from 'next/image'
 import {titleStyle,contentStyle, scroll, intro1, intro2, showcase, cases, displayImg, displayIntro, displayImg2, displayIntro2} from './style'
 import { Popover } from 'antd';
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
-
-import { faLink, faPaperPlane } from '@fortawesome/free-solid-svg-icons'
-import { faGithubSquare } from '@fortawesome/free-brands-svg-icons'
 
 import GitHubIcon from '@material-ui/icons/GitHub';
 import InsertLinkIcon from '@material-ui/icons/InsertLink';
@@ -102,6 +98,7 @@ const Works = ()=>{
     
     return (
         <div css = {scroll}>
+            
             <div css = {showcase}>
                 {portfolios.map((item,index)=>{
                     const path = `/works/${item.img}`

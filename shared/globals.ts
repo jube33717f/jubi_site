@@ -65,7 +65,7 @@ export const globalStyles = css`
     body {
         /* cursor: url('/j.png'),pointer; */
         overflow:none;
-        overflow-y: hidden;
+        /* overflow-y: hidden; */
         overflow-x: hidden;
         cursor: none;
         min-height: 100vh;

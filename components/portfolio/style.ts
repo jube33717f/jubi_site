@@ -14,7 +14,7 @@ const footer=css`
     font-variation-settings:"wght" 500;
     
     
-
+    background:#F2B27C;
     
     p:nth-of-type(1){
             display:none;
@@ -68,5 +68,10 @@ const footer=css`
         }
     }
 `
-
-export {footer}
+const title = css`
+    color:#6D9EEB;
+    ${sm4}{
+        display:none;
+    }
+`
+export {footer,title}
