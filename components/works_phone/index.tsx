@@ -1,7 +1,7 @@
 
 
 import Image from 'next/image'
-import {} from './style'
+import {box} from './style'
 import { Popover } from 'antd';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -80,15 +80,16 @@ const portfolios = [
     }
 ]
 const content = (link:string,github:string,info:string,tech:string)=>(
-    <div css = {contentStyle}>
+    <div>h</div>
+    // <div css = {contentStyle}>
        
-        <h5>
-            <a href={github}><FontAwesomeIcon icon={faGithubSquare}/></a>
-            <a href={link}><FontAwesomeIcon icon={faLink}/></a>
-        </h5>
-        <p>Info: {info}</p>
-        <p>Tech: {tech}</p>
-    </div>
+    //     <h5>
+    //         <a href={github}><FontAwesomeIcon icon={faGithubSquare}/></a>
+    //         <a href={link}><FontAwesomeIcon icon={faLink}/></a>
+    //     </h5>
+    //     <p>Info: {info}</p>
+    //     <p>Tech: {tech}</p>
+    // </div>
 )
 const title = (title:string)=>(<><FontAwesomeIcon style={{color:'#6D9EEB'}} icon={faPaperPlane}/><h4 css={titleStyle}>{title}</h4></>)
 
