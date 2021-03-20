@@ -59,8 +59,9 @@ const Home=()=> {
                     title="Jubi Chen" 
                 />
             </title>
-            
-            
+            <link rel="preconnect" href="https://fonts.gstatic.com"/>
+            <link href="https://fonts.googleapis.com/css2?family=Caveat&display=swap" rel="stylesheet"/>
+            <link href="https://fonts.googleapis.com/css2?family=Caveat"/>
         </Head>
         
         <main>
