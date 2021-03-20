@@ -358,19 +358,34 @@ const h1_title = css`
         text-align:center;
         /* margin-left:30%; */
         /* transform:translateX(-50%); */
-        margin-top:2em;
-        width:80%;
+        margin-top:1.7em;
+        line-height:.8em;
+        width:85%;
         
+    }
+    ${sm3}{
+        margin-top:1em;
+        font-size:1.4em;
     }
 
 `
 const handwriting=css`
     margin:auto;
-    margin-top:8em;
+    margin-left:-90%;
+    margin-top:1em;
     font-variation-settings: "wght" 300;
     letter-spacing:.07em;
-    width:410px;
+    /* width:410px; */
     font-family:var(--font-hard);
     font-size:.5em;
+    ${sm1}{
+        font-size:.4em;
+    }
+    /* transform:transitionX(-50%); */
 `
-export {handwriting,h1_title,footer, imgGrid,sarahEffect,box,cardStyle,cardHeader,cardContent,icons,cardFooter,text ,previousIcon,previous,next,nextIcon}
+const phone_box= css`
+    position:relative;
+    margin-left:50%;
+
+`
+export {phone_box,handwriting,h1_title,footer, imgGrid,sarahEffect,box,cardStyle,cardHeader,cardContent,icons,cardFooter,text ,previousIcon,previous,next,nextIcon}

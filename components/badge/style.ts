@@ -54,6 +54,15 @@ const badge=css`
       width:17em;
       height: 17em;
   }
+  ${sm3}{
+    width:14em;
+    height: 14em;
+  }
+  ${sm1}{
+      top:-4em;
+      width:11em;
+      height:11em;
+  }
 
 ` 
 const text = css`
@@ -158,6 +167,48 @@ const text = css`
        line-height:6em;
        letter-spacing:.2em;
         
+   }
+   ${sm3}{
+        width: 7em;
+        height: 7em;
+        line-height: 7em;
+        font-size: 1rem;
+        font-weight:200;
+        transform: rotate(-180deg) translate( 0em ) rotate(180deg);
+        &:hover{
+            transform: rotate(-45deg) translate(0px) rotate(-315deg);
+            background: rgba(var(--primary-color),.5);
+            width: var(--base-size);
+            letter-spacing: 1rem;
+            line-height: var(--base-size);
+            height: var(--base-size);
+            margin-top:  calc( var(--base-reverse-size) / 2);
+            margin-left:   calc( var(--base-reverse-size) / 2);
+            transition:var(--easing),
+            letter-spacing 1.5s ease-out;
+        
+        } 
+   }
+   ${sm1}{
+        width: 5.5em;
+        height: 5.5em;
+        line-height: 5.5em;
+        font-size: .8rem;
+        font-weight:200;
+        transform: rotate(-180deg) translate( 0em ) rotate(180deg);
+        &:hover{
+            transform: rotate(-45deg) translate(0px) rotate(-315deg);
+            background: rgba(var(--primary-color),.5);
+            width: var(--base-size);
+            letter-spacing: 1rem;
+            line-height: var(--base-size);
+            height: var(--base-size);
+            margin-top:  calc( var(--base-reverse-size) / 2);
+            margin-left:   calc( var(--base-reverse-size) / 2);
+            transition:var(--easing),
+            letter-spacing 1.5s ease-out;
+        
+        } 
    }
 `
 

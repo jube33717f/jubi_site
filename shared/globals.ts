@@ -3,7 +3,7 @@ import {css} from '@emotion/react'
 export const breakpoints = {
     _sm1:'320px',
     _sm2:'360px',
-    _sm3:'480px',
+    _sm3:'400px',
     _sm4:'640px',
 
     _md:'960px',

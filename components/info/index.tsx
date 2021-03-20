@@ -1,7 +1,7 @@
 
 import CardContainer from '@layouts/cardContainer'
 import dynamic from 'next/dynamic';
-import {handwriting,h1_title,footer,imgGrid,sarahEffect,box,cardStyle,cardHeader,cardContent,cardFooter,icons,text,previousIcon,previous,next,nextIcon} from './style'
+import {phone_box,handwriting,h1_title,footer,imgGrid,sarahEffect,box,cardStyle,cardHeader,cardContent,cardFooter,icons,text,previousIcon,previous,next,nextIcon} from './style'
 import Badge from '@components/badge'
 // import { Card } from 'antd';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -106,7 +106,7 @@ const Info= ({active,clickHandler}:{active:string[],clickHandler:({index}:{index
                                 quality={100}
                             />
                             <figcaption>
-                                <h3>Tag + </h3>
+                                <h3>Tag + bla</h3>
                             </figcaption>
                         </figure>
                         
@@ -166,8 +166,8 @@ const Info= ({active,clickHandler}:{active:string[],clickHandler:({index}:{index
 
 
             {/* ===== phone view here ===== */}
-            {active[1]=='active'&&<>
-            <CarouselCards/>
+            {active[1]=='active'&&<div css={phone_box}>
+            <CarouselCards active={active} clickHandler={clickHandler}/>
             
             <div css={handwriting}>           
                             <ReactTypingEffect
@@ -178,7 +178,7 @@ const Info= ({active,clickHandler}:{active:string[],clickHandler:({index}:{index
                             />
                         
                         </div>         
-            </>}
+            </div>}
          
     </CardContainer>)
 }
