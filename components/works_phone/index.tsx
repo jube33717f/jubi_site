@@ -98,14 +98,16 @@ const WorksPhone = ()=>{
                     if(index%2===0){
                         return (
                         <div css={cases}>
-                            <div css={img_display} >
+                            <a href={item.github}>
+                                <div css={img_display} >
                                         <Image 
                                             src={path}
                                             layout="fill"
                                             loading='lazy'
                                             quality={100}
                                         />
-                            </div>
+                                </div>
+                            </a>
                             <div css={description} style={{ right: '0px'}}>
 
                                 <div css={intro1}>
@@ -133,15 +135,17 @@ const WorksPhone = ()=>{
                                         
                                     </div>
                                 </div>
-                                <div css={img_display} style={{ right: '0px'}}>
-                                        <Image 
-                                            src={path}
-                                            layout="fill"
+                                <a href={item.github}>
+                                    <div css={img_display} style={{ right: '0px'}}>
+                                            <Image 
+                                                src={path}
+                                                layout="fill"
 
-                                            loading='lazy'
-                                            quality={100}
-                                        />
-                                </div>
+                                                loading='lazy'
+                                                quality={100}
+                                            />
+                                    </div>
+                                </a>
                             </div>)
                     }
                 }
