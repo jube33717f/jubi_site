@@ -43,7 +43,9 @@ const bgWrap=css`
                 -webkit-transform: translate3d(0,-50%,0) translate3d(0,-40px,0);
                 transform: translate3d(0,-50%,0) translate3d(0,-40px,0);
             }
-            
+            ${sm4}{
+                display:none;
+            }
             
         }
         ${md}{
