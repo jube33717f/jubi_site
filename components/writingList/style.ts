@@ -2,7 +2,7 @@ import {css} from '@emotion/react'
 
 const postIndexList = css `
     font-family:var(--font-hard);
-    pointer-events: none;
+    
     width: 50vw;
     margin-top: 80px;
     list-style: none;

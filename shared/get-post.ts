@@ -31,4 +31,30 @@ const getPosts= async()=> {
     
     return results
 }
-export { getPosts }
+const getPost = async(id:string)=>{
+    const db = firebase.firestore();
+    const snapshot = await db.collection('articles').where(firebase.firestore.FieldPath.documentId(),'==',id).get()
+    let post:ArticleType ={
+        id: '',
+        title: '',
+        tag: '',
+        article: '',
+
+    }
+    snapshot.forEach((doc) =>{
+        post = Object.assign({
+            id:doc.id,
+            title:doc.data().title,
+            article:doc.data().article,
+            tag:doc.data().tag,
+           
+        })
+        
+    }
+
+    )
+
+    return post
+    
+}
+export { getPosts ,getPost}

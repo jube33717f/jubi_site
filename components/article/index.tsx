@@ -11,7 +11,7 @@ import { getPosts } from '@shared/get-post'
 
 
 const Article = ({active,clickHandler}:{active:string[],clickHandler:({index}:{index:number})=>void}) =>{
-    const [post,setPost] = useState<Article[]>([])
+    const [post,setPost] = useState<ArticleType[]>([])
     
     
     useEffect(()=>{
