@@ -19,7 +19,7 @@ const getPosts= async()=> {
                         .get()
     let results:ArticleType[] = []
     snapshot.forEach((doc) => {
-        console.log(doc.id, '=>', doc.data());
+        
         results.push(Object.assign({
             id:doc.id,
             title:doc.data().title,

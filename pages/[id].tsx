@@ -37,9 +37,9 @@ import {
   
   export const getStaticProps = async ({ params }: GetStaticPropsContext) => {
     const { id } = params as { id: string }
-    console.log(id)
+
     const result = await getPost(id)
-    console.log(result)
+  
   
     return {
       props: {
