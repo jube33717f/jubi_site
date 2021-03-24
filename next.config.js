@@ -3,12 +3,6 @@ const webpack = require('webpack')
 require('dotenv').config();
 
 
-
-
-
-
-
-
 const config = {
     webpack:config =>{
 
