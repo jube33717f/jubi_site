@@ -1,12 +1,10 @@
 const webpack = require('webpack')
-const { merge } = require('webpack-merge');
+
 require('dotenv').config();
 
 
 
-const withMDX = require('@zeit/next-mdx')({
-    extension: /\.mdx?$/
-  })
+
 
 
 
