@@ -31,6 +31,7 @@
     "firebase-admin": "^9.5.0",
     "fs": "0.0.1-security",
     "gray-matter": "^4.0.2",
+    "highlight.js": "^10.7.1",
     "make-dir": "^3.1.0",
     "mimic-response": "^3.1.0",
     "next": "^10.0.8",
@@ -45,6 +46,7 @@
     "react": "17.0.1",
     "react-dom": "17.0.1",
     "react-icons": "^4.2.0",
+    "react-markdown": "^5.0.3",
     "react-swipeable-views": "^0.13.9",
     "react-typing-effect": "^2.0.4",
     "sass-loader": "^11.0.1",
@@ -53,6 +55,8 @@
     "textcolor": "^1.0.2",
     "webpack": "^5.25.0",
     "webpack-merge": "^5.7.3",
+    "xhr2": "^0.2.1",
+    "xmlhttprequest": "^1.8.0",
     "yocto-queue": "^0.1.0"
   },
   "devDependencies": {

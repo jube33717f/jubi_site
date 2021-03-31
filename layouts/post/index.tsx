@@ -9,16 +9,13 @@ import SEO from '@components/seo'
 import { postStyles, postContainer } from './style'
 
 type PostProps = {
-   title: string
+  title: string
   children: ReactNode
 //   frontMatter: FrontMatter
 }
 
-type FrontMatter = {
-    id: string
-  
-  }
-const Post = ({  title,children }: PostProps) => (
+
+const PostLayout = ({  title,children }: PostProps) => (
   <>
     <SEO
       title={title}
@@ -35,4 +32,4 @@ const Post = ({  title,children }: PostProps) => (
   </>
 )
 
-export default Post
+export default PostLayout

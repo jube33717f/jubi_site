@@ -7,11 +7,12 @@ const title_h1 = css `
     text-align:center;
 `
 const scroll = css`
-    display:none;
+    
     overflow-y: auto;
     height:100%auto;
     overflow: -moz-scrollbars-none;
     /* ::-webkit-scrollbar { width: 0 !important } */
+    display:none;
     ${sm4}{
         display:block;
     }
@@ -25,7 +26,10 @@ const box = css`
     transform: matrix(1, 0, 0, 1, 0, 0);
     /* height:350vw; */
     background:#F2B27C;
-   
+    display:none;
+    ${sm4}{
+        display:block;
+    }
 
 
 `

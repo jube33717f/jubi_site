@@ -16,7 +16,7 @@ const Portfolio = ({active,clickHandler}:{active:string[],clickHandler:({index}:
                 clickHandler({index:2})
             }}
             style={{color:'black'}}>P</h4> }
-        {active[2]=='active'&&<div>
+        {active[2]=='active'&&<div >
             <Works/> 
             <WorksPhone/>
             <div css={footer}>

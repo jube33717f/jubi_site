@@ -1,10 +1,11 @@
-import {sm1,sm2,sm3,sm4} from '../../shared/globals'
+import {sm1,sm2,sm3,sm4,md} from '../../shared/globals'
 import {css} from '@emotion/react'
 
 
 const cardStyle = ({color,about}:{color:string,about:string}) =>{
     const width= about=='active'&&'100%'||'5rem'
     const s_width= about=='active'?'100%':'0'
+
     // const hover_width = about=='active'&&'100%'||'6em'
     return css`
         position:relative;
@@ -19,6 +20,11 @@ const cardStyle = ({color,about}:{color:string,about:string}) =>{
             min-width:0;
             max-width:100%;
             width:${s_width};
+        }
+        ${md}{
+          
+            overflow-y:none;
+
         }
         
     `

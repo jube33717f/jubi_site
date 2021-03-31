@@ -3,6 +3,7 @@ import {css, keyframes} from '@emotion/react'
 
 import {sm1,sm2,sm3,sm4,md,lg1,lgm,lg2} from '../../shared/globals'
 const footer=css`
+    
     width:100%;
     text-align:center;
     /* position:absolute;
@@ -67,6 +68,7 @@ const footer=css`
             }
         }
     }
+   
 `
 const title = css`
     color:#6D9EEB;

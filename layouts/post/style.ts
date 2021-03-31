@@ -5,6 +5,7 @@ const postStyles = css`
   margin: 0 auto;
   max-width: var(--reading-width);
   line-height: 1.5;
+  cursor:pointer;
 
   @media (max-width: 800px) {
     padding: 0 2.5ch;
@@ -22,6 +23,7 @@ const postContainer = css`
   h6 {
     color: var(--color-accent);
     margin-top: 2.5ch;
+    display:block;
   }
 
   hr {

@@ -22,6 +22,10 @@ const homeStyles = css`
     -webkit-font-smoothing: antialiased;
     font-size:2rem;
     font-weight: light;
+    position:fixed;
+    ${sm4}{
+        position:relative;
+    }
     /* font-weight:100; */
 `
 const navStatus = css`
@@ -73,7 +77,7 @@ const Home=()=> {
                 <Me active={shown} clickHandler={clickTitleHandler}/>
                 <Info active={shown} clickHandler={clickTitleHandler}/>
                 <Portfolio active={shown} clickHandler={clickTitleHandler}/>
-                <Article active={shown} clickHandler={clickTitleHandler}/>
+                <Article active={shown} clickHandler={clickTitleHandler} />
                 
             </div>  
         </main>

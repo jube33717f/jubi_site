@@ -378,6 +378,10 @@ const handwriting=css`
 const phone_box= css`
     position:relative;
     margin-left:50%;
+    display:none;
+    ${sm4}{
+        display:block;
+    }
 
 `
 export {phone_box,handwriting,h1_title,footer, imgGrid,sarahEffect,box,cardStyle,cardHeader,cardContent,icons,cardFooter,text ,previousIcon,previous,next,nextIcon}

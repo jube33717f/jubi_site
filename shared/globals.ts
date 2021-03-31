@@ -33,7 +33,7 @@ export const lg2 = media(_lg2)
 export const lg3 = media(_lg3)
 export const globalStyles = css`
     /*--here control style variable--**/
-    @font-face {
+    /* @font-face {
         font-family: 'Caveat';
         src: local('Caveat'), url('../fonts/Caveat.ttf') format('truetype');
     }
@@ -41,7 +41,7 @@ export const globalStyles = css`
         font-family: Manrope;
         src: local('Manrope'), url('https://fonts.googleapis.com/css2?family=Caveat&display=swap');
         font-weight: light;
-    }
+    } */
     :root{
         --page-width:100%;
         --page-text: rgb(48,48,48);

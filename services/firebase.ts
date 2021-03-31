@@ -12,8 +12,10 @@ import firebase from 'firebase';
         storageBucket: process.env.FIREBASE_STORAGE_BUCKET,
         messagingSenderId: process.env.FIREBASE_MS_ID,
         appId: process.env.FIREBASE_APP_ID,
-        measurementId: process.env.FIREBASE_MEASUREMENT_ID
+        measurementId: process.env.FIREBASE_MEASUREMENT_ID,
+        token:process.env.FIREBASE_TOKEN,
     };
+    export {firebaseConfig}
     // if(!firebase.apps.length){
     if (!firebase.apps.length) firebase.initializeApp(firebaseConfig);
             
