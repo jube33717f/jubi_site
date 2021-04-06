@@ -2,7 +2,7 @@
 
 import CardContainer from '@layouts/cardContainer'
 import {postIndexList, postIndexItem,postIndexTitleBar} from './style'
-import WritingList,{getStaticProps} from '@components/writingList'
+import WritingList from '@components/writingList'
 import {useEffect,useState} from 'react'
 import {ArticleType} from '@shared/get-post'
 
@@ -12,7 +12,6 @@ import { getPosts } from '@shared/get-post'
 
 const Article = ({active,clickHandler}:{active:string[],clickHandler:({index}:{index:number})=>void}) =>{
     const [post,setPost] = useState<ArticleType[]>([])
-    
     
    
     return (
