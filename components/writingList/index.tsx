@@ -31,7 +31,7 @@ const WritingList= (
   
     
     return <>
-    <ul css={postIndexList} >{lists.map(item=>(
+    <ul css={postIndexList} >{lists&&lists.map(item=>(
         <li key={item.id} css={postIndexItem}>
             <Link href={`/${item.id}`} >
                 <a onClick={()=>{console.log(`/${item.id}`)}}
