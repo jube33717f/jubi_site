@@ -11,7 +11,7 @@ import {
 
   import firebase from 'services/firebase'
   import  'firebase/storage'
-  import {useState} from 'react'
+
  
   export default function Post({
     post,
@@ -32,9 +32,9 @@ import {
   }
   
   export const getStaticPaths: GetStaticPaths = async () => {
-    const posts = await getPosts()
+    const results = await getPosts()
   
-    const paths = posts.map(({ id}) => ({
+    const paths = results.map(({ id}) => ({
       params: {
         id,
       },
@@ -68,8 +68,7 @@ import {
             
             const storageRef = storage.ref();
             const img = storageRef.child(`article/${title}/${img_title}`)
-            // console.log(img)
-            // try{
+            
             const url = await img.getDownloadURL()
             i+='('+url+')'
         }
@@ -85,7 +84,8 @@ import {
       props: {
         post:{
             title:result.title,
-            article:asyncRes
+            article:asyncRes,
+            date:result.date
         }
 
       },

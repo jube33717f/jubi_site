@@ -97,7 +97,7 @@ const WorksPhone = ()=>{
                     const path = `/works/${item.img}`
                     if(index%2===0){
                         return (
-                        <div css={cases}>
+                        <div css={cases} key={index}>
                             <a href={item.github}>
                                 <div css={img_display} >
                                         <Image 
@@ -122,7 +122,7 @@ const WorksPhone = ()=>{
                         </div>)
                     }else{
                         return (
-                            <div css={cases}>
+                            <div css={cases} key={index}>
                                     
                                 <div css={description}>
 
@@ -140,7 +140,6 @@ const WorksPhone = ()=>{
                                             <Image 
                                                 src={path}
                                                 layout="fill"
-
                                                 loading='lazy'
                                                 quality={100}
                                             />

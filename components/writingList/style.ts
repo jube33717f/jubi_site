@@ -8,7 +8,7 @@ const postIndexList = css `
     list-style: none;
     display: block;
     list-style-type: decimal; 
-     margin-block-start: 1em;
+    margin-block-start: 1em;
     margin-block-end: 1em;
     margin-inline-start: 0px;
     margin-inline-end: 0px;
@@ -41,6 +41,11 @@ const postIndexItem = css `
     }
     h2{
         
+        position: relative;
+        padding-bottom: 10px;
+        font-size: 14px;
+        line-height: 1.6;
+        overflow: hidden;
 
         font-size: 16px;
         position: relative;
@@ -53,34 +58,43 @@ const postIndexItem = css `
         font-weight: 500;
         letter-spacing: .1em;
         /* transform: translate3d(100%, 0px, 0px); */
-    }
-    :before{
-        position: absolute;
-        left: 0;
-        bottom: 0;
-        width: 100%;
-        height: 1px;
-        content: "";
-        display: block;
-        background-color: #ccc;
+        &::before{
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 1px;
+            content: "";
+            display: block;
+            background-color: #BCB8BD;
+            z-index:2;
         /* transform: translate3d(100%, 0px, 0px); */
+        }
+        &:hover{
+            color: #1890ff;
+            div{
+                transform: translate3d(0%, 0px, 0px);
+                transition: transform 2s ease-in-out;
+            }
+        }
     }
+    
 `
 const postIndexTitleBar=css`
-    /* transform: translate3d(100%, 0px, 0px); */
-
-    background-color: rgba(26,26,26,0.3);
+    /* transform: translate3d(100%, 0px, 0px); */   
+    transform: translate3d(100%, 0px, 0px);
+    background-color: #1a1a1a;
     transform-origin: left top;
     position: absolute;
-    left: 0.5em;
+    left: 0;
     bottom: 0;
     width: 100%;
-    height: 1px;
-    /* font-style: normal;
-    font-weight: 500;
-    letter-spacing: .02em; */
+    height: 1px;  
 `
 
+const pagination = css`
+    position:absolute;
+    bottom:1em;
+`
 
-
-export {postIndexList, postIndexItem,postIndexTitleBar}
+export {postIndexList, postIndexItem,postIndexTitleBar,pagination}

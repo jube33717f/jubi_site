@@ -103,7 +103,7 @@ const Works = ()=>{
                 {portfolios.map((item,index)=>{
                     const path = `/works/${item.img}`
                     if(index%2===0){
-                        return (<div css={cases}>
+                        return (<div css={cases} key={index}>
                             
                                 <div css={displayImg}>
                                     <Popover style={{fontFamily:'Manrope!important'}} content={content(`${item.link}`,`${item.github}`,`${item.info}`,`${item.tech}`)} placement="bottom" title={title(`${item.title}`)} trigger="hover">
@@ -128,7 +128,7 @@ const Works = ()=>{
                         </div>)
                     }
                     else{
-                        return (<div css={cases}>
+                        return (<div css={cases} key={index}>
                             <div css={displayImg2}>
                                 <Popover css = {contentStyle} content={content(`${item.link}`,`${item.github}`,`${item.info}`,`${item.tech}`)} placement="top" title={title(`${item.title}`)} trigger="hover">
                                     <Image 

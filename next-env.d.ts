@@ -29,6 +29,4 @@ declare module 'next-mdx-remote/render-to-string'{
 declare module 'next-mdx-remote/hydrate'{
     function hydrate(mdxObject: object,components?:HydrateParams):string
     export default hydrate
-
-
 }

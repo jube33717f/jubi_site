@@ -47,23 +47,29 @@ const Info= ({active,clickHandler}:{active:string[],clickHandler:({index}:{index
                 </div>
                 <div css={cardContent}>
                     <div css={icons}>
-                        <a href='https://github.com/jubi33717f'>
+                        <a 
+                        href='https://github.com/jubi33717f'
+                        target="_blank">
                             {/* <FontAwesomeIcon style={{color:'#CECECE'}}icon={faGithubSquare}/> */}
                             {/* <GithubFilled /> */}
                             <GitHubIcon  style={{color:'#CECECE',fontSize:'2.4rem'}}/>
                         </a>
-                        <a onClick={(e)=>{
-                            clickHandler({index:2})
-                        }}>
+                        <a 
+                        href='https://drive.google.com/file/d/1VV1Kj0q7ZUXqF0oXGXd3hfwwt7RSbhWZ/view?usp=sharing'
+                        target="_blank"
+                        // onClick={(e)=>{
+                        //     clickHandler({index:2})
+                        // }}
+                        >
                             {/* <FontAwesomeIcon style={{color:'#2B84FF'}}icon={faPaperclip}/> */}
                             <AttachFileIcon style={{color:'#2B84FF',fontSize:'2.4rem'}}/>
                         </a>
-                        <a href='https://www.linkedin.com/in/jubi-chen/'>
+                        <a href='https://www.linkedin.com/in/jubi-chen/' target="_blank">
                             {/* <FontAwesomeIcon style={{color:'#EC2F78'}}icon={faLinkedinIn}/> */}
                             <LinkedInIcon style={{color:'#EC2F78',fontSize:'2.4rem'}}/>
                         </a>
                         
-                        <a href='https://jubi33717f@gmail.com'>
+                        <a href='https://jubi33717f@gmail.com' target="_blank">
                             {/* <FontAwesomeIcon style={{color:'#DB4438'}} icon={faEnvelopeSquare}/> */}
                             <EmailIcon style={{color:'#DB4438',fontSize:'2.4rem'}}/>
                         </a>

@@ -14,14 +14,7 @@ const Article = ({active,clickHandler}:{active:string[],clickHandler:({index}:{i
     const [post,setPost] = useState<ArticleType[]>([])
     
     
-    useEffect(()=>{
-        initialPosts()
-        
-    },[])
-    const initialPosts = async ()=>{
-        const posts =  await getPosts()
-        setPost(posts)
-    }
+   
     return (
         <CardContainer color='#D3CCCB' about={active[3]}>
             {active[3]=='active'&&<h1 style={{color:'#FAED45'}}>WRITINGS </h1>||<h4 
@@ -30,7 +23,7 @@ const Article = ({active,clickHandler}:{active:string[],clickHandler:({index}:{i
             }}
             style={{color:'black'}}>W</h4> }
             {active[3]=='active'&&<section>
-                <WritingList posts={post}/>
+                <WritingList />
                           
             </section>}
            

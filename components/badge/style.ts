@@ -41,7 +41,7 @@ const badge=css`
   ${lgm}{
     width: 9em;
     height: 9em;
-    top:1.5em;
+    top:3em;
   }
   ${lg2}{
     width: var(--base-size);
