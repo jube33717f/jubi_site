@@ -26,7 +26,9 @@ const PostLayout = ({  title,children }: PostProps) => (
     {/* <Header pageTitle={frontMatter.title} /> */}
    
     <main css={postStyles}>
-      <article css={postContainer}>{children}</article>
+      <section>
+        <article css={postContainer}>{children}</article>
+      </section>
     </main>
     {/* <Footer /> */}
   </>

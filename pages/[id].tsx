@@ -3,17 +3,18 @@ import {
     GetStaticPropsContext,
     InferGetStaticPropsType,
   } from 'next'
-  import { getPost,getPosts } from '@shared/get-post'
-  import PostLayout from '@layouts/post'
+import { getPost,getPosts } from '@shared/get-post'
+import PostLayout from '@layouts/post'
  
-  import hydrate from 'next-mdx-remote/hydrate'
-  import renderToString from 'next-mdx-remote/render-to-string'
+import hydrate from 'next-mdx-remote/hydrate'
+import renderToString from 'next-mdx-remote/render-to-string'
 
-  import firebase from 'services/firebase'
-  import  'firebase/storage'
-
+import firebase from 'services/firebase'
+import  'firebase/storage'
+import { avatar, info, author, infoBox } from '../layouts/post/style'
+import { description } from '@components/works_phone/style'
  
-  export default function Post({
+export default function Post({
     post,
   }: InferGetStaticPropsType<typeof getStaticProps>) {
 
@@ -25,6 +26,13 @@ import {
     // const [posting,setPosting] = useState([])
     return <PostLayout title={post.title}>
         <h2>{post.title}</h2>
+        <div css={infoBox}>
+            <div css={avatar}><img src='/tinkerbell2.gif'/></div>
+            <div css={info}>
+                <span css={author}>Jubi</span>
+                <time>{post.date}</time>
+            </div>
+        </div>
         {post.article.map(i=>hydrate(i))}
 
         
@@ -56,6 +64,7 @@ import {
     
     const asyncRes = await Promise.all(sentence.map(async(i)=>{
         i.trim()
+        console.log(i)
         let re = /!\[.*\]/
         const match = i.match(re)
         
