@@ -169,7 +169,7 @@ const Info= ({active,clickHandler}:{active:string[],clickHandler:({index}:{index
                              quality={100}
                          />
                          <figcaption>
-                             <h3>With friends is best</h3>
+                             <h3>m</h3>
                          </figcaption>
                      </figure>
                      

@@ -1,5 +1,5 @@
 import {css} from '@emotion/react'
-
+import {sm1,sm2,sm3,sm4} from '../../shared/globals'
 const postIndexList = css `
     font-family:var(--font-hard);
     
@@ -14,6 +14,9 @@ const postIndexList = css `
     margin-inline-end: 0px;
     padding-inline-start: 40px;
     white-space: normal;
+    ${sm4}{
+        width: 90vw;
+    }
     
 
 `
@@ -38,12 +41,14 @@ const postIndexItem = css `
         white-space: nowrap;       
         margin-top: 6px;
         font-size: 16px;
+        ${sm3}{
+            font-size: 14px;
+        }
+        
     }
     h2{
         
         position: relative;
-        padding-bottom: 10px;
-        font-size: 14px;
         line-height: 1.6;
         overflow: hidden;
 
@@ -57,6 +62,12 @@ const postIndexItem = css `
         font-style: normal;
         font-weight: 500;
         letter-spacing: .1em;
+        ${sm3}{
+            font-size: 14px;
+        }
+        ${sm2}{
+            margin-left:1em;
+        }
         /* transform: translate3d(100%, 0px, 0px); */
         &::before{
             position: absolute;
