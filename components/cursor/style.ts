@@ -1,8 +1,8 @@
 import {css} from '@emotion/react'
 import {sm1,sm2,sm3,sm4,md,lg1,lgm,lg2} from '../../shared/globals'
 const cursor= css`
-    width: 40px;
-    height: 40px;
+    width: 30px;
+    height: 30px;
     border: 2px solid #D9EAD3;
     border-radius: 100%;
     position: fixed;
