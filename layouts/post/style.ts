@@ -41,7 +41,7 @@ const postContainer = css`
     margin: 5ch 0;
   }
   img{
-      max-width:400px;
+      max-width:500px;
   }
 
   ul,
@@ -94,10 +94,9 @@ const info = css`
         color: #969696;
     }
 `
-const author = css`
-`
+
 const infoBox = css`
     display: flex;
     align-items: center;
 `
-export { postStyles, postContainer, avatar, info, author, infoBox }
+export { postStyles, postContainer, avatar, info, infoBox }

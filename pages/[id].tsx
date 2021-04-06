@@ -11,7 +11,7 @@ import renderToString from 'next-mdx-remote/render-to-string'
 
 import firebase from 'services/firebase'
 import  'firebase/storage'
-import { avatar, info, author, infoBox } from '../layouts/post/style'
+import { avatar, info, infoBox } from '../layouts/post/style'
 import { description } from '@components/works_phone/style'
  
 export default function Post({
@@ -29,7 +29,7 @@ export default function Post({
         <div css={infoBox}>
             <div css={avatar}><img src='/tinkerbell2.gif'/></div>
             <div css={info}>
-                <span css={author}>Jubi</span>
+                <span>Jubi</span>
                 <time>{post.date}</time>
             </div>
         </div>
@@ -63,8 +63,10 @@ export default function Post({
     let sentence:string[] = article.split('<br/>')
     
     const asyncRes = await Promise.all(sentence.map(async(i)=>{
-        i.trim()
-        console.log(i)
+        // console.log(i)
+        i = i.replace(/^\s+|\s+$/,'');
+        // i.trim()
+        // console.log(i)
         let re = /!\[.*\]/
         const match = i.match(re)
         
