@@ -132,11 +132,8 @@ const WritingList= (
                         onChange={(e)=>{
                             setSearch(e.target.value)
                         }}
-                        onKeyDown={(e)=>{
-                            console.log(e)
+                        onKeyDown={(e)=>{            
                             if(e.key==="Enter"){
-
-                                console.log(search)
                                 searchByTitle()
                             }
                         }}
