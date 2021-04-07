@@ -8,6 +8,7 @@ import SEO from '@components/seo'
 
 import { postStyles, postContainer } from './style'
 
+
 type PostProps = {
   title: string
   children: ReactNode

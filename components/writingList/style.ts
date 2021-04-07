@@ -1,10 +1,21 @@
 import {css} from '@emotion/react'
-import {sm1,sm2,sm3,sm4} from '../../shared/globals'
+import {sm1,sm2,sm3,sm4,md} from '../../shared/globals'
+const contentBox = css`
+    display:flex;
+`
+const category = css`
+    margin-right:1em;
+    
+ 
+    ${sm4}{
+        display:none;
+        
+    }
+`
 const postIndexList = css `
     font-family:var(--font-hard);
     
     width: 50vw;
-    margin-top: 80px;
     list-style: none;
     display: block;
     list-style-type: decimal; 
@@ -17,8 +28,6 @@ const postIndexList = css `
     ${sm4}{
         width: 90vw;
     }
-    
-
 `
 const postIndexItem = css `
     list-style: none;
@@ -108,4 +117,4 @@ const pagination = css`
     bottom:1em;
 `
 
-export {postIndexList, postIndexItem,postIndexTitleBar,pagination}
+export {category,contentBox, postIndexList, postIndexItem,postIndexTitleBar,pagination}
