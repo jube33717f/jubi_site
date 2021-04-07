@@ -54,7 +54,7 @@ const  getPostsByPage = async(page:number,tag?:string) =>{
     const p = (page-1)*5
     
     if(tag){
-        console.log('A')
+        
         const snapshot = await db.collection('articles').where('tag','==',tag)
                         .orderBy('date')
                         .startAfter(p)
@@ -123,8 +123,29 @@ const getPost = async(id:string)=>{
     return post
     
 }
+const searchPosts = async(keywords:string)=>{
+    const db = firebase.firestore(); 
+    const snapshot = await db.collection('articles').where("title", ">=", keywords)
+                    .where("title", "<=", keywords + "\uf8ff")
+                    .limit(5)
+                    .get()
+
+    let results:ArticleType[] = []
+    snapshot.forEach((doc) => {
+        
+        results.push(Object.assign({
+            id:doc.id,
+            title:doc.data().title,
+            article:doc.data().article,
+            tag:doc.data().tag,
+            date:doc.data().date
+        }))
+    });
+
+    return results
+}
 
  
 
 
-export { getPosts ,getPost, getPostsByPage, getPostsTotalNumber}
+export { getPosts ,getPost, getPostsByPage, getPostsTotalNumber,searchPosts}

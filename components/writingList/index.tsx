@@ -1,7 +1,7 @@
 
 
-import { getPostsByPage, getPostsTotalNumber , ArticleType} from '@shared/get-post'
-
+import { searchPosts, getPostsByPage, getPostsTotalNumber , ArticleType} from '@shared/get-post'
+import { Input } from '@material-ui/core';
 import {contentBox, postIndexList, postIndexItem,postIndexTitleBar,pagination,category} from './style'
 import Link from 'next/link'
 import {useState,useEffect} from 'react'
@@ -30,6 +30,7 @@ const WritingList= (
 // }:InferGetStaticPropsType<typeof getStaticProps>
 ) => {
     const [tag,setTag] = useState('')
+    const [search,setSearch] =useState('')
     const [total,setTotal] = useState(1)
     const [lists,setLists] = useState<ArticleType[]>()
 
@@ -46,7 +47,10 @@ const WritingList= (
         const posts = await getPostsByPage(1,tag)
         setLists(posts)
     }
-
+    const searchByTitle = async ()=>{
+        const posts = await searchPosts(search.trim())
+        setLists(posts)
+    }
     useEffect(()=>{
         
         if(tag===''){
@@ -96,46 +100,50 @@ const WritingList= (
             <Paper 
                 style={{'padding':'.3em'}}
                 elevation={3}>
-                Tags
-                <Breadcrumbs aria-label="breadcrumb">
-                <StyledBreadcrumb
-                    label="ALL"
-                    // component="a"
-                    // href="#"
-                    // icon={<HomeIcon fontSize="small" />}
-                    onClick={()=>{
-                        setTag('')
-                        initialSetting()
-                    }}
-                />
-                <StyledBreadcrumb 
-                    label="Web" 
-                // component="a" 
-                // href="#" 
-                    onClick={()=>{
-                        setTag('Web')
-                    
-                    }}
-                />
-                <StyledBreadcrumb
-                    label="Reading notes"
-                   
-                    onClick={()=>{
-                        setTag('Reading')
+                    <section>
+                            Tags
+                        <Breadcrumbs aria-label="breadcrumb">
+                        <StyledBreadcrumb
+                            label="ALL"
+                            onClick={()=>{
+                                setTag('')
+                                initialSetting()
+                            }}
+                        />
+                        <StyledBreadcrumb 
+                            label="Web" 
+                            onClick={()=>{setTag('Web')}}
+                        />
+                        <StyledBreadcrumb
+                            label="Reading notes"
+                            onClick={()=>{setTag('Reading')}} 
+                        />
+                        <StyledBreadcrumb
+                            label="Life style"
+                            onClick={()=>{
+                                setTag('lifestyle')
+                            }}
+                        />
+                        </Breadcrumbs>
+                    </section>
+                    <section>
+                        <Input
+                        value={search}
+                        onChange={(e)=>{
+                            setSearch(e.target.value)
+                        }}
+                        onKeyDown={(e)=>{
+                            console.log(e)
+                            if(e.key==="Enter"){
+
+                                console.log(search)
+                                searchByTitle()
+                            }
+                        }}
+                        />
+                    </section>
                 
-                    }}
-                    
-                />
-                <StyledBreadcrumb
-                    label="Life style"
-                   
-                    onClick={()=>{
-                        setTag('lifestyle')
-              
-                    }}
-                    
-                />
-                </Breadcrumbs>
+                
             </Paper>
         </section>
     </div>
