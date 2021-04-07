@@ -1,5 +1,5 @@
 import { css } from '@emotion/react'
-
+import {sm1,sm2,sm3,sm4} from '../../shared/globals'
 const postStyles = css`
   width: 100%;
   margin: 0 auto;
@@ -42,6 +42,14 @@ const postContainer = css`
   }
   img{
       max-width:500px;
+      ${sm3}{
+        max-width:300px;
+        margin-left:0;
+        padding-left:0;
+        ${sm2}{
+            max-width:250px;
+        }
+      }
   }
 
   ul,
@@ -65,6 +73,12 @@ const postContainer = css`
       color: var(--color-acent);
       text-decoration: none;
     }
+  }
+  p,h5{
+    font-family: var(--font-hard);
+  }
+  h5{
+      font-size:19px;
   }
 
 `
