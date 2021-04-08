@@ -298,7 +298,7 @@ const cardHeader  = css`
     width: 90wv;
     margin-top:-1em;
     ${lgm}{
-        height:11em;
+        height:9.5em;
         margin-top:0;
     }
     
