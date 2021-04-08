@@ -26,7 +26,7 @@ const PhoneNavigation = ({clickHandler}:{clickHandler:({index}:{index:number})=>
             <li onClick={(e)=>{
                 clickHandler({index:1})
             }}>
-                ABOUT
+                BIO
             </li>
             <li onClick={(e)=>{
                 clickHandler({index:2})

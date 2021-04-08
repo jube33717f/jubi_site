@@ -12,8 +12,7 @@ import {sm1,sm2,sm3,sm4,md,lg1,lgm,lg2} from '../../shared/globals'
 // }
 
 const badge=css`
-  margin-left:5%auto;
-  margin-top:5%auto;
+
   display: block;
   position: relative;
   width: var(--base-size);
@@ -25,34 +24,34 @@ const badge=css`
   background-size: 120%;
   border-radius: 50%;
   transition: var(--easing);
-  box-shadow: 0px .5rem 1rem rgba(0,0,0,.75);
+  box-shadow: 0px .1rem .1rem rgba(0,0,0,.25);
   &:hover {
-    box-shadow: 0px .5rem 2rem rgba(0,0,0,.75);
+    box-shadow: 0px .5rem .1rem rgba(0,0,0,.25);
     background-position: 0% 50%;
 
   }
   ${md}{
-    left:.5em;
-    top:3em;
+    margin:auto;
     width: 6em;
     height: 6em; 
     
   }
   ${lgm}{
-    width: 9em;
+    /* width: 9em; */
     height: 9em;
-    top:3em;
+    width: 9em;
+    /* top:3em; */
   }
   ${lg2}{
     width: var(--base-size);
     height: var(--base-size);
   }
   ${sm4}{
-      margin-left:20%;
-      padding:0;
-      top:-1.5em;
-      width:17em;
-      height: 17em;
+    margin-left:20%;
+    padding:0;
+    top:-1.5em;
+    width:17em;
+    height: 17em;
   }
   ${sm3}{
     width:14em;

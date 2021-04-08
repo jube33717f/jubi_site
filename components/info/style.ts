@@ -1,5 +1,6 @@
 import {css, keyframes} from '@emotion/react'
 import {sm1,sm2,sm3,sm4,md,mdm,lg1,lgm,lg2} from '../../shared/globals'
+import { createStyles, makeStyles, Theme } from '@material-ui/core/styles';
 // const Contrast = require('contrast-js');
 
 
@@ -166,107 +167,10 @@ const cardStyle = css`
     
 
 `
-const cardHeader  = css`
-    width:13em;
-    height:16em;
-    display:block;
-    position:absolute;
-    overflow:hidden;
-    /* padding-top:2em; */
-    
-   
-`
-const cardContent = css `
-    /* background-image:url('/bg2.jpg'); */
-    background-position: right bottom;
-    background-repeat: no-repeat;
-    width:calc(100%-13em);
-    /* padding-top:4em; */
-    padding-right:2em;
-    display:block;
-    height:16em;
-    position:absolute;
-    left:16em;
-    right:0;
-    top:0;
-    overflow:hidden;
-    ${mdm}{
-        top:5em;
-    }
-    ${md}{
-        width:10em;
-        left:10em;
-        top:5em;
-    }
-   
-    ${lgm}{
-        width:14em;
-        left:13em;
-        padding-top:0em;
-    }
-    ${lg2}{
-        width:calc(100%-13em);
-        left:16em;
-        padding-top:0em;
-    }
-`
 
-const footer=css`
-    width:100%;
-    text-align:center;
-    margin-top:0em;
-    color: #6D9EEB;
-    font-family:var(--font-hard);
-    font-size:.7em;
-    font-variation-settings:"wght" 500;
-    line-height:.9em;
-    letter-spacing:.01em;
-    p:nth-of-type(2){
-        :after{
-            height:1px;
-            background-color: #6D9EEB;
-            width:25em;
-            margin:auto;
-            content: "";
-            display: block;
-        }
-    }
-    ${sm4}{
-        display:none;
-    }
-`
-const text = css`
-    font-size:1.2em;
-    font-weight:600;
-    color:#663499;
-    letter-spacing:0.1em;
-    margin-top:0.5em;
-    overflow:hidden;
-    ${md}{
-        font-size:.7em;
-    }
-    ${lgm}{
-        font-size:1em;
-    }
-    ${lg2}{
-        font-size:1.2em;
-    }
-    
-    
-`
-const icons = css`
-    /* width:calc(100% - 13em); */
-    line-height:1em;
-    display:inline-block;
-    font-size:large;
-    overflow:hidden;
 
-    a{
-        margin-right:.3em;
-    }
-   
 
-`
+
 const arrowAttention = keyframes`
     from{
         opacity:0;
@@ -384,4 +288,89 @@ const phone_box= css`
     }
 
 `
-export {phone_box,handwriting,h1_title,footer, imgGrid,sarahEffect,box,cardStyle,cardHeader,cardContent,icons,cardFooter,text ,previousIcon,previous,next,nextIcon}
+
+
+const infoBox=css`
+    position:relative;
+`
+const cardHeader  = css`
+    height:6.5em;
+    width: 90wv;
+    margin-top:-1em;
+    ${lgm}{
+        height:11em;
+        margin-top:0;
+    }
+    
+`
+const cardContent = css `
+    margin:auto;
+    display:block;
+    height:16em;
+    width:50vw;
+    
+    /* padding-left:.5em; */
+    overflow:hidden;
+    h1{
+        text-align: center;
+        font-size: 40px;
+        
+    }
+    ${mdm}{
+        /* top:5em; */
+    }
+    ${md}{
+        
+        left:10em;
+        
+        h1{
+            font-size: 35px;
+        }
+    }
+   
+    ${lgm}{
+        /* width:14em; */
+        left:13em;
+    }
+    ${lg2}{
+        /* width:calc(100%-13em); */
+        left:16em;
+  
+    }
+`
+const text = css`
+    font-size:.7em;
+    font-weight:500;
+    letter-spacing:0.1em;
+    overflow:hidden;
+    padding-left:1em;
+    /* ${md}{
+        font-size:.7em;
+    } */
+    ${lgm}{
+        font-size:.8em;
+    }
+    /*${lg2}{
+        font-size:1.2em;
+    } */ 
+`
+const icons = css`
+    /* width:calc(100% - 13em); */
+    width:100%;
+    line-height:1em;
+    padding-left:2em;
+    display:inline-block;
+    font-size:large;
+    overflow:hidden;
+    position:relative;
+    a{
+        margin-right:.3em;
+    }
+    
+`
+const btn = css`
+    color:#fff;
+    position:absolute;
+    right:3vw;;
+`
+export {btn, infoBox, phone_box,handwriting,h1_title, imgGrid,sarahEffect,box,cardStyle,cardHeader,cardContent,icons,cardFooter,text ,previousIcon,previous,next,nextIcon}

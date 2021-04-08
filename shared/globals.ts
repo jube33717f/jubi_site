@@ -47,8 +47,8 @@ export const globalStyles = css`
         --page-text: rgb(48,48,48);
         --primary-color: rebeccapurple;
         --easing: all 0.5s cubic-bezier(.55,0,.1,1);
-        --base-size: 12em;
-        --base-reverse-size: -12em;
+        --base-size: 10em;
+        --base-reverse-size: -10em;
         --font-art:Caveat;
         --font-hard:Manrope;
         
