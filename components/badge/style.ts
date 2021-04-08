@@ -15,9 +15,9 @@ const badge=css`
 
   display: block;
   position: relative;
-  width: var(--base-size);
-  height: var(--base-size);
-
+  width: 6em;
+  height: 6em;
+  margin:auto;
   cursor: pointer;
   background: url(/photo.jpg) no-repeat 100% 50%;
   /* https://source.unsplash.com/random/1000x1000 */
@@ -58,7 +58,7 @@ const badge=css`
     height: 14em;
   }
   ${sm1}{
-      top:-4em;
+      top:-1.5em;
       width:11em;
       height:11em;
   }
@@ -68,9 +68,9 @@ const text = css`
     display: block;
     position: absolute;
 
-    width: calc(var(--base-size) / 2);
-    height: calc(var(--base-size) / 2);
-    line-height: calc(var(--base-size) / 2);
+    width: 3em;
+    height: 3em;
+    line-height: 3em;
     left: 50%; 
     top: 50%;
     /* margin-top:  - calc( var(--base-size) / 4);
@@ -162,16 +162,18 @@ const text = css`
 
    }
    ${sm4}{
-       font-size:1.4em;
-       line-height:6em;
+       font-size:1.7em;
+       line-height:5em;
        letter-spacing:.2em;
+       width: 5em;
+       height: 5em;
         
    }
    ${sm3}{
         width: 7em;
         height: 7em;
         line-height: 7em;
-        font-size: 1rem;
+        font-size: 1.2rem;
         font-weight:200;
         transform: rotate(-180deg) translate( 0em ) rotate(180deg);
         &:hover{
@@ -192,7 +194,7 @@ const text = css`
         width: 5.5em;
         height: 5.5em;
         line-height: 5.5em;
-        font-size: .8rem;
+        font-size: .95rem;
         font-weight:200;
         transform: rotate(-180deg) translate( 0em ) rotate(180deg);
         &:hover{

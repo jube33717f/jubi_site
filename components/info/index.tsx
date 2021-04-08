@@ -198,8 +198,8 @@ const Info= ({active,clickHandler}:{active:string[],clickHandler:({index}:{index
             
                 <div css={handwriting}>           
                     <ReactTypingEffect
-                        staticText="Nice to meet you 💖"
-                        text={["I am Jubi, a web developer in Sydney."," Focus on front end and always enthusiastic to try new techs.","Feel free to leave me messages."]}
+                        staticText="Born and raised in China. Graduated from New South Wales. Frontend developer in Sydney since 2020. 💖"
+                        text={["Feel free to leave me messages."]}
                         speed={100}
                         eraseSpeed={10}
                     />

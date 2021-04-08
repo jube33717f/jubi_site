@@ -270,13 +270,13 @@ const h1_title = css`
 `
 const handwriting=css`
     margin:auto;
-    margin-left:-90%;
+    margin-left:-85%;
     margin-top:1em;
     font-variation-settings: "wght" 300;
     letter-spacing:.07em;
-    width:410px;
+    width:90vw;
     font-family:var(--font-hard);
-    font-size:.5em;
+    font-size:.4em;
     /* transform:transitionX(-50%); */
 `
 const phone_box= css`
@@ -292,11 +292,17 @@ const phone_box= css`
 
 const infoBox=css`
     position:relative;
+    margin:auto;
+    ${sm4}{
+        display:none;
+    }
 `
 const cardHeader  = css`
     height:6.5em;
     width: 90wv;
+    margin:auto;
     margin-top:-1em;
+    
     ${lgm}{
         height:9.5em;
         margin-top:0;
