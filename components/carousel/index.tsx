@@ -76,9 +76,9 @@ const CarouselCards = ({active,clickHandler}:{active:string[],clickHandler:({ind
                             {/* <GithubFilled /> */}
                             <GitHubIcon  style={{color:'#CECECE',fontSize:'2rem'}}/>
                         </a>
-                        <a onClick={(e)=>{
-                            clickHandler({index:2})
-                        }}>
+                        <a 
+                        href='https://drive.google.com/file/d/1VV1Kj0q7ZUXqF0oXGXd3hfwwt7RSbhWZ/view?usp=sharing'                    
+                        >
                             {/* <FontAwesomeIcon style={{color:'#2B84FF'}}icon={faPaperclip}/> */}
                             <AttachFileIcon style={{color:'#2B84FF',fontSize:'2rem'}}/>
                         </a>
