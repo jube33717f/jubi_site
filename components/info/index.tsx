@@ -82,7 +82,7 @@ const Info= ({active,clickHandler}:{active:string[],clickHandler:({index}:{index
                 }
             
             
-            {shown&&<div css={box}>
+            {active[1]=='active'&&shown&&<div css={box}>
             <div css={cardStyle}>
                 
                 {page===0&&<>
