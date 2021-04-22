@@ -1,5 +1,5 @@
 import {css} from '@emotion/react'
-
+import {sm1,sm2,sm3,sm4} from '../../shared/globals'
 const emailStyles = css `
     border-radius:50%;
     height:9.5rem;
@@ -14,6 +14,11 @@ const emailStyles = css `
     line-height:9.5rem;
     z-index:1000;
     font-size:2rem;
+    box-shadow: 0px 3px 5px -1px rgb(0 0 0 / 20%), 0px 6px 10px 0px rgb(0 0 0 / 14%), 0px 1px 18px 0px rgb(0 0 0 / 12%);
+    box-sizing: border-box;
+    ${sm4}{
+        display:none;
+    }
     
 
 

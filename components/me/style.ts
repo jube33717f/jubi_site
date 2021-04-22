@@ -1,4 +1,6 @@
-import {css, keyframes} from '@emotion/react'
+import {css} from '@emotion/react'
+import {sm1,sm2,sm3,sm4,md,lg1,lgm,lg2} from '../../shared/globals'
+
 const header = css`
     display: block;
     white-space: nowrap;
@@ -41,7 +43,39 @@ const bgWrap=css`
                 -webkit-transform: translate3d(0,-50%,0) translate3d(0,-40px,0);
                 transform: translate3d(0,-50%,0) translate3d(0,-40px,0);
             }
+            ${sm4}{
+                display:none;
+            }
             
+        }
+        ${md}{
+            h3{
+                font-size:1em;
+            }
+            p{
+                font-size:.6em;
+            }
+            margin-left:-2em;
+        }
+        ${lg1}{
+            p{
+                font-size:.7em;
+                margin-left:0;
+            }
+            
+            
+        }
+        ${lgm}{
+            p{
+                font-size:.9em;
+                margin-left:0;
+            }
+        }
+        ${lg2}{
+            p{
+                font-size:1.2em;
+                margin-left:0;
+            }
         }
         img{
             opacity: 0.8;
@@ -56,10 +90,8 @@ const bgWrap=css`
             font-size: 1.25em;
             -webkit-backface-visibility: hidden;
             backface-visibility: hidden;
-            h3{
-                
-                font-weight:100;
-               
+            h3{        
+                font-weight:100;              
                 span{
                     font-weight:800;
                 }
@@ -110,10 +142,7 @@ const bgWrap=css`
             -webkit-transform: translate3d(0,10px,0);
             font-family:var(--font-hard);
             word-spacing:1em;
-        }
-       
-
-        
+        }       
     }
     /* img{
         opacity:0.5;
@@ -121,14 +150,12 @@ const bgWrap=css`
 ` 
 
 
-const icon=css`
-    font-size:0.6em;
-   
-`
 
 
 
 
 
 
-export {header,bgWrap,icon}
+
+
+export {header,bgWrap}

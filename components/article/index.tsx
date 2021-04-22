@@ -1,11 +1,19 @@
 
-import { css } from '@emotion/react'
+
 import CardContainer from '@layouts/cardContainer'
 import {postIndexList, postIndexItem,postIndexTitleBar} from './style'
+import WritingList from '@components/writingList'
+import {useEffect,useState} from 'react'
+import {ArticleType} from '@shared/get-post'
+
+import { getPosts } from '@shared/get-post'
+
 
 
 const Article = ({active,clickHandler}:{active:string[],clickHandler:({index}:{index:number})=>void}) =>{
+    const [post,setPost] = useState<ArticleType[]>([])
     
+   
     return (
         <CardContainer color='#D3CCCB' about={active[3]}>
             {active[3]=='active'&&<h1 style={{color:'#FAED45'}}>WRITINGS </h1>||<h4 
@@ -14,51 +22,10 @@ const Article = ({active,clickHandler}:{active:string[],clickHandler:({index}:{i
             }}
             style={{color:'black'}}>W</h4> }
             {active[3]=='active'&&<section>
-                <ol css={postIndexList}>
-                   <li css={postIndexItem}>
-                       <a><time>2020</time><h2> CSR  vs  SSR  vs SSG <div css={postIndexTitleBar} ></div></h2></a>
-                    
-                    </li> 
-                   <li css={postIndexItem}>
-                       <a>
-                           <time>2020</time>
-                           <h2> Agile Methodology
-                            <div css={postIndexTitleBar} ></div>
-                           </h2>
-                        </a>
-                       
-                   </li> 
-                   
-                   <li css={postIndexItem}>
-                        <a>
-                            <time>2020</time>
-                            <h2> ES6 New features
-                                <div css={postIndexTitleBar} ></div>
-                                
-                            </h2>
-                        </a>
-                        
-                   </li> 
-                   <li css={postIndexItem}>
-                        <a>
-                            <time>2020</time>
-                            <h2>ES6 New features
-                                <div css={postIndexTitleBar} ></div>
-                            </h2>
-                        </a>
-                        
-                   </li> 
-                   <li css={postIndexItem}>
-                        <a>
-                            <time>2020</time>
-                            <h2>ES6 New features
-                                <div css={postIndexTitleBar} ></div>
-                            </h2>
-                        </a>
-                        
-                   </li> 
-                </ol>
+                <WritingList />
+                          
             </section>}
+           
         </CardContainer>
     )
 }

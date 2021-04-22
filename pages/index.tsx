@@ -7,8 +7,9 @@ import Article from '@components/article'
 import Me from '@components/me'
 import Info from '@components/info'
 import Portfolio from '@components/portfolio'
-import{useState} from 'react'
-
+import {useState} from 'react'
+import PhoneNavigation from '@components/navigation'
+import {sm4} from '../shared/globals'
 const homeStyles = css`
     width:100%;
     height:100vh;
@@ -21,10 +22,24 @@ const homeStyles = css`
     -webkit-font-smoothing: antialiased;
     font-size:2rem;
     font-weight: light;
+    position:fixed;
+    ${sm4}{
+        position:relative;
+    }
     /* font-weight:100; */
 `
-
+const navStatus = css`
+    display:none;
+    position:absolute;
+    height:100vh;
+    ${sm4}{
+        display:block;
+        position:absolute;
+        
+    }
+`
 const Home=()=> {
+     
     const [shown,setShown] = useState(['active','inactive','inactive','inactive'])
     const clickTitleHandler = ({index}:{index:number})=>{
         let arr = []
@@ -48,17 +63,21 @@ const Home=()=> {
                     title="Jubi Chen" 
                 />
             </title>
-            
+            <link rel="preconnect" href="https://fonts.gstatic.com"/>
+            <link href="https://fonts.googleapis.com/css2?family=Caveat&family=Manrope&display=swap" rel="stylesheet"/>
             
         </Head>
         
         <main>
+            <div css={navStatus}>
+                    <PhoneNavigation clickHandler={clickTitleHandler}/>
+                </div>
             <div css={homeStyles}>
                 
                 <Me active={shown} clickHandler={clickTitleHandler}/>
                 <Info active={shown} clickHandler={clickTitleHandler}/>
                 <Portfolio active={shown} clickHandler={clickTitleHandler}/>
-                <Article active={shown} clickHandler={clickTitleHandler}/>
+                <Article active={shown} clickHandler={clickTitleHandler} />
                 
             </div>  
         </main>

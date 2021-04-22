@@ -1,4 +1,6 @@
 import {css, keyframes} from '@emotion/react'
+import {sm1,sm2,sm3,sm4,md,mdm,lg1,lgm,lg2} from '../../shared/globals'
+import { createStyles, makeStyles, Theme } from '@material-ui/core/styles';
 // const Contrast = require('contrast-js');
 
 
@@ -52,6 +54,18 @@ const imgGrid=css`
 	                transform: translate3d(0,0,0);
                 }
             }
+            ${md}{
+                margin-top:4em;
+                font-size:.9em;
+            }
+            ${lgm}{
+                margin-top:1em;
+                font-size: 1.1em;
+            }
+            ${lg2}{
+                margin-top:1em;
+                font-size: 1.25em;
+            }
         }
 
     }
@@ -76,6 +90,7 @@ const sarahEffect=css`
         }
         
     }
+    
     figcaption {
 	    text-align: left;
         h3{
@@ -111,9 +126,13 @@ const box=css`
     position: relative;
     width:100%;
     overflow:hidden;
+    ${sm4}{
+        display:none;
+    }
 `
 const cardStyle = css`
     width:32em;
+    height:20em;
     top:50%;
     left:50%;
     
@@ -125,83 +144,33 @@ const cardStyle = css`
     transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
     border: 1px solid rgba(0, 0, 0, 0.12);
     
-    height:20em;
+    
     border-radius:0.2em;
     padding:2em;
     background:#60A58F;
     overflow:hidden;
-    
-
-`
-const cardHeader  = css`
-    width:13em;
-    height:16em;
-    display:block;
-    position:absolute;
-    overflow:hidden;
-    padding-top:2em;
-   
-`
-const cardContent = css `
-    /* background-image:url('/bg2.jpg'); */
-    background-position: right bottom;
-    background-repeat: no-repeat;
-    width:calc(100%-13em);
-    padding-top:4em;
-    padding-right:2em;
-    display:block;
-    height:16em;
-    position:absolute;
-    left:16em;
-    right:0;
-    overflow:hidden;
-
-`
-
-const footer=css`
-    width:100%;
-    text-align:center;
-    margin-top:0em;
-    color: #6D9EEB;
-    font-family:var(--font-hard);
-    font-size:.7em;
-    font-variation-settings:"wght" 500;
-    line-height:.9em;
-    letter-spacing:.01em;
-    p:nth-of-type(2){
-        :after{
-            height:1px;
-            background-color: #6D9EEB;
-            width:25em;
-            margin:auto;
-            content: "";
-            display: block;
-        }
+    ${md}{
+        width:18em;
+        left:82%;
+        height:17em;
     }
-`
-const text = css`
-    font-size:1.2em;
-    font-weight:600;
-    color:#663499;
-    letter-spacing:0.1em;
-    margin-top:0.5em;
-    overflow:hidden;
-    
-    
-`
-const icons = css`
-    /* width:calc(100% - 13em); */
-    height:1em;
-    display:inline-block;
-    font-size:2em;
-    overflow:hidden;
-
-    svg{
-       
-        padding-right:0.4em;
+    ${lgm}{
+        width:25em;
+        left:62%;
+        height:19em;
     }
+    ${lg2}{
+        width:32em;
+        height:20em;
+        left:50%;
+    }
+    
 
 `
+
+
+
+
 const arrowAttention = keyframes`
     from{
         opacity:0;
@@ -231,7 +200,20 @@ const cardFooter = css `
     right:1.5em;
     /* bottom:0em; */
     top:18em;
-    
+    ${md}{
+        top:19em;
+        font-size:.8em;
+    }
+    ${lgm}{
+        top:17em;
+        font-size:1em;
+    }
+    ${lg2}{
+        top:18em;
+    }
+    ${sm4}{
+        display:none;
+    }
 `
 const previousIcon=css`
     left:3em;
@@ -239,7 +221,8 @@ const previousIcon=css`
     font-variation-settings:"wght" 200;
     font-size:0.8em;
     font-family:var(--font-hard);
-    animation:${arrowAttention2} 2.4s infinite;  
+    animation:${arrowAttention2} 2.4s infinite; 
+    
     /* text-shadow: #D9EAD3 1px 0 10px; */
 `
 const previous=css`
@@ -257,7 +240,7 @@ const next=css`
     float:right;
     font-family:var(--font-hard);  
     /* text-shadow: #D9EAD3 1px 0 10px; */
-   
+    
 `
 const nextIcon=css`
     
@@ -268,5 +251,132 @@ const nextIcon=css`
     font-family:var(--font-hard);
     animation:${arrowAttention} 2.4s infinite;  
 `
+const h1_title = css`
+    color:#EB6E51;
+    ${sm4}{
+        text-align:center;
+        /* margin-left:30%; */
+        /* transform:translateX(-50%); */
+        margin-top:1.7em;
+        line-height:.8em;
+        width:85%;
+        
+    }
+    ${sm3}{
+        margin-top:1em;
+        font-size:1.3em;
+    }
 
-export {footer, imgGrid,sarahEffect,box,cardStyle,cardHeader,cardContent,icons,cardFooter,text ,previousIcon,previous,next,nextIcon}
+`
+const handwriting=css`
+    margin:auto;
+    margin-left:-85%;
+    margin-top:1em;
+    font-variation-settings: "wght" 300;
+    letter-spacing:.07em;
+    width:90vw;
+    font-family:var(--font-hard);
+    font-size:.4em;
+    /* transform:transitionX(-50%); */
+`
+const phone_box= css`
+    position:relative;
+    margin-left:50%;
+    display:none;
+    ${sm4}{
+        display:block;
+    }
+
+`
+
+
+const infoBox=css`
+    position:relative;
+    margin:auto;
+    ${sm4}{
+        display:none;
+    }
+`
+const cardHeader  = css`
+    height:6.5em;
+    width: 90wv;
+    margin:auto;
+    margin-top:-1em;
+    
+    ${lgm}{
+        height:9.5em;
+        margin-top:0;
+    }
+    
+`
+const cardContent = css `
+    margin:auto;
+    display:block;
+    height:16em;
+    width:50vw;
+    
+    /* padding-left:.5em; */
+    overflow:hidden;
+    h1{
+        text-align: center;
+        font-size: 40px;
+        
+    }
+    ${mdm}{
+        /* top:5em; */
+    }
+    ${md}{
+        
+        left:10em;
+        
+        h1{
+            font-size: 35px;
+        }
+    }
+   
+    ${lgm}{
+        /* width:14em; */
+        left:13em;
+    }
+    ${lg2}{
+        /* width:calc(100%-13em); */
+        left:16em;
+  
+    }
+`
+const text = css`
+    font-size:.7em;
+    font-weight:500;
+    letter-spacing:0.1em;
+    overflow:hidden;
+    padding-left:1em;
+    /* ${md}{
+        font-size:.7em;
+    } */
+    ${lgm}{
+        font-size:.8em;
+    }
+    /*${lg2}{
+        font-size:1.2em;
+    } */ 
+`
+const icons = css`
+    /* width:calc(100% - 13em); */
+    width:100%;
+    line-height:1em;
+    padding-left:2em;
+    display:inline-block;
+    font-size:large;
+    overflow:hidden;
+    position:relative;
+    a{
+        margin-right:.3em;
+    }
+    
+`
+const btn = css`
+    color:#fff;
+    position:absolute;
+    right:3vw;;
+`
+export {btn, infoBox, phone_box,handwriting,h1_title, imgGrid,sarahEffect,box,cardStyle,cardHeader,cardContent,icons,cardFooter,text ,previousIcon,previous,next,nextIcon}

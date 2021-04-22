@@ -1,6 +1,7 @@
 
 
 import {css} from '@emotion/react'
+import {sm1,sm2,sm3,sm4,md,lg1,lgm,lg2} from '../../shared/globals'
 // @import url(https://fonts.googleapis.com/css?family=Raleway:300);
 
 
@@ -11,33 +12,65 @@ import {css} from '@emotion/react'
 // }
 
 const badge=css`
-  margin-left:5%auto;
-  margin-top:5%auto;
+
   display: block;
   position: relative;
-  width: var(--base-size);
-  height: var(--base-size);
-
+  width: 6em;
+  height: 6em;
+  margin:auto;
   cursor: pointer;
   background: url(/photo.jpg) no-repeat 100% 50%;
   /* https://source.unsplash.com/random/1000x1000 */
   background-size: 120%;
   border-radius: 50%;
   transition: var(--easing);
-  box-shadow: 0px .5rem 1rem rgba(0,0,0,.75);
+  box-shadow: 0px .1rem .1rem rgba(0,0,0,.25);
   &:hover {
-    box-shadow: 0px .5rem 2rem rgba(0,0,0,.75);
+    box-shadow: 0px .5rem .1rem rgba(0,0,0,.25);
     background-position: 0% 50%;
 
   }
+  ${md}{
+    margin:auto;
+    width: 6em;
+    height: 6em; 
+    
+  }
+  ${lgm}{
+    /* width: 9em; */
+    height: 9em;
+    width: 9em;
+    /* top:3em; */
+  }
+  ${lg2}{
+    width: var(--base-size);
+    height: var(--base-size);
+  }
+  ${sm4}{
+    margin-left:20%;
+    padding:0;
+    top:-1.5em;
+    width:17em;
+    height: 17em;
+  }
+  ${sm3}{
+    width:14em;
+    height: 14em;
+  }
+  ${sm1}{
+      top:-1.5em;
+      width:11em;
+      height:11em;
+  }
+
 ` 
 const text = css`
     display: block;
     position: absolute;
 
-    width: calc(var(--base-size) / 2);
-    height: calc(var(--base-size) / 2);
-    line-height: calc(var(--base-size) / 2);
+    width: 3em;
+    height: 3em;
+    line-height: 3em;
     left: 50%; 
     top: 50%;
     /* margin-top:  - calc( var(--base-size) / 4);
@@ -51,6 +84,68 @@ const text = css`
     transform: rotate(-180deg) translate( calc(- var(--base-size) / 2)) rotate(180deg);
     box-shadow: 0px .5rem 1rem rgba(0,0,0,.5);
     transition: var(--easing);    
+    &:hover{
+        transform: rotate(-45deg) translate(0px) rotate(-315deg);
+        background: rgba(var(--primary-color),.5);
+        width: var(--base-size);
+        letter-spacing: 1rem;
+        line-height: var(--base-size);
+        height: var(--base-size);
+        margin-top:  calc( var(--base-reverse-size) / 2);
+        margin-left:   calc( var(--base-reverse-size) / 2);
+        transition:var(--easing),
+        letter-spacing 1.5s ease-out;
+    
+    }
+    ${md}{
+        width: 3em;
+        height: 3em;
+        line-height: 3em;
+        font-size: 2rem;
+        font-weight:10;
+        transform: rotate(-180deg) translate( 0em ) rotate(180deg);
+        &:hover{
+            transform: rotate(-45deg) translate(0px) rotate(-315deg);
+            background: rgba(var(--primary-color),.5);
+            width: 6em;
+            letter-spacing: 1rem;
+            line-height: 6em;
+            height: 6em;
+            margin-top:  -3em;
+            margin-left:   -3em;
+            transition:var(--easing),
+            letter-spacing 1.5s ease-out;
+        
+        } 
+    }
+    ${lgm}{
+        width: 4.5em;
+        height: 4.5em;
+        line-height: 4.5em;
+        font-size: 2rem;
+        font-weight:200;
+        transform: rotate(-180deg) translate( 0em ) rotate(180deg);
+        &:hover{
+            transform: rotate(-45deg) translate(0px) rotate(-315deg);
+            background: rgba(var(--primary-color),.5);
+            width: 9em;
+            letter-spacing: 1rem;
+            line-height: 9em;
+            height: 9em;
+            margin-top:  -4.5em;
+            margin-left:   -4.5em;
+            transition:var(--easing),
+            letter-spacing 1.5s ease-out;
+        
+        }
+   }
+   ${lg2}{
+        width: calc(var(--base-size) / 2);
+        height: calc(var(--base-size) / 2);
+        line-height: calc(var(--base-size) / 2);
+        font-size: 2rem;
+        font-weight:200;
+        transform: rotate(-180deg) translate( 0em ) rotate(180deg);
         &:hover{
             transform: rotate(-45deg) translate(0px) rotate(-315deg);
             background: rgba(var(--primary-color),.5);
@@ -64,6 +159,58 @@ const text = css`
             letter-spacing 1.5s ease-out;
         
         }
+
+   }
+   ${sm4}{
+       font-size:1.7em;
+       line-height:5em;
+       letter-spacing:.2em;
+       width: 5em;
+       height: 5em;
+        
+   }
+   ${sm3}{
+        width: 7em;
+        height: 7em;
+        line-height: 7em;
+        font-size: 1.2rem;
+        font-weight:200;
+        transform: rotate(-180deg) translate( 0em ) rotate(180deg);
+        &:hover{
+            transform: rotate(-45deg) translate(0px) rotate(-315deg);
+            background: rgba(var(--primary-color),.5);
+            width: var(--base-size);
+            letter-spacing: 1rem;
+            line-height: var(--base-size);
+            height: var(--base-size);
+            margin-top:  calc( var(--base-reverse-size) / 2);
+            margin-left:   calc( var(--base-reverse-size) / 2);
+            transition:var(--easing),
+            letter-spacing 1.5s ease-out;
+        
+        } 
+   }
+   ${sm1}{
+        width: 5.5em;
+        height: 5.5em;
+        line-height: 5.5em;
+        font-size: .95rem;
+        font-weight:200;
+        transform: rotate(-180deg) translate( 0em ) rotate(180deg);
+        &:hover{
+            transform: rotate(-45deg) translate(0px) rotate(-315deg);
+            background: rgba(var(--primary-color),.5);
+            width: var(--base-size);
+            letter-spacing: 1rem;
+            line-height: var(--base-size);
+            height: var(--base-size);
+            margin-top:  calc( var(--base-reverse-size) / 2);
+            margin-left:   calc( var(--base-reverse-size) / 2);
+            transition:var(--easing),
+            letter-spacing 1.5s ease-out;
+        
+        } 
+   }
 `
 
 export {  badge,text}

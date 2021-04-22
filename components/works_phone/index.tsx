@@ -1,20 +1,22 @@
 
 
 import Image from 'next/image'
-import {titleStyle,contentStyle, scroll, intro1, intro2, showcase, cases, displayImg, displayIntro, displayImg2, displayIntro2} from './style'
+import {title_h1,scroll,box,cases,img_display,description,intro1,intro2} from './style'
 import { Popover } from 'antd';
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faLink, faPaperPlane } from '@fortawesome/free-solid-svg-icons'
+import { faGithubSquare } from '@fortawesome/free-brands-svg-icons'
 
 
-import GitHubIcon from '@material-ui/icons/GitHub';
-import InsertLinkIcon from '@material-ui/icons/InsertLink';
-import FlightTakeoffIcon from '@material-ui/icons/FlightTakeoff';
+
+
 
 const portfolios = [
     {
         title:'MY website',
         date:'2021.3',
-        img:'jubi.jpg',
+        img:'jubi2.jpg',
         link:'https://jubi-git-master-jubi33717f.vercel.app/',
         github:'https://github.com/jubi33717f/jubi_site',
         info:'My personal website',
@@ -24,7 +26,7 @@ const portfolios = [
     {
         title:'Film Finder',
         date:'2020.10',
-        img:'filmFinder.jpg',
+        img:'filmFinder2.jpg',
         link:'',
         github:'https://github.com/unsw-cse-capstone-project/capstone-project-comp9900-h18b-galahad',
         info:'Film score system based on TMDB api + personal recommendation based on our own machine learning system. Backend part did not deploy. You can still run it locally follow the github Readme introduction.',
@@ -34,7 +36,7 @@ const portfolios = [
     {
         title:'Airtasker',
         date:'2020.5',
-        img:'airtasker.jpg',
+        img:'airtasker2.jpg',
         link:'https://ataker.now.sh',
         github:'https://bitbucket.org/soniahou/xyz.frontend',
         info:'Community marketplace for people to outsource task, find local services or complete flexible jobs to earn money.',
@@ -43,7 +45,7 @@ const portfolios = [
     {
         title:'Unihelp chatbot',
         date:'2020.7',
-        img:'unihelp.jpg',
+        img:'unihelp2.jpg',
         link:'https://unihelp-9323team3.vercel.app/',
         github:'https://github.com/9323Team/frontend',
         info:'University helping system. Backend did not deploy. You can still run it locally follow the github Readme introduction.',
@@ -52,7 +54,7 @@ const portfolios = [
     {
         title:'Weather App',
         date:'2020.2',
-        img:'weatherapp.jpg',
+        img:'weatherapp2.jpg',
         link:'https://weather-rho.now.sh',
         github:'https://github.com/jubi33717f/weather',
         info:'Forecast 5 days weather condition on your location.',
@@ -61,7 +63,7 @@ const portfolios = [
     {
         title:'Seddit App',
         date:'2019.12',
-        img:'seddit.jpg',
+        img:'seddit2.jpg',
         link:'',
         github:'https://github.com/jubi33717f/weather',
         info:' =>Reddit ',
@@ -70,7 +72,7 @@ const portfolios = [
     {
         title:'Hr Management',
         date:'2020.8',
-        img:'hrManagement.jpg',
+        img:'hrManagement2.jpg',
         link:'https://hr-management-eight.vercel.app',
         github:'https://github.com/jubi33717f/hrManagement',
         info:'HR management system, Admin system + Employee system. Test account could be found in github Readme file.',
@@ -78,47 +80,39 @@ const portfolios = [
     }
 ]
 const content = (link:string,github:string,info:string,tech:string)=>(
-    <div css = {contentStyle}>
-       
-        <h5>
-            <a href={github}>
-                <GitHubIcon/>
-            </a>
-            <a href={link}>
-                <InsertLinkIcon/>
-            </a>
-        </h5>
-        <p>Info: {info}</p>
-        <p>Tech: {tech}</p>
+    <div css>
+        <div></div>
+        <div></div>
     </div>
 )
-const title = (title:string)=>(<><FlightTakeoffIcon  style={{color:'#6D9EEB'}} /><h4 css={titleStyle}>{title}</h4></>)
+const title = (title:string)=>(<><FontAwesomeIcon style={{color:'#6D9EEB'}} icon={faPaperPlane}/><h4>{title}</h4></>)
 
-const Works = ()=>{
+const WorksPhone = ()=>{
     
     return (
-        <div css = {scroll}>
-            
-            <div css = {showcase}>
-                {portfolios.map((item,index)=>{
+        <div css={scroll}>
+            <h1 css={title_h1}>PORTFOLIO</h1>
+            <div css={box}>
+            {portfolios.map((item,index)=>{
                     const path = `/works/${item.img}`
                     if(index%2===0){
-                        return (<div css={cases} key={index}>
-                            
-                                <div css={displayImg}>
-                                    <Popover style={{fontFamily:'Manrope!important'}} content={content(`${item.link}`,`${item.github}`,`${item.info}`,`${item.tech}`)} placement="bottom" title={title(`${item.title}`)} trigger="hover">
+                        return (
+                        <div css={cases} key={index}>
+                            <a href={item.github}>
+                                <div css={img_display} >
                                         <Image 
                                             src={path}
                                             layout="fill"
                                             loading='lazy'
                                             quality={100}
                                         />
-                                    </Popover>
                                 </div>
-                            
-                            <div css={displayIntro}>
+                            </a>
+                            <div css={description} style={{ right: '0px'}}>
+
                                 <div css={intro1}>
                                     <p>0{index+1}</p>
+                                    <span></span>
                                 </div>
                                 <div css={intro2}> 
                                     <p>{item.title}<span>{item.date}</span></p>
@@ -126,35 +120,37 @@ const Works = ()=>{
                                 </div>
                             </div>
                         </div>)
-                    }
-                    else{
-                        return (<div css={cases} key={index}>
-                            <div css={displayImg2}>
-                                <Popover css = {contentStyle} content={content(`${item.link}`,`${item.github}`,`${item.info}`,`${item.tech}`)} placement="top" title={title(`${item.title}`)} trigger="hover">
-                                    <Image 
-                                        src={path}
-                                        layout="fill"
-                                        loading='lazy'
-                                        quality={100}
-                                    />
-                                </Popover>
-                            </div>
-                            <div css={displayIntro2}>
-                                <div css={intro1}>
-                                    <p>0{index+1}</p>
+                    }else{
+                        return (
+                            <div css={cases} key={index}>
+                                    
+                                <div css={description}>
+
+                                    <div css={intro1}>
+                                        <p>0{index+1}</p>
+                                        
+                                    </div>
+                                    <div css={intro2} > 
+                                        <p>{item.title}<span>{item.date}</span></p>
+                                        
+                                    </div>
                                 </div>
-                                <div css={intro2}> 
-                                    <p>{item.title}<span>{item.date}</span></p>
-                                </div>
-                            </div>
-                        </div>)
+                                <a href={item.github}>
+                                    <div css={img_display} style={{ right: '0px'}}>
+                                            <Image 
+                                                src={path}
+                                                layout="fill"
+                                                loading='lazy'
+                                                quality={100}
+                                            />
+                                    </div>
+                                </a>
+                            </div>)
                     }
-                })}
-               
-                
-               
-            </div>
-            </div>
+                }
+            )}
+        </div>
+        </div>
     )
 }
-export default Works;
+export default WorksPhone;
