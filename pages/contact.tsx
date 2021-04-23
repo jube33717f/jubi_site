@@ -14,6 +14,7 @@ import AttachFileIcon from '@material-ui/icons/AttachFile';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import EmailIcon from '@material-ui/icons/Email';
 import Page from '@layouts/page'
+import WebNavigation from '@components/navi_web'
 // @syncromatics/
 // import { withScriptjs, withGoogleMap, GoogleMap, Marker } from "@syncromatics/react-google-maps"
 
@@ -47,6 +48,7 @@ const Info= () =>{
         <>
         <Page>
             <div css={web_box}>
+            <WebNavigation/>
                 <div css={info}>
                     <div css={info_photo}>
                         <Badge/>
