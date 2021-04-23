@@ -3,7 +3,7 @@
 /// <reference types="next-images" />
 /// <reference types="@emotion/react/types/css-prop" />
 /// <reference types="@emotion/core" />
-
+/// <reference types="google.maps" />
 
 type RenderToStringParams = {
     components?:object
@@ -30,3 +30,5 @@ declare module 'next-mdx-remote/hydrate'{
     function hydrate(mdxObject: object,components?:HydrateParams):string
     export default hydrate
 }
+
+declare module 'google.maps';

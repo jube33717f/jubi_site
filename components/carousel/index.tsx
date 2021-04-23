@@ -61,7 +61,7 @@ const Carousel_cp=()=>(
         </div>
   </Carousel>
 )
-const CarouselCards = ({active,clickHandler}:{active:string[],clickHandler:({index}:{index:number})=>void}) =>(
+const CarouselCards = () =>(
     <Card
         hoverable
         css={card}

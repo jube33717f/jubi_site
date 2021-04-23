@@ -10,7 +10,7 @@ const Badge = ()=>{
         // <div css = {box}>
             <div css = {badge}>
                 <div css = {text}>
-                    Hallo!
+                    Jubi
                 </div>
             </div>
         // </div>

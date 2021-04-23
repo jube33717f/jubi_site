@@ -15,8 +15,8 @@ const badge=css`
 
   display: block;
   position: relative;
-  width: 6em;
-  height: 6em;
+  width: 30vh;
+  height: 30vh;
   margin:auto;
   cursor: pointer;
   background: url(/photo.jpg) no-repeat 100% 50%;
@@ -30,22 +30,20 @@ const badge=css`
     background-position: 0% 50%;
 
   }
-  ${md}{
+  /* ${md}{
     margin:auto;
     width: 6em;
     height: 6em; 
     
   }
   ${lgm}{
-    /* width: 9em; */
     height: 9em;
     width: 9em;
-    /* top:3em; */
   }
   ${lg2}{
     width: var(--base-size);
     height: var(--base-size);
-  }
+  } */
   ${sm4}{
     margin-left:20%;
     padding:0;
@@ -67,37 +65,35 @@ const badge=css`
 const text = css`
     display: block;
     position: absolute;
-
-    width: 3em;
-    height: 3em;
-    line-height: 3em;
+    
+    width: 15vh;
+    height: 15vh;
+    line-height: 15vh;
     left: 50%; 
     top: 50%;
-    /* margin-top:  - calc( var(--base-size) / 4);
-    margin-left: - calc( var(--base-size) / 4); */
     font-size: 2rem;
-	font-family: Raleway, sans-serif;
+
     text-align: center;
     color: #fff;
     border-radius: 50%;
-    background: var(--primary-color);
+    background: #FAD688;
     transform: rotate(-180deg) translate( calc(- var(--base-size) / 2)) rotate(180deg);
     box-shadow: 0px .5rem 1rem rgba(0,0,0,.5);
     transition: var(--easing);    
     &:hover{
         transform: rotate(-45deg) translate(0px) rotate(-315deg);
         background: rgba(var(--primary-color),.5);
-        width: var(--base-size);
+        width: 30vh;
         letter-spacing: 1rem;
-        line-height: var(--base-size);
-        height: var(--base-size);
-        margin-top:  calc( var(--base-reverse-size) / 2);
-        margin-left:   calc( var(--base-reverse-size) / 2);
+        line-height: 30vh;
+        height: 30vh;
+        margin-top:  -15vh;
+        margin-left:   -15vh;
         transition:var(--easing),
         letter-spacing 1.5s ease-out;
     
     }
-    ${md}{
+    /* ${md}{
         width: 3em;
         height: 3em;
         line-height: 3em;
@@ -117,8 +113,8 @@ const text = css`
             letter-spacing 1.5s ease-out;
         
         } 
-    }
-    ${lgm}{
+    } */
+    /* ${lgm}{
         width: 4.5em;
         height: 4.5em;
         line-height: 4.5em;
@@ -138,8 +134,8 @@ const text = css`
             letter-spacing 1.5s ease-out;
         
         }
-   }
-   ${lg2}{
+   } */
+   /* ${lg2}{
         width: calc(var(--base-size) / 2);
         height: calc(var(--base-size) / 2);
         line-height: calc(var(--base-size) / 2);
@@ -160,7 +156,7 @@ const text = css`
         
         }
 
-   }
+   } */
    ${sm4}{
        font-size:1.7em;
        line-height:5em;

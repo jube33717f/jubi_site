@@ -45,7 +45,7 @@ export const globalStyles = css`
     :root{
         --page-width:100%;
         --page-text: rgb(48,48,48);
-        --primary-color: rebeccapurple;
+        --primary-color: rgb(255，214,136);
         --easing: all 0.5s cubic-bezier(.55,0,.1,1);
         --base-size: 10em;
         --base-reverse-size: -10em;
@@ -63,19 +63,14 @@ export const globalStyles = css`
    
     html,
     body {
-        /* cursor: url('/j.png'),pointer; */
-        overflow:none;
-        /* overflow-y: hidden; */
         overflow-x: hidden;
         cursor: none;
-        min-height: 100vh;
-        height: 100vh;
         color:var(--page-text);
         padding: 0;
         margin: 0;
         font-family:  Caveat, Manrope, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
             Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-        background-color:#d4c6bd;
+        background-color:#F3EBE9;
         font-feature-settings: "palt","calt","liga";
 
     }
@@ -89,7 +84,7 @@ export const globalStyles = css`
         text-decoration: none;
     }
     h1{
-        font-size:1.7em;
+        font-size:2.5rem;
         line-height:1em;
         font-family:var(--font-hard);
         font-variation-settings: "wght" 500;
@@ -102,20 +97,23 @@ export const globalStyles = css`
     }
     h4{
         /* font-family:var(--font-hard); */
-        font-size:3rem;
+        font-size:2.3rem;
         padding-left:1.5%;
         line-height:1rem;
         padding-left:10%;
         color:'#410807';
         font-variation-settings:"wght" 600;
         margin-top:1em;
+        span{
+            font-size:.4em;
+        }
     }
 
     * {
         box-sizing: border-box;
     }
     #__next,main {
-        min-height: 100vh;
+        /* min-height: 100vh; */
     }
      
     

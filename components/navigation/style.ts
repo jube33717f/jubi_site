@@ -1,5 +1,5 @@
 import { css } from "@emotion/react";
-
+import {sm4} from '../../shared/globals'
 
 const naviStyle = css`
     /* position:fixed; */
@@ -14,6 +14,13 @@ const naviStyle = css`
     border: 1px solid #ccc;
     background-color: #f9fafb;
     font-size:1em;
+    display:none;
+    height:100vh;
+    ${sm4}{
+        display:block;
+        position:absolute;
+        
+    }
     
 `
 const inner = css`

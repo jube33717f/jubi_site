@@ -1,4 +1,4 @@
-import {css} from '@emotion/react'
+import {css, keyframes} from '@emotion/react'
 import {sm1,sm2,sm3,sm4,md,lg1,lgm,lg2} from '../../shared/globals'
 
 const header = css`
@@ -10,21 +10,48 @@ const header = css`
     height:23rem;
    
 `
+const arrowAttention = keyframes`
+    from{
+        opacity:0;
+        transform:translate3d(1.5em,0,0)
+    }
+    50%{
+        opacity:1;
 
+    }
+    
+`
+const next=css`
+   /* float:right; */
+    left:140px;
+    top:calc(50% - 20px);
+    position:absolute;
+    font-variation-settings:"wght" 200;
+    font-size:0.8em;
+    font-family:var(--font-hard);
+    animation:${arrowAttention} 2.4s infinite;   
+    /* text-shadow: #D9EAD3 1px 0 10px; */
+    span{
+        font-size:.3em;
+        top:-2em;
+    }
+    
+`
 const bgWrap=css`
     
-    position: relative;
+    position: absolute;
     height: 100vh;
-    width: 100vw;
-    overflow: hidden;
+    width: 100%;
+    overflow:hidden;
     margin: 0 auto;
+    margin-left:55px;
     z-index: 0;
     text-align: center;
     figure{
         position: relative;
         margin:0;
         height: 100vh;
-        width: 100vw;
+        width: 100%;
         background-color:#F2E4DA;
         :hover{
             color: #fff;
@@ -85,13 +112,15 @@ const bgWrap=css`
         }
         figcaption{
             padding: 2em;
+            
             color: #fff;
             text-transform: uppercase;
             font-size: 1.25em;
             -webkit-backface-visibility: hidden;
             backface-visibility: hidden;
             h3{        
-                font-weight:100;              
+                font-weight:100; 
+                margin-left:60px;             
                 span{
                     font-weight:800;
                 }
@@ -100,7 +129,7 @@ const bgWrap=css`
                 pointer-events: none;
             }
             :before,p{
-                
+                margin-left:60px;
                 -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
 	            transition: opacity 0.35s, transform 0.35s;
                 
@@ -108,7 +137,7 @@ const bgWrap=css`
             :before{
                 position: absolute;
                 top: 0;
-                left: 0;
+                left: 60px;
                 width: 100%;
                 height: 100%;
                 background: -webkit-linear-gradient(top, rgba(72,76,97,0) 0%, rgba(72,76,97,0.8) 75%);
@@ -158,4 +187,4 @@ const bgWrap=css`
 
 
 
-export {header,bgWrap}
+export {header,bgWrap,next}

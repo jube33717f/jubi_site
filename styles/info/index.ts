@@ -3,10 +3,65 @@ import {sm1,sm2,sm3,sm4,md,mdm,lg1,lgm,lg2} from '../../shared/globals'
 import { createStyles, makeStyles, Theme } from '@material-ui/core/styles';
 // const Contrast = require('contrast-js');
 
+const web_box= css`
+    position: absolute;
+    width:100vw;
+    height:100vh;
+    min-width: 1100px;
+  
+    overflow:hidden;
+    
+`
+const info = css`
+    
+    position: absolute;
+    top: 8vh;
+    left: 10vw;
+    width: 50vw;
+    height: 87vh;
+    overflow:hidden;
+  
+    color: white;
+    line-height: 1.9;
+
+`
+const info_photo = css`
+    width: 30vw;
+`
+const info_name = css`
+    width: 30vw;
+    margin-bottom: 15px;
+    border-bottom: solid 1px white;
+`
+const info_contact = css`
+    width: 30vw;    
+    margin-left:1vw;
+`
+const map = css`
+    position: absolute;
+    top: 8vh;
+    left: 55vw;
+    width: 38vw;
+    height: 87vh;
+    padding: 15px;
+    /* margin: -250px 0 0 -250px; */
+    background: white;
+
+`
+
+
+
+
+
+
+
+
+
 
 
 /*---image effect--**/
 const imgGrid=css`
+    padding:15px;
     width:100%;
     height:100%;
     top:0;
@@ -40,6 +95,7 @@ const imgGrid=css`
                 letter-spacing: .1em;
                 color:#fff;
                 margin-top:1em;
+                font-size:1.9em;
                 :after{
                     position: absolute;
                     bottom: 0;
@@ -54,7 +110,7 @@ const imgGrid=css`
 	                transform: translate3d(0,0,0);
                 }
             }
-            ${md}{
+            /* ${md}{
                 margin-top:4em;
                 font-size:.9em;
             }
@@ -65,7 +121,7 @@ const imgGrid=css`
             ${lg2}{
                 margin-top:1em;
                 font-size: 1.25em;
-            }
+            } */
         }
 
     }
@@ -111,7 +167,6 @@ const sarahEffect=css`
         
     }
 `
-
 const nameAnimation = keyframes`
     from{
         opacity:0
@@ -122,23 +177,30 @@ const nameAnimation = keyframes`
     
 `
 const box=css`
-    height:100vh;
-    position: relative;
-    width:100%;
+    position: absolute;
+    top: 18vh;
+    left: 46vw;
+    width: 50vw;
+    height: 65vh;
+    padding: 1em;
+    /* margin: -250px 0 0 -250px; */
+    background: white;
+    
     overflow:hidden;
     ${sm4}{
         display:none;
     }
 `
 const cardStyle = css`
-    width:32em;
-    height:20em;
-    top:50%;
-    left:50%;
+
+    width:100%;
+    height:100%;
+    /* top: 78vh;
+    left: 30vw; */
     
-    position:absolute;
+    /* position:absolute; */
     animation:${nameAnimation} 1s;
-    transform:translate3d(-16em,-14em,0);
+    /* transform:translate3d(-16em,-14em,0); */
     z-index:1;
     color: rgba(0, 0, 0, 0.87);
     transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
@@ -146,24 +208,10 @@ const cardStyle = css`
     
     
     border-radius:0.2em;
-    padding:2em;
+ 
     background:#60A58F;
     overflow:hidden;
-    ${md}{
-        width:18em;
-        left:82%;
-        height:17em;
-    }
-    ${lgm}{
-        width:25em;
-        left:62%;
-        height:19em;
-    }
-    ${lg2}{
-        width:32em;
-        height:20em;
-        left:50%;
-    }
+    
     
 
 `
@@ -192,28 +240,15 @@ const arrowAttention2 = keyframes`
     }
 `
 const cardFooter = css `
-    z-index:2;
+    z-index:200;
     width:100%;
     display:block;
     height:4em;
     position:absolute;
     right:1.5em;
     /* bottom:0em; */
-    top:18em;
-    ${md}{
-        top:19em;
-        font-size:.8em;
-    }
-    ${lgm}{
-        top:17em;
-        font-size:1em;
-    }
-    ${lg2}{
-        top:18em;
-    }
-    ${sm4}{
-        display:none;
-    }
+    bottom:.5em;
+    
 `
 const previousIcon=css`
     left:3em;
@@ -366,7 +401,7 @@ const icons = css`
     line-height:1em;
     padding-left:2em;
     display:inline-block;
-    font-size:large;
+    font-size:5px;
     overflow:hidden;
     position:relative;
     a{
@@ -377,6 +412,6 @@ const icons = css`
 const btn = css`
     color:#fff;
     position:absolute;
-    right:3vw;;
+    right:1vw;;
 `
-export {btn, infoBox, phone_box,handwriting,h1_title, imgGrid,sarahEffect,box,cardStyle,cardHeader,cardContent,icons,cardFooter,text ,previousIcon,previous,next,nextIcon}
+export {info,info_photo,info_name,info_contact,map,btn, web_box, infoBox, phone_box,handwriting,h1_title, imgGrid,sarahEffect,box,cardStyle,cardHeader,cardContent,icons,cardFooter,text ,previousIcon,previous,next,nextIcon}

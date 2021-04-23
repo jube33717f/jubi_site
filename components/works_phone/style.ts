@@ -26,7 +26,7 @@ const box = css`
     transform: matrix(1, 0, 0, 1, 0, 0);
     /* height:350vw; */
     background:#F2B27C;
-    display:none;
+    /* display:none; */
     ${sm4}{
         display:block;
     }

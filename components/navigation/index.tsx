@@ -2,9 +2,9 @@
 import {nav,nav_no_show,naviStyle,inner,close_row,cancel,navi_page,navi_contact} from './style'
 
 import {useState} from 'react'
+import Link from 'next/link'
 
-
-const PhoneNavigation = ({clickHandler}:{clickHandler:({index}:{index:number})=>void}) =>{
+const PhoneNavigation = () =>{
     const [shown, setShown] = useState(false)
     return <>
     <nav
@@ -18,26 +18,10 @@ const PhoneNavigation = ({clickHandler}:{clickHandler:({index}:{index:number})=>
             <div css={cancel}></div>
         </div>
         <ul css={shown?navi_page:nav_no_show}>
-            <li onClick={(e)=>{
-                clickHandler({index:0})
-            }}>
-                HOME
-            </li>
-            <li onClick={(e)=>{
-                clickHandler({index:1})
-            }}>
-                BIO
-            </li>
-            <li onClick={(e)=>{
-                clickHandler({index:2})
-            }}>
-                PORTPOLIO
-            </li>
-            <li onClick={(e)=>{
-                clickHandler({index:3})
-            }}>
-                WRITINGS
-            </li>
+            <Link href={``}><li>HOME</li></Link>
+            <Link href={`/portfolio`}><li>PORTFOLIO</li></Link>
+            <Link href={`/writing`}><li>Writing</li></Link>
+            <Link href={`/contact`}><li>Contact</li></Link>
         </ul>
         <ul css={shown?navi_contact:nav_no_show}>
             <li>
