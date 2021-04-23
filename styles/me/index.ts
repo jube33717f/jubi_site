@@ -41,10 +41,10 @@ const bgWrap=css`
     
     position: absolute;
     height: 100vh;
-    width: 100%;
+    width: 110vw;
     overflow:hidden;
     margin: 0 auto;
-    margin-left:55px;
+    /* margin-left:55px; */
     z-index: 0;
     text-align: center;
     figure{
