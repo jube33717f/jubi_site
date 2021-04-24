@@ -23,7 +23,7 @@ const arrowAttention = keyframes`
 `
 const next=css`
    /* float:right; */
-    left:140px;
+    /* left:140px; */
     top:calc(50% - 20px);
     position:absolute;
     font-variation-settings:"wght" 200;
@@ -43,10 +43,10 @@ const next=css`
 const bgWrap=css`
     position: absolute;
     height: 100vh;
-    width: 110vw;
+    width: 100vw;
+    left:0;
     overflow:hidden;
     margin: 0 auto;
-    /* margin-left:55px; */
     z-index: 0;
     text-align: center;
     figure{
@@ -77,35 +77,8 @@ const bgWrap=css`
             }
             
         }
-        ${md}{
-            h3{
-                font-size:1em;
-            }
-            p{
-                font-size:.6em;
-            }
-            margin-left:-2em;
-        }
-        ${lg1}{
-            p{
-                font-size:.7em;
-                margin-left:0;
-            }
-            
-            
-        }
-        ${lgm}{
-            p{
-                font-size:.9em;
-                margin-left:0;
-            }
-        }
-        ${lg2}{
-            p{
-                font-size:1.2em;
-                margin-left:0;
-            }
-        }
+        
+       
         img{
             opacity: 0.8;
             position:relative;
@@ -113,8 +86,7 @@ const bgWrap=css`
 	        max-width: 100%;
         }
         figcaption{
-            padding: 2em;
-            
+            padding: 2em;          
             color: #fff;
             text-transform: uppercase;
             font-size: 1.25em;
@@ -131,7 +103,7 @@ const bgWrap=css`
                 pointer-events: none;
             }
             :before,p{
-                margin-left:60px;
+                margin-left:-10px;
                 -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
 	            transition: opacity 0.35s, transform 0.35s;
                 
@@ -180,9 +152,7 @@ const bgWrap=css`
             word-spacing:1em;
         }       
     }
-    /* img{
-        opacity:0.5;
-    } */
+
 ` 
 
 

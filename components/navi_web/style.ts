@@ -207,18 +207,20 @@ const naviBtn_dot = css`
 const closeBtn = (open:boolean)=>{
     if(open){
         return css`
-       
+            opacity:1;
             z-index: 101;
+            /* transform: translate3d(55px,0,0); */
             left: calc(100% - 3.33333vw);
             top: calc(3.33333vh - 3px);
             position: absolute;
             transition-property: opacity;
             transition-duration: .4s;
             transition-timing-function: cubic-bezier(.4,.1,.2,1);
-            transition-delay: .4s;
+            transition-delay: .6s;
         `
     }
-    return css`transform: translate3d(-20em,0,0);`
+    return css`opacity:0;
+    transform: translate3d(-20em,0,0);`
 }
 const closeBtn_area=css`
 

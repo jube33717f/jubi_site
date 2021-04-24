@@ -63,7 +63,7 @@ const Home=()=> {
                             <div  css={next} >←</div>
                                 <div>
                                     <h3>JUBI <span>CHEN</span></h3>
-                                    <p>INTERESTING FREE ENTHUSIASTIC NAIVE</p>
+                                    <p>            INTERESTING FREE ENTHUSIASTIC NAIVE</p>
                                 </div>
                             </figcaption>
                         </figure>
