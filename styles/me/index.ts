@@ -163,9 +163,9 @@ const bgWrap=css`
             -webkit-transform: translate3d(0,-50%,0);
             transform: translate3d(0,-50%,0);
             ${sm4}{
-                font-size:1.3em;
+                font-size:1.8em;
                 left:0;
-                width: 65%;
+                width: 60%;
             }
         }
         p{      
