@@ -13,6 +13,10 @@ const portfolio_bg = css`
     overflow:hidden;
     position:absolute;
     top:0;
+    ${sm4}{
+        margin-left:0;
+        overflow:auto;
+    }
 
 `
 const title = css`

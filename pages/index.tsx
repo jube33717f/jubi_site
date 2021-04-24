@@ -5,8 +5,7 @@ import { css } from '@emotion/react'
 import SEO from '@components/seo'
 
 import {useState} from 'react'
-import PhoneNavigation from '@components/navigation'
-import WebNavigation from '@components/navi_web'
+
 import {sm4} from '../shared/globals'
 import {bgWrap,next} from 'styles/me'
 import Image from 'next/image'
@@ -15,7 +14,9 @@ import Page from '@layouts/page'
 const homeStyles = css`
     width:100vw;
     height:100vh;
+    position:absolute;
     overflow:hidden;
+    top:0;
     /* display: flex;
      flex-flow: row wrap; 
     justify-content: flex-start; */
@@ -26,21 +27,12 @@ const homeStyles = css`
     font-size:2rem;
     font-weight: light;
     /* position:fixed; */
-    ${sm4}{
+    /* ${sm4}{
         position:relative;
-    }
+    } */
     /* font-weight:100; */
 `
-const navStatus = css`
-    display:none;
-    position:absolute;
-    height:100vh;
-    ${sm4}{
-        display:block;
-        position:absolute;
-        
-    }
-`
+
 const Home=()=> {
      
   
@@ -54,11 +46,11 @@ const Home=()=> {
         
     
             <Page>
-                <div css={navStatus}>
-                        <PhoneNavigation/>
-                    </div>
+                {/* <div css={navStatus}>
+                        
+                    </div> */}
                 <div css={homeStyles}>
-                    <WebNavigation/>
+                    
                         <div css={bgWrap}>
                         <figure>
                             <Image 

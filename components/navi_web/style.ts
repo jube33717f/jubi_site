@@ -1,11 +1,18 @@
 import {css, keyframes} from '@emotion/react'
-
+import {sm4} from '../../shared/globals'
 const siteNavi = css`
     position: fixed;
     z-index: 100;
     left: 0;
     top: 0;
     height: 100%;
+    /* display:block; */
+    /* display:none; */
+    ${sm4}{
+        position: absolute;
+        display:none;
+    }
+    
 
 `
 const siteNavi_bg =  (open:boolean)=>{
@@ -27,6 +34,7 @@ const siteNavi_bg =  (open:boolean)=>{
             transition-duration: .6s;
             transition-timing-function: cubic-bezier(.4,.1,.2,1);
             transition-delay: .2s;
+
         `
     }
 
@@ -44,6 +52,7 @@ const siteNavi_bg =  (open:boolean)=>{
         transition-duration: .6s;
         transition-timing-function: cubic-bezier(.4,.1,.2,1);
         transition-delay: .2s;
+        
     
 
     `
@@ -148,6 +157,10 @@ const naviBtn = (open:boolean)=>{
             transition-duration: .4s;
             transition-timing-function: cubic-bezier(.4,.1,.2,1);
             transition-delay: .4s;
+            ${sm4}{
+                position: absolute;
+                display:none;
+            }
 
         `
     
@@ -160,6 +173,10 @@ const  naviBtn_area = css`
     width: 120px;
     height: 120px;
     border-radius: 50%;
+    ${sm4}{
+        position: absolute;
+        display:none;
+    }
 `
 const naviBtn_inner = css`
     transform: translate3d(1.4822e-323px, 1.4822e-323px, 0px);
@@ -191,14 +208,14 @@ const closeBtn = (open:boolean)=>{
     if(open){
         return css`
        
-        z-index: 101;
-        left: calc(100% - 3.33333vw);
-        top: calc(3.33333vh - 3px);
-        position: absolute;
-        ransition-property: opacity;
-        transition-duration: .4s;
-        transition-timing-function: cubic-bezier(.4,.1,.2,1);
-        transition-delay: .4s;
+            z-index: 101;
+            left: calc(100% - 3.33333vw);
+            top: calc(3.33333vh - 3px);
+            position: absolute;
+            transition-property: opacity;
+            transition-duration: .4s;
+            transition-timing-function: cubic-bezier(.4,.1,.2,1);
+            transition-delay: .4s;
         `
     }
     return css`transform: translate3d(-20em,0,0);`
@@ -212,6 +229,10 @@ const closeBtn_area=css`
     width: 120px;
     height: 120px;
     border-radius: 50%;
+    ${sm4}{
+        position: absolute;
+        display:none;
+    }
 `
 const closeBtn_inner=css`
     transform: translate3d(1.4822e-323px, -1.4822e-323px, 0px);
@@ -243,4 +264,4 @@ const closeBtn_inner=css`
     }
 `
 
-export {siteNavi,siteNavi_bg,siteNavi_pages,siteNavi_links,naviBtn,naviBtn_area,naviBtn_inner,naviBtn_dot,closeBtn,closeBtn_area,closeBtn_inner} 
+export { siteNavi,siteNavi_bg,siteNavi_pages,siteNavi_links,naviBtn,naviBtn_area,naviBtn_inner,naviBtn_dot,closeBtn,closeBtn_area,closeBtn_inner} 

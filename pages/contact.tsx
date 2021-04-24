@@ -48,7 +48,7 @@ const Info= () =>{
         <>
         <Page>
             <div css={web_box}>
-            <WebNavigation/>
+        
                 <div css={info}>
                     <div css={info_photo}>
                         <Badge/>

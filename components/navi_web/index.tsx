@@ -4,8 +4,7 @@ import Link from 'next/link'
 const WebNavigation =()=>{
     const [open,setOpen] = useState(false)
     
-    return (
-        <>
+    return (<>
             <nav css={siteNavi}>
                 <div css={siteNavi_bg(open)}></div>
                 <ul css={siteNavi_pages(open)}>
@@ -15,20 +14,20 @@ const WebNavigation =()=>{
                     <li><Link href={`/contact`}>Contact</Link></li>
                 </ul>
                 <ul css={siteNavi_links(open)}>
-                <li>
-                Contact
-                <span onClick={async ()=>{
-                    try{
-                        await navigator.clipboard.writeText('jubi33717f@gmail.com')          
-                    }catch(err){
-                        console.error('Could not copy text')
-                    }
-                }}>Copy email</span>
-            </li>
-            <li>
-                Find me on
-                <a href='https://github.com/jubi33717f' target="_blank"><span>Github</span></a>
-            </li>
+                    <li>
+                        Contact
+                        <span onClick={async ()=>{
+                            try{
+                                await navigator.clipboard.writeText('jubi33717f@gmail.com')          
+                            }catch(err){
+                                console.error('Could not copy text')
+                            }
+                        }}>Copy email</span>
+                    </li>
+                    <li>
+                        Find me on
+                        <a href='https://github.com/jubi33717f' target="_blank"><span>Github</span></a>
+                    </li>
                 </ul>
                 <div css={closeBtn(open)} onClick={()=>{setOpen(false)}}>
                 <div css={closeBtn_area}></div>
@@ -44,7 +43,7 @@ const WebNavigation =()=>{
                     <div css={naviBtn_dot}></div>
                 </div>
             </div>
-        </>
+            </>
     )
 }
 export default WebNavigation

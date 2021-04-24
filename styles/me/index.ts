@@ -35,10 +35,12 @@ const next=css`
         font-size:.3em;
         top:-2em;
     }
+    ${sm4}{
+        display:none;
+    }
     
 `
 const bgWrap=css`
-    
     position: absolute;
     height: 100vh;
     width: 110vw;
@@ -160,6 +162,11 @@ const bgWrap=css`
             transition: transform 0.35s, color 0.35s;
             -webkit-transform: translate3d(0,-50%,0);
             transform: translate3d(0,-50%,0);
+            ${sm4}{
+                font-size:1.3em;
+                left:0;
+                width: 65%;
+            }
         }
         p{      
             position: absolute;

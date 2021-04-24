@@ -18,8 +18,7 @@ const Article = () =>{
    
     return (
         <Page>
-        <PhoneNavigation />
-        <WebNavigation/>
+     
         <div style={{position:'absolute',top:'0',marginLeft:'55px',height:'100vh',width:'100vw'}}>
             <h1 >WRITINGS </h1>
             <section>

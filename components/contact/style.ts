@@ -1,6 +1,6 @@
 
 import {css} from '@emotion/react'
-
+import {sm4} from '../../shared/globals'
 const contact_form = css`
     font-family:var(--font-art);
     width: 25vw;
@@ -26,6 +26,9 @@ const contact_form = css`
             padding-top:1em;
             color:#000;
         }
+    }
+    ${sm4}{
+        width: 80vw;
     }
 `
 

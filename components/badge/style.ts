@@ -44,14 +44,14 @@ const badge=css`
     width: var(--base-size);
     height: var(--base-size);
   } */
-  ${sm4}{
+  /* ${sm4}{
     margin-left:20%;
     padding:0;
-    top:-1.5em;
+
     width:17em;
     height: 17em;
-  }
-  ${sm3}{
+  } */
+  /* ${sm3}{
     width:14em;
     height: 14em;
   }
@@ -59,7 +59,7 @@ const badge=css`
       top:-1.5em;
       width:11em;
       height:11em;
-  }
+  } */
 
 ` 
 const text = css`
@@ -157,15 +157,15 @@ const text = css`
         }
 
    } */
-   ${sm4}{
+   /* ${sm4}{
        font-size:1.7em;
        line-height:5em;
        letter-spacing:.2em;
        width: 5em;
        height: 5em;
         
-   }
-   ${sm3}{
+   } */
+   /* ${sm3}{
         width: 7em;
         height: 7em;
         line-height: 7em;
@@ -185,8 +185,8 @@ const text = css`
             letter-spacing 1.5s ease-out;
         
         } 
-   }
-   ${sm1}{
+   } */
+   /* ${sm1}{
         width: 5.5em;
         height: 5.5em;
         line-height: 5.5em;
@@ -206,7 +206,7 @@ const text = css`
             letter-spacing 1.5s ease-out;
         
         } 
-   }
+   } */
 `
 
 export {  badge,text}

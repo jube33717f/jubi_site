@@ -79,13 +79,7 @@ const portfolios = [
         tech:'Fontend: React, Redux, SCSS Backend: Node-Koa | Database: Mongodb'
     }
 ]
-const content = (link:string,github:string,info:string,tech:string)=>(
-    <div css>
-        <div></div>
-        <div></div>
-    </div>
-)
-const title = (title:string)=>(<><FontAwesomeIcon style={{color:'#6D9EEB'}} icon={faPaperPlane}/><h4>{title}</h4></>)
+
 
 const WorksPhone = ()=>{
     

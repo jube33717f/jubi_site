@@ -4,7 +4,8 @@ import Head from 'next/head'
 import SEO, { SEOProps } from '@components/seo'
 // import Footer from '@components/footer'
 import { wrapper } from './style'
-
+import PhoneNavigation from '@components/navigation'
+import WebNavigation from '@components/navi_web'
 type PageProps = {
   meta?: SEOProps
   children?: ReactNode
@@ -27,8 +28,8 @@ const Page = ({ meta, children }: PageProps) => (
     <Cursor/>
     <main css={wrapper}>
     
-      {/* <Header /> */}
-      {/* <Navigation /> */}
+    <PhoneNavigation/>
+    <WebNavigation/>
     {children}
       {/* <Footer /> */}
     </main>

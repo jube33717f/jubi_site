@@ -8,8 +8,11 @@ const web_box= css`
     width:100vw;
     height:100vh;
     min-width: 1100px;
-  
+    top:0;
     overflow:hidden;
+    ${sm4}{
+        overflow:auto;
+    }
     
 `
 const info = css`
@@ -23,19 +26,33 @@ const info = css`
   
     color: white;
     line-height: 1.9;
+    ${sm4}{
+        top: 8vh;
+        width:100vw;
+        height: 110vh;
+    }
 
 `
 const info_photo = css`
     width: 30vw;
+    ${sm4}{
+        width:90vw;
+    }
 `
 const info_name = css`
     width: 30vw;
     margin-bottom: 15px;
     border-bottom: solid 1px white;
+    ${sm4}{
+        width:80vw;
+    }
 `
 const info_contact = css`
     width: 30vw;    
     margin-left:1vw;
+    ${sm4}{
+        width:100vw;
+    }
 `
 const map = css`
     position: absolute;
@@ -46,6 +63,11 @@ const map = css`
     padding: 15px;
     /* margin: -250px 0 0 -250px; */
     background: white;
+    ${sm4}{
+        width:90vw;
+        top:110vh;
+        left:5vw;
+    }
 
 `
 

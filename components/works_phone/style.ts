@@ -5,16 +5,19 @@ const title_h1 = css `
     height:1em;
     font-size:1.4em;
     text-align:center;
+    margin-left:.3rem;
+    position:absolute;
 `
 const scroll = css`
     
     overflow-y: auto;
     height:100%auto;
     overflow: -moz-scrollbars-none;
-    /* ::-webkit-scrollbar { width: 0 !important } */
     display:none;
+    /* position: absolute; */
     ${sm4}{
         display:block;
+        overflow-y: auto;
     }
 `
 const box = css`
@@ -24,13 +27,12 @@ const box = css`
     -webkit-user-drag: none;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
     transform: matrix(1, 0, 0, 1, 0, 0);
-    /* height:350vw; */
-    background:#F2B27C;
-    /* display:none; */
+    position:absolute;
+    top:3em;
     ${sm4}{
         display:block;
     }
-
+    
 
 `
 const cases = css`
@@ -50,6 +52,8 @@ const img_display = css`
     height: 50vw;
     transform: matrix(1, 0, 0, 1, 0, 0);
     position: absolute;
+    border:rgba(0,0,0,0.05) solid 10px;
+    
    
 `
 const description = css`

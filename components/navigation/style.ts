@@ -19,7 +19,8 @@ const naviStyle = css`
     ${sm4}{
         display:block;
         position:absolute;
-        
+        width:3em;
+        height:3em;
     }
     
 `

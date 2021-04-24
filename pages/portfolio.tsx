@@ -11,8 +11,7 @@ import PhoneNavigation from '@components/navigation'
 import WebNavigation from '@components/navi_web'
 const Portfolio = () =>(
     <Page>
-        <PhoneNavigation />
-        <WebNavigation/>
+     
         <div css={portfolio_bg}>
             {/* <h1 css={title}>PORTFOLIO </h1>         */}
                 <Works/>        
