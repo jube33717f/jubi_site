@@ -18,7 +18,7 @@ const PhoneNavigation = () =>{
             <div css={cancel}></div>
         </div>
         <ul css={shown?navi_page:nav_no_show}>
-            <Link href={``}><li>HOME</li></Link>
+            <Link href={`/`}><li>HOME</li></Link>
             <Link href={`/portfolio`}><li>PORTFOLIO</li></Link>
             <Link href={`/writing`}><li>Writing</li></Link>
             <Link href={`/contact`}><li>Contact</li></Link>
