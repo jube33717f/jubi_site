@@ -3,10 +3,11 @@ import {sm1,sm2,sm3,sm4,md,mdm,lg1,lgm,lg2} from '../../shared/globals'
 
 const web_box= css`
     position: absolute;
+    margin-left:55px;
     width:100vw;
     height:100vh;
     min-width: 1100px;
-    z-index: 101;
+    z-index: 99;
     top:0;
     overflow:hidden;
     ${sm4}{
@@ -18,7 +19,7 @@ const info = css`
     
     position: absolute;
     top: 8vh;
-    left: 10vw;
+    left: 9vw;
     width: 50vw;
     height: 87vh;
     overflow:hidden;

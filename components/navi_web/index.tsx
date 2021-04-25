@@ -5,7 +5,7 @@ const WebNavigation =()=>{
     const [open,setOpen] = useState(false)
     
     return (<>
-            <nav css={siteNavi}>
+            <nav css={siteNavi(open)}>
                 <div css={siteNavi_bg(open)}></div>
                 <ul css={siteNavi_pages(open)}>
                     <li><Link href={`/`}>HOME</Link></li>

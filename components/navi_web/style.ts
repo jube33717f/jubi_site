@@ -1,20 +1,41 @@
 import {css, keyframes} from '@emotion/react'
 import {sm4} from '../../shared/globals'
-const siteNavi = css`
-    position: fixed;
-    z-index: 100;
-    left: 0;
-    top: 0;
-    height: 100%;
-    /* display:block; */
-    /* display:none; */
-    ${sm4}{
-        position: absolute;
-        display:none;
+const siteNavi= (open:boolean)=>{
+    if(open){
+        return  css`
+        position: fixed;
+        z-index: 100;
+        left: 0;
+        top: 0;
+        height: 100%;
+
+
+        /* display:block; */
+        /* display:none; */
+            ${sm4}{
+                position: absolute;
+                display:none;
+            }
+        `
     }
+    
+    return  css`
+        position: fixed;
+        z-index: 90;
+        left: 0;
+        top: 0;
+        height: 100%;
+        /* display:block; */
+        /* display:none; */
+        ${sm4}{
+            position: absolute;
+            display:none;
+        }
     
 
 `
+}
+
 const siteNavi_bg =  (open:boolean)=>{
     
     if(open){
@@ -43,7 +64,7 @@ const siteNavi_bg =  (open:boolean)=>{
         z-index: -1;
         left: 0;
         top: 0;
-        width: 55px;
+        width: 100%;
         height: 100%;
         background-color: #fff;
         border-right: 1px solid #ccc;
