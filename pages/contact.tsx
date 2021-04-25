@@ -1,12 +1,11 @@
 
-import CardContainer from '@layouts/cardContainer'
 import dynamic from 'next/dynamic';
 import { info,info_photo,info_name,info_contact,map       ,btn,web_box,phone_box,handwriting,h1_title,infoBox,imgGrid,sarahEffect,box,cardStyle,cardHeader,cardContent,cardFooter,icons,text,previousIcon,previous,next,nextIcon} from 'styles/info'
 import Badge from '@components/badge'
 import ContactForm from '@components/contact'
 import {useState} from 'react'
 import Image from 'next/image'
-import CarouselCards from '@components/carousel'
+import Link from 'next/link'
 import React from 'react'
 import Collections from '@material-ui/icons/Collections';
 import GitHubIcon from '@material-ui/icons/GitHub';
@@ -14,18 +13,8 @@ import AttachFileIcon from '@material-ui/icons/AttachFile';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import EmailIcon from '@material-ui/icons/Email';
 import Page from '@layouts/page'
-import WebNavigation from '@components/navi_web'
-// @syncromatics/
-// import { withScriptjs, withGoogleMap, GoogleMap, Marker } from "@syncromatics/react-google-maps"
 
-// const MyMapComponent = withScriptjs(withGoogleMap(() =>
-//   <GoogleMap
-//     defaultZoom={20}
-//     defaultCenter={{ lat: -34.397, lng: 150.644 }}
-//   >
-//     <Marker position={{ lat: -34.397, lng: 150.644 }} />
-//   </GoogleMap>
-// ))
+
 
 const ReactTypingEffect = dynamic(()=>import('react-typing-effect'),{ssr:false})
 // const AnyReactComponent = ({ text }:{text:string}) => <div>{text}</div>;
@@ -56,16 +45,11 @@ const Info= () =>{
                     <div css={info_name}>
                         <h2>Frontend Developer - Sydney</h2>
                         <p css={icons}>
-                            <a 
-                            href='https://github.com/jubi33717f'
-                            target="_blank">
+                            <a href='https://github.com/jubi33717f' target="_blank">
                             
                                 <GitHubIcon  style={{color:'#CECECE',fontSize:'2rem'}}/>
                             </a>
-                            <a 
-                            href='https://drive.google.com/file/d/1VV1Kj0q7ZUXqF0oXGXd3hfwwt7RSbhWZ/view?usp=sharing'
-                            target="_blank"                     
-                            >
+                            <a href='https://drive.google.com/file/d/1VV1Kj0q7ZUXqF0oXGXd3hfwwt7RSbhWZ/view?usp=sharing' target="_blank" >
                             
                                 <AttachFileIcon style={{color:'#2B84FF',fontSize:'2rem'}}/>
                             </a>

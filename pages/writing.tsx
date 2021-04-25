@@ -1,15 +1,9 @@
 
 
-import CardContainer from '@layouts/cardContainer'
-import {postIndexList, postIndexItem,postIndexTitleBar} from 'styles/article'
-import WritingList from '@components/writingList'
-import {useEffect,useState} from 'react'
-import {ArticleType} from '@shared/get-post'
 
-import { getPosts } from '@shared/get-post'
+import WritingList from '@components/writingList'
 import Page from '@layouts/page'
-import PhoneNavigation from '@components/navigation'
-import WebNavigation from '@components/navi_web'
+
 
 
 const Article = () =>{

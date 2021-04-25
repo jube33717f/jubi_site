@@ -43,7 +43,7 @@ const siteNavi_bg =  (open:boolean)=>{
         z-index: -1;
         left: 0;
         top: 0;
-        width: 100%;
+        width: 55px;
         height: 100%;
         background-color: #fff;
         border-right: 1px solid #ccc;

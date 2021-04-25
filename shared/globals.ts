@@ -82,6 +82,8 @@ export const globalStyles = css`
     a {
         color: inherit;
         text-decoration: none;
+
+
     }
     h1{
         font-size:2.5rem;

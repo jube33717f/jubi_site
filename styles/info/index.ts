@@ -1,13 +1,12 @@
 import {css, keyframes} from '@emotion/react'
 import {sm1,sm2,sm3,sm4,md,mdm,lg1,lgm,lg2} from '../../shared/globals'
-import { createStyles, makeStyles, Theme } from '@material-ui/core/styles';
-// const Contrast = require('contrast-js');
 
 const web_box= css`
     position: absolute;
     width:100vw;
     height:100vh;
     min-width: 1100px;
+    z-index: 101;
     top:0;
     overflow:hidden;
     ${sm4}{
@@ -427,7 +426,8 @@ const icons = css`
     overflow:hidden;
     position:relative;
     a{
-        margin-right:.3em;
+        margin-right:1em;
+        line-height:1em;
     }
     
 `
