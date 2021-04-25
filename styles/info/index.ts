@@ -57,7 +57,7 @@ const info_contact = css`
 const map = css`
     position: absolute;
     top: 8vh;
-    left: 55vw;
+    left: 53vw;
     width: 38vw;
     height: 87vh;
     padding: 15px;
@@ -201,7 +201,7 @@ const nameAnimation = keyframes`
 const box=css`
     position: absolute;
     top: 18vh;
-    left: 46vw;
+    left: 44vw;
     width: 50vw;
     height: 65vh;
     padding: 1em;
