@@ -1,11 +1,10 @@
 
 import dynamic from 'next/dynamic';
-import { info,info_photo,info_name,info_contact,map       ,btn,web_box,phone_box,handwriting,h1_title,infoBox,imgGrid,sarahEffect,box,cardStyle,cardHeader,cardContent,cardFooter,icons,text,previousIcon,previous,next,nextIcon} from 'styles/info'
+import { info,info_photo,info_name,info_contact,map,btn,web_box,imgGrid,sarahEffect,box,cardStyle,cardFooter,icons,previousIcon,previous,next,nextIcon} from 'styles/info'
 import Badge from '@components/badge'
 import ContactForm from '@components/contact'
 import {useState} from 'react'
 import Image from 'next/image'
-import Link from 'next/link'
 import React from 'react'
 import Collections from '@material-ui/icons/Collections';
 import GitHubIcon from '@material-ui/icons/GitHub';
@@ -17,7 +16,7 @@ import Page from '@layouts/page'
 
 
 const ReactTypingEffect = dynamic(()=>import('react-typing-effect'),{ssr:false})
-// const AnyReactComponent = ({ text }:{text:string}) => <div>{text}</div>;
+
 const Info= () =>{
     const [page,setPage] = useState(0)
     const [shown,setShown] = useState(false)
@@ -31,7 +30,6 @@ const Info= () =>{
         if(page === 0) return
         setPage(page-1)
     }
-    /*google map*/
    
     return (
         <>

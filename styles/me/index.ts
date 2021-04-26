@@ -1,15 +1,7 @@
 import {css, keyframes} from '@emotion/react'
-import {sm1,sm2,sm3,sm4,md,lg1,lgm,lg2} from '../../shared/globals'
+import {sm4,} from '../../shared/globals'
 
-const header = css`
-    display: block;
-    white-space: nowrap;
-    padding-top:5%;
-    padding-left:5%;
-    width:100%;
-    height:23rem;
-   
-`
+
 const arrowAttention = keyframes`
     from{
         opacity:0;
@@ -22,15 +14,12 @@ const arrowAttention = keyframes`
     
 `
 const next=css`
-   /* float:right; */
-    /* left:140px; */
     top:calc(50% - 20px);
     position:absolute;
     font-variation-settings:"wght" 200;
     font-size:0.8em;
     font-family:var(--font-hard);
     animation:${arrowAttention} 2.4s infinite;   
-    /* text-shadow: #D9EAD3 1px 0 10px; */
     span{
         font-size:.3em;
         top:-2em;
@@ -103,6 +92,7 @@ const bgWrap=css`
                 pointer-events: none;
             }
             :before,p{
+                white-space: pre;
                 margin-left:-10px;
                 -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
 	            transition: opacity 0.35s, transform 0.35s;
@@ -164,4 +154,4 @@ const bgWrap=css`
 
 
 
-export {header,bgWrap,next}
+export {bgWrap,next}

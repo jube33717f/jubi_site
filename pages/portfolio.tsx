@@ -1,21 +1,11 @@
-// import { css } from '@emotion/react'
-
 import Works from '@components/works'
 import WorksPhone from '@components/works_phone'
-import {portfolio_bg,title} from 'styles/portfolio'
-
-import GitHubIcon from '@material-ui/icons/GitHub';
-
+import {portfolio_bg} from 'styles/portfolio'
 import Page from '@layouts/page'
-import PhoneNavigation from '@components/navigation'
-import WebNavigation from '@components/navi_web'
 const Portfolio = () =>(
-    <Page>
-     
+    <Page>    
         <div css={portfolio_bg}>
-            {/* <h1 css={title}>PORTFOLIO </h1>         */}
-                <Works/>        
-                
+            <Works/>                       
             <WorksPhone/>
         </div >
     </Page>   

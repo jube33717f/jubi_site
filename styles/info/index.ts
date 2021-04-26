@@ -1,5 +1,5 @@
 import {css, keyframes} from '@emotion/react'
-import {sm1,sm2,sm3,sm4,md,mdm,lg1,lgm,lg2} from '../../shared/globals'
+import {sm4} from '../../shared/globals'
 
 const web_box= css`
     position: absolute;
@@ -23,7 +23,6 @@ const info = css`
     width: 50vw;
     height: 87vh;
     overflow:hidden;
-  
     color: white;
     line-height: 1.9;
     ${sm4}{
@@ -61,7 +60,6 @@ const map = css`
     width: 38vw;
     height: 87vh;
     padding: 15px;
-    /* margin: -250px 0 0 -250px; */
     background: white;
     ${sm4}{
         width:90vw;
@@ -70,17 +68,6 @@ const map = css`
     }
 
 `
-
-
-
-
-
-
-
-
-
-
-
 /*---image effect--**/
 const imgGrid=css`
     padding:15px;
@@ -91,7 +78,6 @@ const imgGrid=css`
     left:0;
     overflow:hidden;
     figure{
-        /* border:1em solid #60A58F; */
         position: relative;
 	    float: left;
 	    overflow: hidden;
@@ -132,18 +118,6 @@ const imgGrid=css`
 	                transform: translate3d(0,0,0);
                 }
             }
-            /* ${md}{
-                margin-top:4em;
-                font-size:.9em;
-            }
-            ${lgm}{
-                margin-top:1em;
-                font-size: 1.1em;
-            }
-            ${lg2}{
-                margin-top:1em;
-                font-size: 1.25em;
-            } */
         }
 
     }
@@ -205,7 +179,6 @@ const box=css`
     width: 50vw;
     height: 65vh;
     padding: 1em;
-    /* margin: -250px 0 0 -250px; */
     background: white;
     
     overflow:hidden;
@@ -217,12 +190,7 @@ const cardStyle = css`
 
     width:100%;
     height:100%;
-    /* top: 78vh;
-    left: 30vw; */
-    
-    /* position:absolute; */
     animation:${nameAnimation} 1s;
-    /* transform:translate3d(-16em,-14em,0); */
     z-index:1;
     color: rgba(0, 0, 0, 0.87);
     transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
@@ -234,12 +202,7 @@ const cardStyle = css`
     background:#60A58F;
     overflow:hidden;
     
-    
-
 `
-
-
-
 
 const arrowAttention = keyframes`
     from{
@@ -308,115 +271,8 @@ const nextIcon=css`
     font-family:var(--font-hard);
     animation:${arrowAttention} 2.4s infinite;  
 `
-const h1_title = css`
-    color:#EB6E51;
-    ${sm4}{
-        text-align:center;
-        /* margin-left:30%; */
-        /* transform:translateX(-50%); */
-        margin-top:1.7em;
-        line-height:.8em;
-        width:85%;
-        
-    }
-    ${sm3}{
-        margin-top:1em;
-        font-size:1.3em;
-    }
-
-`
-const handwriting=css`
-    margin:auto;
-    margin-left:-85%;
-    margin-top:1em;
-    font-variation-settings: "wght" 300;
-    letter-spacing:.07em;
-    width:90vw;
-    font-family:var(--font-hard);
-    font-size:.4em;
-    /* transform:transitionX(-50%); */
-`
-const phone_box= css`
-    position:relative;
-    margin-left:50%;
-    display:none;
-    ${sm4}{
-        display:block;
-    }
-
-`
 
 
-const infoBox=css`
-    position:relative;
-    margin:auto;
-    ${sm4}{
-        display:none;
-    }
-`
-const cardHeader  = css`
-    height:6.5em;
-    width: 90wv;
-    margin:auto;
-    margin-top:-1em;
-    
-    ${lgm}{
-        height:9.5em;
-        margin-top:0;
-    }
-    
-`
-const cardContent = css `
-    margin:auto;
-    display:block;
-    height:16em;
-    width:50vw;
-    
-    /* padding-left:.5em; */
-    overflow:hidden;
-    h1{
-        text-align: center;
-        font-size: 40px;
-        
-    }
-    ${mdm}{
-        /* top:5em; */
-    }
-    ${md}{
-        
-        left:10em;
-        
-        h1{
-            font-size: 35px;
-        }
-    }
-   
-    ${lgm}{
-        /* width:14em; */
-        left:13em;
-    }
-    ${lg2}{
-        /* width:calc(100%-13em); */
-        left:16em;
-  
-    }
-`
-const text = css`
-    font-size:.7em;
-    font-weight:500;
-    letter-spacing:0.1em;
-    overflow:hidden;
-    padding-left:1em;
-    /* ${md}{
-        font-size:.7em;
-    } */
-    ${lgm}{
-        font-size:.8em;
-    }
-    /*${lg2}{
-        font-size:1.2em;
-    } */ 
-`
 const icons = css`
     /* width:calc(100% - 13em); */
     width:100%;
@@ -437,4 +293,4 @@ const btn = css`
     position:absolute;
     right:1vw;;
 `
-export {info,info_photo,info_name,info_contact,map,btn, web_box, infoBox, phone_box,handwriting,h1_title, imgGrid,sarahEffect,box,cardStyle,cardHeader,cardContent,icons,cardFooter,text ,previousIcon,previous,next,nextIcon}
+export { info,info_photo,info_name,info_contact,map,btn,web_box,imgGrid,sarahEffect,box,cardStyle,cardFooter,icons,previousIcon,previous,next,nextIcon}

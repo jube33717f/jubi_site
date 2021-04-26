@@ -19,10 +19,5 @@ const portfolio_bg = css`
     }
 
 `
-const title = css`
-    color:#6D9EEB;
-    ${sm4}{
-        display:none;
-    }
-`
-export {portfolio_bg,title}
+
+export {portfolio_bg}

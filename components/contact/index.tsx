@@ -6,7 +6,6 @@ const ContactForm = ()=>{
 
     const [email,setEmail] = useState('')
     const [name, setName] = useState('')
-    const [message, setMessage] = useState('')
     const [feedback, setFeedBack] = useState('')
     const sendFeedback = async (templateId:string, variables:object)=> {
         const userID= "user_pMiF80loZQBp2KIqs9Qe9";
@@ -57,7 +56,7 @@ const ContactForm = ()=>{
         <TextField
           required
           id="outlined-multiline-static"
-          placeholder="Type your Message here..."         
+          placeholder="Type here to leave me message if you want..."         
           fullWidth
           multiline
           rows={5}

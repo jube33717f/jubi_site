@@ -1,15 +1,12 @@
 import {css} from '@emotion/react'
-import {sm1,sm2,sm3,sm4,md} from '../../shared/globals'
+import {sm2,sm3,sm4} from '../../shared/globals'
 const contentBox = css`
     display:flex;
 `
 const category = css`
     margin-right:1em;
-    
- 
     ${sm4}{
-        display:none;
-        
+        display:none;     
     }
 `
 const postIndexList = css `
@@ -111,10 +108,9 @@ const postIndexTitleBar=css`
     width: 100%;
     height: 1px;  
 `
-
 const pagination = css`
     position:absolute;
     bottom:1em;
 `
 
-export {category,contentBox, postIndexList, postIndexItem,postIndexTitleBar,pagination}
+export {contentBox, postIndexList, postIndexItem,postIndexTitleBar,pagination,category}
