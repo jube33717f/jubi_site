@@ -1,7 +1,16 @@
-// import { ClassNames } from '@emotion/core';
+/**
+ * @file Cursor component
+ * @date 2020-04-01
+ * @author Jubi
+ * @lastModify Jubi 2020-04-26
+ */
+/* <------------------------------------ **** DEPENDENCE IMPORT START **** ------------------------------------ */
+/** This section will include all the necessary dependence for this tsx file */
 import { css } from '@emotion/react';
 import {useState, useEffect } from 'react'
 import {cursor, cursorHidden, cursorLinkHovered, cursorClicked} from './style'
+/* <------------------------------------ **** DEPENDENCE IMPORT END **** ------------------------------------ */
+/* <------------------------------------ **** FUNCTION COMPONENT START **** ------------------------------------ */
 const isMobile = () => {
     const ua = navigator.userAgent;
     return /Android|Mobi/i.test(ua);
@@ -9,18 +18,20 @@ const isMobile = () => {
 
 const Cursor = () => {
     if (typeof navigator !== "undefined" && isMobile()) return null;
-
+    /* <------------------------------------ **** HOOKS START **** ------------------------------------ */
+    /************* This section will include this component HOOK function *************/
     const [position, setPosition] = useState({ x: 0, y: 0 });
     const [clicked, setClicked] = useState(false);
     const [linkHovered, setLinkHovered] = useState(false);
     const [hidden, setHidden] = useState(false);
-
     useEffect(() => {
         addEventListeners();
         handleLinkHoverEvents();
         return () => removeEventListeners();
     }, []);
-
+    /* <------------------------------------ **** HOOKS END **** ------------------------------------ */
+    /* <------------------------------------ **** FUNCTION START **** ------------------------------------ */
+    /************* This section will include this component general function *************/
     const addEventListeners = () => {
         document.addEventListener("mousemove", onMouseMove);
         document.addEventListener("mouseenter", onMouseEnter);
@@ -65,7 +76,6 @@ const Cursor = () => {
     };
 
     const cursorClasses =()=>{
-        // let cx = `${cursor};`+(clicked ? `${cursorClicked};`:'') + (hidden?`${cursorClicked};`:'') + (linkHovered?`${cursorLinkHovered}`:'')
         
         if(clicked) return css`${cursor};${cursorClicked}`;
         
@@ -75,12 +85,9 @@ const Cursor = () => {
         
         return css`${cursor}`
     }
-    //  ClassNames({
-    //     "cursorClicked": clicked,
-    //     "cursorHidden": hidden,
-    //     "cursorLinkHovered": linkHovered
-    // });
-
+  
+    /* <------------------------------------ **** FUNCTION END **** ------------------------------------ */
+    {/** Cursor */}
     return (
         <div
             css={cursorClasses}
@@ -88,5 +95,5 @@ const Cursor = () => {
         />
     );
 };
-
+/* <------------------------------------ **** FUNCTION COMPONENT END **** ------------------------------------ */
 export default Cursor;

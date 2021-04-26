@@ -1,15 +1,18 @@
-
-
+/**
+ * @file Portfolio List component  - for computer view
+ * @date 2020-04-01
+ * @author Jubi
+ * @lastModify Jubi 2020-04-26
+ */
+/* <------------------------------------ **** DEPENDENCE IMPORT START **** ------------------------------------ */
+/** This section will include all the necessary dependence for this tsx file */
 import Image from 'next/image'
 import {titleStyle,contentStyle, scroll, intro1, intro2, showcase, cases, displayImg, displayIntro, displayImg2, displayIntro2} from './style'
 import { Popover } from 'antd';
-
-
-
 import GitHubIcon from '@material-ui/icons/GitHub';
 import InsertLinkIcon from '@material-ui/icons/InsertLink';
 import FlightTakeoffIcon from '@material-ui/icons/FlightTakeoff';
-
+/* <------------------------------------ **** DEPENDENCE IMPORT END **** ------------------------------------ */
 const portfolios = [
     {
         title:'MY website',
@@ -77,9 +80,9 @@ const portfolios = [
         tech:'Fontend: React, Redux, SCSS Backend: Node-Koa | Database: Mongodb'
     }
 ]
+/* <------------------------------------ **** FUNCTION COMPONENT START **** ------------------------------------ */
 const content = (link:string,github:string,info:string,tech:string)=>(
-    <div css = {contentStyle}>
-       
+    <div css = {contentStyle}>     
         <h5>
             <a href={github}>
                 <GitHubIcon/>
@@ -97,14 +100,21 @@ const title = (title:string)=>(<><FlightTakeoffIcon  style={{color:'#6D9EEB'}} /
 const Works = ()=>{
     
     return (
-        <div css = {scroll}>
-            
+        <>
+        {/* <------------------------------------ **** LAYER FIRST START **** ------------------------------------ */}
+        {/** scroll */}
+        <div css = {scroll}> 
+            {/* <------------------------------------ **** LAYER SECOND START **** ------------------------------------ */}
+            {/** works */}  
             <div css = {showcase}>
                 {portfolios.map((item,index)=>{
                     const path = `/works/${item.img}`
+                    {/* <------------------------------------ **** LAYER THREE START **** ------------------------------------ */}
+                    {/** every single work */} 
                     if(index%2===0){
                         return (<div css={cases} key={index}>
-                            
+                            {/* <------------------------------------ **** SECTION ONE START **** ------------------------------------ */}
+                            {/** image top & introduction bottom */}
                                 <div css={displayImg}>
                                     <Popover style={{fontFamily:'Manrope!important'}} content={content(`${item.link}`,`${item.github}`,`${item.info}`,`${item.tech}`)} placement="bottom" title={title(`${item.title}`)} trigger="hover">
                                         <Image 
@@ -125,10 +135,13 @@ const Works = ()=>{
                                     
                                 </div>
                             </div>
+                            {/* <------------------------------------ **** SECTION ONE END **** ------------------------------------ */}
                         </div>)
                     }
                     else{
                         return (<div css={cases} key={index}>
+                            {/* <------------------------------------ **** SECTION TWO START **** ------------------------------------ */}
+                            {/** introduction top & image bottom */}
                             <div css={displayImg2}>
                                 <Popover css = {contentStyle} content={content(`${item.link}`,`${item.github}`,`${item.info}`,`${item.tech}`)} placement="top" title={title(`${item.title}`)} trigger="hover">
                                     <Image 
@@ -147,14 +160,17 @@ const Works = ()=>{
                                     <p>{item.title}<span>{item.date}</span></p>
                                 </div>
                             </div>
+                            {/* <------------------------------------ **** SECTION TWO END **** ------------------------------------ */}
                         </div>)
                     }
+                    {/* <------------------------------------ **** LAYER THREE START **** ------------------------------------ */}
                 })}
-               
-                
-               
             </div>
-            </div>
+            {/* <------------------------------------ **** LAYER SECOND END **** ------------------------------------ */}
+        </div>
+        {/* <------------------------------------ **** LAYER ONE END **** ------------------------------------ */}
+    </>
     )
 }
+/* <------------------------------------ **** FUNCTION COMPONENT END **** ------------------------------------ */
 export default Works;

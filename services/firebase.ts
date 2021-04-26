@@ -1,9 +1,14 @@
+/**
+ * @file Firebase Setting
+ * @date 2020-04-01
+ * @author Jubi
+ * @lastModify Jubi 2020-04-26
+ */
+/* <------------------------------------ **** DEPENDENCE IMPORT START **** ------------------------------------ */
+/** This section will include all the necessary dependence for this tsx file */
 import firebase from 'firebase';
-
-
-
-
-    // try{
+/* <------------------------------------ **** DEPENDENCE IMPORT END **** ------------------------------------ */
+/* <------------------------------------ **** FIREBASE DATA IMPORT START  **** ------------------------------------ */
     const firebaseConfig = {
         apiKey: process.env.FIREBASE_API_KEY,
         authDomain: process.env.FIREBASE_AUTH_DOMAIN,
@@ -16,16 +21,10 @@ import firebase from 'firebase';
         token:process.env.FIREBASE_TOKEN,
     };
     export {firebaseConfig}
-    // if(!firebase.apps.length){
+/* <------------------------------------ **** FIREBASE DATA IMPORT END **** ------------------------------------ */
+/* <------------------------------------ **** FIREBASE INITIAL START **** ------------------------------------ */
     if (!firebase.apps.length) firebase.initializeApp(firebaseConfig);
-            
-        // }
+/* <------------------------------------ **** FIREBASE INITIAL END  **** ------------------------------------ */         
 
-        
-    // }catch(error){
-    //     if(/already exists/.test(error.message)){
-    //         console.log(`Firebase  donesn't initialize successfully`)
-    //     }
-    // }
 
 export default firebase

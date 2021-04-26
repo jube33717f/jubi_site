@@ -1,16 +1,14 @@
-
-
+/**
+ * @file Portfolio List component - for phone view
+ * @date 2020-04-01
+ * @author Jubi
+ * @lastModify Jubi 2020-04-26
+ */
+/* <------------------------------------ **** DEPENDENCE IMPORT START **** ------------------------------------ */
+/** This section will include all the necessary dependence for this tsx file */
 import Image from 'next/image'
 import {title_h1,scroll,box,cases,img_display,description,intro1,intro2} from './style'
-import { Popover } from 'antd';
-
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faLink, faPaperPlane } from '@fortawesome/free-solid-svg-icons'
-import { faGithubSquare } from '@fortawesome/free-brands-svg-icons'
-
-
-
-
+/* <------------------------------------ **** DEPENDENCE IMPORT END **** ------------------------------------ */
 
 const portfolios = [
     {
@@ -80,41 +78,54 @@ const portfolios = [
     }
 ]
 
-
+/* <------------------------------------ **** FUNCTION COMPONENT START **** ------------------------------------ */
 const WorksPhone = ()=>{
     
     return (
+        <>
+        {/* <------------------------------------ **** LAYER FIRST START **** ------------------------------------ */}
+        {/** scroll */}
         <div css={scroll}>
             <h1 css={title_h1}>PORTFOLIO</h1>
+            {/* <------------------------------------ **** LAYER SECOND START **** ------------------------------------ */}
+            {/** works */}
             <div css={box}>
             {portfolios.map((item,index)=>{
                     const path = `/works/${item.img}`
+                    {/* <------------------------------------ **** LAYER THREE START **** ------------------------------------ */}
+                    {/** every single work */} 
                     if(index%2===0){
+                        {/* <------------------------------------ **** SECTION ONE START **** ------------------------------------ */}
+                        {/** image left & introduction right*/}
                         return (
-                        <div css={cases} key={index}>
-                            <a href={item.github}>
-                                <div css={img_display} >
-                                        <Image 
-                                            src={path}
-                                            layout="fill"
-                                            loading='lazy'
-                                            quality={100}
-                                        />
-                                </div>
-                            </a>
-                            <div css={description} style={{ right: '0px'}}>
+                            <div css={cases} key={index}>
+                                
+                                <a href={item.github}>
+                                    <div css={img_display} >
+                                            <Image 
+                                                src={path}
+                                                layout="fill"
+                                                loading='lazy'
+                                                quality={100}
+                                            />
+                                    </div>
+                                </a>
+                                <div css={description} style={{ right: '0px'}}>
 
-                                <div css={intro1}>
-                                    <p>0{index+1}</p>
-                                    <span></span>
+                                    <div css={intro1}>
+                                        <p>0{index+1}</p>
+                                        <span></span>
+                                    </div>
+                                    <div css={intro2}> 
+                                        <p>{item.title}<span>{item.date}</span></p>
+                                        
+                                    </div>
                                 </div>
-                                <div css={intro2}> 
-                                    <p>{item.title}<span>{item.date}</span></p>
-                                    
-                                </div>
-                            </div>
-                        </div>)
+                            </div>)
+                        {/* <------------------------------------ **** SECTION ONE END **** ------------------------------------ */}
                     }else{
+                        {/* <------------------------------------ **** SECTION TWO START **** ------------------------------------ */}
+                        {/** introduction top & image bottom */}
                         return (
                             <div css={cases} key={index}>
                                     
@@ -140,11 +151,16 @@ const WorksPhone = ()=>{
                                     </div>
                                 </a>
                             </div>)
+                        {/* <------------------------------------ **** SECTION TWO END **** ------------------------------------ */}
                     }
+                    {/* <------------------------------------ **** LAYER THREE END **** ------------------------------------ */}
                 }
             )}
+            </div>
+            {/* <------------------------------------ **** LAYER SECOND END **** ------------------------------------ */}
         </div>
-        </div>
-    )
+        {/* <------------------------------------ **** LAYER FIRST END **** ------------------------------------ */}
+    </>)
 }
+/* <------------------------------------ **** FUNCTION COMPONENT END **** ------------------------------------ */
 export default WorksPhone;

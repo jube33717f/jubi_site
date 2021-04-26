@@ -1,19 +1,32 @@
+/**
+ * @file SEO Environment Setting 
+ * @date 2020-04-01
+ * @author Jubi
+ * @lastModify Jubi 2020-04-26
+ */
+/* <------------------------------------ **** DEPENDENCE IMPORT START **** ------------------------------------ */
+/** This section will include all the necessary dependence for this tsx file */
 import Head from 'next/head'
 import { metadata as siteMeta } from 'config'
-
+/* <------------------------------------ **** DEPENDENCE IMPORT END **** ------------------------------------ */
+/* <------------------------------------ **** INTERFACE/TYPE START **** ------------------------------------ */
+/** This section will include all the interface for this tsx file */
 export type SEOProps = {
   title?: string
   description?: string
   isBlogPost?: boolean
   keywords?: string[]
 }
-
+/* <------------------------------------ **** INTERFACE/TYPE END **** ------------------------------------ */
+/* <------------------------------------ **** FUNCTION COMPONENT START **** ------------------------------------ */
 const SEO = ({ title, description, keywords= siteMeta.keywords , isBlogPost = false }: SEOProps) => {
+  /* <------------------------------------ **** PARAMETER START **** ------------------------------------ */
+  /************* This section will include this component parameter *************/
   const pageTitle = title
     ? `${title} :: ${siteMeta.siteName}`
     : siteMeta.siteName
-  const pageDescription = description ? description : siteMeta.description
-
+  const pageDescription = description ? description : siteMeta.description 
+  /* <------------------------------------ **** PARAMETER END **** ------------------------------------ */
   return (
     <Head>
       <title>{pageTitle}</title>
@@ -29,5 +42,6 @@ const SEO = ({ title, description, keywords= siteMeta.keywords , isBlogPost = fa
     </Head>
   )
 }
+/* <------------------------------------ **** FUNCTION COMPONENT END **** ------------------------------------ */
 
 export default SEO

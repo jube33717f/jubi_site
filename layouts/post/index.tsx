@@ -1,38 +1,49 @@
+/**
+ * @file Article Wrapper
+ * @date 2020-04-01
+ * @author Jubi
+ * @lastModify Jubi 2020-04-26
+ */
+/* <------------------------------------ **** DEPENDENCE IMPORT START **** ------------------------------------ */
+/** This section will include all the necessary dependence for this tsx file */
 import { ReactNode } from 'react'
-import { Global } from '@emotion/react'
-import { globalStyles } from '@shared/globals'
-// import Header from '@components/header'
-// import Navigation from '@components/navigation'
+
 import SEO from '@components/seo'
-// import Footer from '@components/footer'
-
+import Cursor from '@components/cursor'
 import { postStyles, postContainer } from './style'
-
-
+/* <------------------------------------ **** DEPENDENCE IMPORT END **** ------------------------------------ */
+/* <------------------------------------ **** INTERFACE/Type START **** ------------------------------------ */
+/** This section will include all the interface for this tsx file */
 type PostProps = {
   title: string
   children: ReactNode
-//   frontMatter: FrontMatter
 }
+/* <------------------------------------ **** INTERFACE/TYPE END **** ------------------------------------ */
 
 
+/* <------------------------------------ **** FUNCTION COMPONENT START **** ------------------------------------ */
 const PostLayout = ({  title,children }: PostProps) => (
   <>
+  {/* <------------------------------------ **** SECTION1 START **** ------------------------------------ */}
+  {/** HEAD part / SEO setting */}
     <SEO
-      title={title}
-      
+      title={title}    
       isBlogPost
     />
-    <Global styles={globalStyles} />
-    {/* <Header pageTitle={frontMatter.title} /> */}
    
+   {/* <------------------------------------ **** SECTION1 END **** ------------------------------------ */}
+    {/* <------------------------------------ **** SECTION2 START **** ------------------------------------ */}
+    {/** cursor */}
+    <Cursor/>
+    {/* <------------------------------------ **** SECTION2 END **** ------------------------------------ */}
+    {/* <------------------------------------ **** SECTION3 START **** ------------------------------------ */}
+    {/** main part */}
     <main css={postStyles}>
       <section>
         <article css={postContainer}>{children}</article>
       </section>
     </main>
-    {/* <Footer /> */}
   </>
 )
-
+/* <------------------------------------ **** FUNCTION COMPONENT END **** ------------------------------------ */
 export default PostLayout

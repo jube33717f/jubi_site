@@ -1,58 +1,42 @@
-
-
+/**
+ * @file Home Page
+ * @date 2020-04-01
+ * @author Jubi
+ * @lastModify Jubi 2020-04-26
+ */
+/* <------------------------------------ **** DEPENDENCE IMPORT START **** ------------------------------------ */
+/** This section will include all the necessary dependence for this tsx file */
 import { css } from '@emotion/react'
-
-import SEO from '@components/seo'
-
-import {useState} from 'react'
-
 import {sm4} from '../shared/globals'
 import {bgWrap,next} from 'styles/me'
 import Image from 'next/image'
-
 import Page from '@layouts/page'
+/* <------------------------------------ **** DEPENDENCE IMPORT END **** ------------------------------------ */
+
 const homeStyles = css`
     width:100vw;
     height:100vh;
     position:absolute;
     overflow:hidden;
     top:0;
-    /* display: flex;
-     flex-flow: row wrap; 
-    justify-content: flex-start; */
     font-family: var(--font-art),sans-serif;
     font-feature-settings: "palt","calt","liga";
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     font-size:2rem;
     font-weight: light;
-    /* position:fixed; */
-    /* ${sm4}{
-        position:relative;
-    } */
-    /* font-weight:100; */
 `
-
+ /* <------------------------------------ **** HOME PAGE START **** ------------------------------------ */
 const Home=()=> {
-     
-  
-   
-    // const mouseOverTitleHandler (e: Event,{index}:{index:number})=>{
-
-    // }
-    // const mouseUp
-    return<>
-    
-        
-    
+    return<>   
             <Page>
-                {/* <div css={navStatus}>
-                        
-                    </div> */}
+
                 <div css={homeStyles}>
-                    
-                        <div css={bgWrap}>
+                    <div css={bgWrap}>
+                        
                         <figure>
+                            {/* <------------------------------------ **** SECTION 1 START **** ------------------------------------ */}
+                            {/** background */}
                             <Image 
                                 src='/bg.jpg'
                                 layout="fill"
@@ -60,23 +44,26 @@ const Home=()=> {
                                 quality={100}
                                 />
                             <figcaption>
-                            <div  css={next} >←</div>
+                                {/* <------------------------------------ **** SECTION 1 END **** ------------------------------------ */}
+                                {/* <------------------------------------ **** SECTION 2 START **** ------------------------------------ */}
+                                {/** title */}
+                                <div  css={next} >←</div>
+                                {/* <------------------------------------ **** SECTION 2 END **** ------------------------------------ */}
+                                {/* <------------------------------------ **** SECTION 3 START **** ------------------------------------ */}
+                                {/** title */}
                                 <div>
                                     <h3>JUBI <span>CHEN</span></h3>
                                     <p>            INTERESTING FREE ENTHUSIASTIC NAIVE</p>
                                 </div>
+                                {/* <------------------------------------ **** SECTION 3 END **** ------------------------------------ */}
                             </figcaption>
                         </figure>
-                        
-
-
-                    </div>
-                    
+                    </div>                    
                 </div>  
             </Page>
             
   
     </>
 }
-
+/* <------------------------------------ **** HOME PAGE END **** ------------------------------------ */
 export default Home;

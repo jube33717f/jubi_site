@@ -1,7 +1,16 @@
+/**
+ * @file Get Firebase data related functions
+ * @date 2020-04-01
+ * @author Jubi
+ * @lastModify Jubi 2020-04-26
+ */
+/* <------------------------------------ **** DEPENDENCE IMPORT START **** ------------------------------------ */
+/** This section will include all the necessary dependence for this tsx file */
 import firebase from 'services/firebase'
 import  'firebase/firestore'
-
-
+/* <------------------------------------ **** DEPENDENCE IMPORT END **** ------------------------------------ */
+/* <------------------------------------ **** INTERFACE/Type START **** ------------------------------------ */
+/** This section will include all the interface for this tsx file */
 export type ArticleType = {
     id: string,
     title: string,
@@ -10,12 +19,12 @@ export type ArticleType = {
     date:string,
 
 }
+/* <------------------------------------ **** INTERFACE/TYPE END **** ------------------------------------ */
 
 const getPosts= async()=> {
 
     const db = firebase.firestore();
-    const snapshot = await db.collection('articles').get()
-    
+    const snapshot = await db.collection('articles').get()   
     let results:ArticleType[] = []
     snapshot.forEach((doc) => {
         
@@ -27,10 +36,7 @@ const getPosts= async()=> {
             date:doc.data().date
         }))
 
-    });
-    // const amount = results.length
-    
-    
+    }); 
     return results
 }
 const getPostsTotalNumber =async (tag?:string)=>{
@@ -129,10 +135,8 @@ const searchPosts = async(keywords:string)=>{
                     .where("title", "<=", keywords + "\uf8ff")
                     .limit(5)
                     .get()
-
     let results:ArticleType[] = []
-    snapshot.forEach((doc) => {
-        
+    snapshot.forEach((doc) => {      
         results.push(Object.assign({
             id:doc.id,
             title:doc.data().title,

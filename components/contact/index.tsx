@@ -1,12 +1,26 @@
+/**
+ * @file Contact form component
+ * @date 2020-04-01
+ * @author Jubi
+ * @lastModify Jubi 2020-04-26
+ */
+/* <------------------------------------ **** DEPENDENCE IMPORT START **** ------------------------------------ */
+/** This section will include all the necessary dependence for this tsx file */
 import React,{useState} from 'react'
 import TextField from '@material-ui/core/TextField';
 import {contact_form} from './style'
 import emailjs from 'emailjs-com';
+/* <------------------------------------ **** DEPENDENCE IMPORT END **** ------------------------------------ */
+/* <------------------------------------ **** FUNCTION COMPONENT START **** ------------------------------------ */
 const ContactForm = ()=>{
-
+    /* <------------------------------------ **** HOOKS START **** ------------------------------------ */
+    /************* This section will include this component HOOK function *************/ 
     const [email,setEmail] = useState('')
     const [name, setName] = useState('')
     const [feedback, setFeedBack] = useState('')
+    /* <------------------------------------ **** HOOKS END **** ------------------------------------ */
+    /* <------------------------------------ **** FUNCTION START **** ------------------------------------ */
+    /************* This section will include this component general function *************/
     const sendFeedback = async (templateId:string, variables:object)=> {
         const userID= "user_pMiF80loZQBp2KIqs9Qe9";
         const res = await emailjs.send('gmail', templateId,variables,userID)
@@ -14,6 +28,7 @@ const ContactForm = ()=>{
             setFeedBack('Thanks for submitting!')
         }
       }
+    
     const handleSubmit = ()=> {
         const templateId = 'template_SuPmdfBi';
         const sender = name+'(Email:'+ email+")";
@@ -24,7 +39,8 @@ const ContactForm = ()=>{
             from_email:email, 
             reply_to: "jubi33717f@gmail.com"})
     }
-    return<form css={contact_form} >
+    /* <------------------------------------ **** FUNCTION END **** ------------------------------------ */
+    return <form css={contact_form} >
         <TextField
           required
           id="outlined-required"
@@ -72,5 +88,5 @@ const ContactForm = ()=>{
         </section>
     </form>
 }
-
+/* <------------------------------------ **** FUNCTION COMPONENT END **** ------------------------------------ */
 export default ContactForm;

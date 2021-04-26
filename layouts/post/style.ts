@@ -1,5 +1,5 @@
 import { css } from '@emotion/react'
-import {sm1,sm2,sm3,sm4} from '../../shared/globals'
+import {sm2,sm3} from '../../shared/globals'
 const postStyles = css`
   width: 100%;
   margin: 0 auto;

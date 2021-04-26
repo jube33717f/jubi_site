@@ -1,5 +1,11 @@
-
-
+/**
+ * @file Writing List component - for phone view
+ * @date 2020-04-01
+ * @author Jubi
+ * @lastModify Jubi 2020-04-26
+ */
+/* <------------------------------------ **** DEPENDENCE IMPORT START **** ------------------------------------ */
+/** This section will include all the necessary dependence for this tsx file */
 import { searchPosts, getPostsByPage, getPostsTotalNumber , ArticleType} from '@shared/get-post'
 import { Input } from '@material-ui/core';
 import {contentBox, postIndexList, postIndexItem,postIndexTitleBar,pagination,category} from './style'
@@ -10,6 +16,9 @@ import { emphasize, withStyles, Theme } from '@material-ui/core/styles';
 import Chip from '@material-ui/core/Chip';
 import Breadcrumbs from '@material-ui/core/Breadcrumbs';
 import Paper from '@material-ui/core/Paper';
+/* <------------------------------------ **** DEPENDENCE IMPORT END **** ------------------------------------ */
+
+
 const StyledBreadcrumb = withStyles((theme: Theme) => ({
     root: {
       backgroundColor: theme.palette.grey[100],
@@ -25,15 +34,28 @@ const StyledBreadcrumb = withStyles((theme: Theme) => ({
       },
     },
   }))(Chip) as typeof Chip;
-const WritingList= (
-//     { posts,amount
-// }:InferGetStaticPropsType<typeof getStaticProps>
-) => {
+/* <------------------------------------ **** FUNCTION COMPONENT START **** ------------------------------------ */
+const WritingList= () => {
+    /* <------------------------------------ **** HOOKS START **** ------------------------------------ */
+    /************* This section will include this component HOOK function *************/
+    /* <------------------------------------ **** HOOKS END **** ------------------------------------ */
     const [tag,setTag] = useState('')
     const [search,setSearch] =useState('')
     const [total,setTotal] = useState(1)
     const [lists,setLists] = useState<ArticleType[]>()
-
+    useEffect(()=>{
+        
+        if(tag===''){
+            initialSetting()
+        }else{
+            
+            refreshByTag()
+        }
+        
+    },[tag,total])
+    /* <------------------------------------ **** HOOKS END **** ------------------------------------ */
+    /* <------------------------------------ **** FUNCTION START **** ------------------------------------ */
+    /************* This section will include this component general function *************/
     const initialSetting = async()=>{
         const amount = await getPostsTotalNumber ()
         setTotal(amount)
@@ -51,19 +73,10 @@ const WritingList= (
         const posts = await searchPosts(search.trim())
         setLists(posts)
     }
-    useEffect(()=>{
-        
-        if(tag===''){
-            initialSetting()
-        }else{
-            
-            refreshByTag()
-        }
-        
-    },[tag,total])
-  
-    
+    /* <------------------------------------ **** FUNCTION END **** ------------------------------------ */
     return <div css={contentBox}> 
+        {/* <------------------------------------ **** SECTION1 START **** ------------------------------------ */}
+        {/** writing list */}
         <section>
             <ul css={postIndexList} >{lists&&lists.map(item=>(
                 <li key={item.id} css={postIndexItem}>
@@ -96,6 +109,8 @@ const WritingList= (
                 />
             </div>
         </section>
+        {/* <------------------------------------ **** SECTION1 END **** ------------------------------------ */}
+        {/* <------------------------------------ **** SECTION2 START **** ------------------------------------ */}
         <section css={category}>
             <Paper 
                 style={{'padding':'.3em'}}
@@ -143,15 +158,8 @@ const WritingList= (
                 
             </Paper>
         </section>
+        {/* <------------------------------------ **** SECTION2 END **** ------------------------------------ */}
     </div>
 }
-
-  
-
-
-  
-
-
-
-
+/* <------------------------------------ **** FUNCTION COMPONENT END **** ------------------------------------ */
 export default WritingList;

@@ -1,3 +1,11 @@
+/**
+ * @file Article Page
+ * @date 2020-04-01
+ * @author Jubi
+ * @lastModify Jubi 2020-04-26
+ */
+/* <------------------------------------ **** DEPENDENCE IMPORT START **** ------------------------------------ */
+/** This section will include all the necessary dependence for this tsx file */
 import {
     GetStaticPaths,
     GetStaticPropsContext,
@@ -12,18 +20,13 @@ import renderToString from 'next-mdx-remote/render-to-string'
 import firebase from 'services/firebase'
 import  'firebase/storage'
 import { avatar, info, infoBox } from '../layouts/post/style'
-import { description } from '@components/works_phone/style'
- 
+/* <------------------------------------ **** DEPENDENCE IMPORT END **** ------------------------------------ */
+ /* <------------------------------------ **** ARTICLE PAGE START **** ------------------------------------ */
 export default function Post({
     post,
   }: InferGetStaticPropsType<typeof getStaticProps>) {
 
-    // Marked.setOptions({ highlight: (code, lang) => highlight(lang.en, code).value });
-    // const content = Marked.parse(post.article)
-    
-    // const content = hydrate(post.article)
-    // const dom = new BeautifulDom(content)
-    // const [posting,setPosting] = useState([])
+ 
     return <PostLayout title={post.title}>
         <h2>{post.title}</h2>
         <div css={infoBox}>
@@ -38,7 +41,9 @@ export default function Post({
         
         </PostLayout>
   }
-  
+/* <------------------------------------ **** ARTICLE PAGE END **** ------------------------------------ */
+
+
   export const getStaticPaths: GetStaticPaths = async () => {
     const results = await getPosts()
   
@@ -63,10 +68,9 @@ export default function Post({
     let sentence:string[] = article.split('<br/>')
     
     const asyncRes = await Promise.all(sentence.map(async(i)=>{
-        // console.log(i)
+
         i = i.replace(/^\s+|\s+$/,'');
-        // i.trim()
-        // console.log(i)
+
         let re = /!\[.*\]/
         const match = i.match(re)
         
