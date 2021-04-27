@@ -21,8 +21,8 @@ npm run dev
 
 # Roadmap
 ```
-# style.ts // style file
-# index.tsx //function file
+
+
     ┣ ...
     ┣ components/  # Components
     ┃       ┣ badge/             # badge (in contact page)
@@ -84,6 +84,8 @@ npm run dev
     ┣ package.json  # Required packages
     ┣ .babelrc # JavaScript transpiler presets setting
     ┗ ...
+
+
 ```
 
 # Demo
