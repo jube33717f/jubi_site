@@ -3,7 +3,7 @@
 > 
 > Last edit date: 2021.4.27
 >
-> Description: My personal website: portfolio/writings/contact
+> Description: personal website: portfolio/writings/contact
 >
 > Link on [here](https://jubi.vercel.app/)
 
