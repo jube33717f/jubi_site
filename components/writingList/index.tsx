@@ -7,15 +7,18 @@
 /* <------------------------------------ **** DEPENDENCE IMPORT START **** ------------------------------------ */
 /** This section will include all the necessary dependence for this tsx file */
 import { searchPosts, getPostsByPage, getPostsTotalNumber , ArticleType} from '@shared/get-post'
-import { Input } from '@material-ui/core';
-import {contentBox, postIndexList, postIndexItem,postIndexTitleBar,pagination,category} from './style'
+
 import Link from 'next/link'
 import {useState,useEffect} from 'react'
+
 import { Pagination } from 'antd';
 import { emphasize, withStyles, Theme } from '@material-ui/core/styles';
 import Chip from '@material-ui/core/Chip';
 import Breadcrumbs from '@material-ui/core/Breadcrumbs';
 import Paper from '@material-ui/core/Paper';
+import { Input } from '@material-ui/core';
+
+import {contentBox, postIndexList, postIndexItem,postIndexTitleBar,pagination,category} from './style'
 /* <------------------------------------ **** DEPENDENCE IMPORT END **** ------------------------------------ */
 
 
@@ -111,6 +114,7 @@ const WritingList= () => {
         </section>
         {/* <------------------------------------ **** SECTION1 END **** ------------------------------------ */}
         {/* <------------------------------------ **** SECTION2 START **** ------------------------------------ */}
+        {/** search part */}
         <section css={category}>
             <Paper 
                 style={{'padding':'.3em'}}

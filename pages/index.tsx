@@ -7,8 +7,7 @@
 /* <------------------------------------ **** DEPENDENCE IMPORT START **** ------------------------------------ */
 /** This section will include all the necessary dependence for this tsx file */
 import { css } from '@emotion/react'
-import {sm4} from '../shared/globals'
-import {bgWrap,next} from 'styles/me'
+import {bgWrap,next} from '@styles/home'
 import Image from 'next/image'
 import Page from '@layouts/page'
 /* <------------------------------------ **** DEPENDENCE IMPORT END **** ------------------------------------ */
@@ -53,7 +52,7 @@ const Home=()=> {
                                 {/** title */}
                                 <div>
                                     <h3>JUBI <span>CHEN</span></h3>
-                                    <p>            INTERESTING FREE ENTHUSIASTIC NAIVE</p>
+                                    <p>    INTERESTING FREE ENTHUSIASTIC NAIVE</p>
                                 </div>
                                 {/* <------------------------------------ **** SECTION 3 END **** ------------------------------------ */}
                             </figcaption>

@@ -118,15 +118,11 @@ const navi_page = css`
     justify-content: flex-end;
     align-items: flex-start;
     height: 50%;
-    padding: 0 6.6666666667vw;
-
-
-    
+    padding: 0 6.6666666667vw;  
     transition-property: transform;
     transition-duration: .6s;
     transition-timing-function: cubic-bezier(.4,.1,.2,1);
     transition-delay: .2s;
-
     font-feature-settings: "palt","calt","liga";
     font-variation-settings: "wght" 250;
     color: #1a1a1a;
@@ -135,33 +131,20 @@ const navi_page = css`
     font-size:24px;
     li{
         z-index:2;
-        margin-top: 2.5vh;
-        /* pointer-events: none; */
-        /* color: #ccc; */
-        
+        margin-top: 2.5vh;        
         font-variation-settings: "wght" 250;//700
         letter-spacing:.08em;
-        position: relative;
-       
+        position: relative;  
         font-size: .9em;
-        /*------transform--------**/
         transition-property: color,transform,font-variation-settings;
         transition-duration: .4s;
         transition-timing-function: cubic-bezier(.4,.1,.2,1);
-        
-
-
     }
 `
 
 
-const active_li=css`
-    pointer-events: none;
-    color: #ccc;
-    font-variation-settings: "wght" 700;
-`
-const navi_contact=css`
 
+const navi_contact=css`
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -172,9 +155,7 @@ const navi_contact=css`
     transition-duration: .6s;
     transition-timing-function: cubic-bezier(.4,.1,.2,1);
     transition-delay: .2s;
-
     margin-top: 4vh;
-
     margin-left: -.04em;
     font-variation-settings: "wght" 400;
     font-size: 18px;

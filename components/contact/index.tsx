@@ -40,6 +40,7 @@ const ContactForm = ()=>{
             reply_to: "jubi33717f@gmail.com"})
     }
     /* <------------------------------------ **** FUNCTION END **** ------------------------------------ */
+    {/** Contact form */}
     return <form css={contact_form} >
         <TextField
           required
@@ -52,8 +53,6 @@ const ContactForm = ()=>{
           onChange={(e)=>{
               setName(e.target.value)
           }}
-
-   
         />
         <TextField
           required

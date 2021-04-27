@@ -16,9 +16,7 @@ const config = {
         return config;
     }
 }
-// const config2 = withMDX({
-//     pageExtensions: ['js', 'jsx', 'mdx']
-//   })
+
 module.exports = config
 
 

@@ -1,4 +1,4 @@
-import {css, keyframes} from '@emotion/react'
+import {css} from '@emotion/react'
 import {sm4} from '../../shared/globals'
 const siteNavi= (open:boolean)=>{
     if(open){
@@ -8,10 +8,6 @@ const siteNavi= (open:boolean)=>{
         left: 0;
         top: 0;
         height: 100%;
-
-
-        /* display:block; */
-        /* display:none; */
             ${sm4}{
                 position: absolute;
                 display:none;
@@ -25,19 +21,14 @@ const siteNavi= (open:boolean)=>{
         left: 0;
         top: 0;
         height: 100%;
-        /* display:block; */
-        /* display:none; */
         ${sm4}{
             position: absolute;
             display:none;
         }
-    
-
-`
+    `
 }
 
-const siteNavi_bg =  (open:boolean)=>{
-    
+const siteNavi_bg =  (open:boolean)=>{    
     if(open){
         return css`
             transform:translate3d(100%,0,0);
@@ -50,7 +41,6 @@ const siteNavi_bg =  (open:boolean)=>{
             height: 100%;
             background-color: #fff;
             border-right: 1px solid #ccc;
-            /* transform: translate3d(-100%,0,0); */
             transition-property: transform;
             transition-duration: .6s;
             transition-timing-function: cubic-bezier(.4,.1,.2,1);
@@ -58,7 +48,6 @@ const siteNavi_bg =  (open:boolean)=>{
 
         `
     }
-
     return css`
         position: absolute;
         z-index: -1;
@@ -73,12 +62,7 @@ const siteNavi_bg =  (open:boolean)=>{
         transition-duration: .6s;
         transition-timing-function: cubic-bezier(.4,.1,.2,1);
         transition-delay: .2s;
-        
-    
-
-    `
-    
-    
+    `  
 }
 
 const siteNavi_pages = (open:boolean)=>{
@@ -186,6 +170,7 @@ const naviBtn = (open:boolean)=>{
         `
     
 }
+
 const  naviBtn_area = css`
     position: absolute;
     top: 50%;
@@ -215,13 +200,13 @@ const naviBtn_dot = css`
     height: 4px;
     border-radius: 50%;
     background-color: #1a1a1a;
-    &:nth-child(1){
+    &:nth-of-type(1){
         top: 0;
     }
-    &:nth-child(2){
+    &:nth-of-type(2){
         top: 9px;
     }
-    &:nth-child(3){
+    &:nth-of-type(3){
         top: 18px;
     }
 `

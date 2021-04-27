@@ -1,5 +1,5 @@
 import {css} from '@emotion/react'
-import {sm1,sm2,sm3,sm4,md,lg1,lgm,lg2,lg3} from '../../shared/globals'
+import {sm4} from '../../shared/globals'
 const title_h1 = css `
     color:#6D9EEB;
     height:1em;
@@ -9,12 +9,10 @@ const title_h1 = css `
     position:absolute;
 `
 const scroll = css`
-    
     overflow-y: auto;
     height:100%auto;
     overflow: -moz-scrollbars-none;
     display:none;
-    /* position: absolute; */
     ${sm4}{
         display:block;
         overflow-y: auto;
@@ -32,8 +30,6 @@ const box = css`
     ${sm4}{
         display:block;
     }
-    
-
 `
 const cases = css`
     width:100vw;
@@ -52,20 +48,16 @@ const img_display = css`
     height: 50vw;
     transform: matrix(1, 0, 0, 1, 0, 0);
     position: absolute;
-    border:rgba(0,0,0,0.05) solid 10px;
-    
-   
+    border:rgba(0,0,0,0.05) solid 10px;  
 `
 const description = css`
     width: 50vw;
     height: 50vw;
-    /* left:50vw; */
     position: absolute;
     transform: matrix(1, 0, 0, 1, 0, 0);
     z-index:2;
     bottom: 0px;
-    transform: translateZ(0);
-  
+    transform: translateZ(0);  
 `
 
 const intro1 = css`

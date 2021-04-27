@@ -12,6 +12,7 @@ const web_box= css`
     overflow:hidden;
     ${sm4}{
         overflow:auto;
+        margin-left:0;
     }
     
 `

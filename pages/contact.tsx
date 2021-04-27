@@ -18,7 +18,7 @@ import GitHubIcon from '@material-ui/icons/GitHub';
 import AttachFileIcon from '@material-ui/icons/AttachFile';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import EmailIcon from '@material-ui/icons/Email';
-import { info,info_photo,info_name,info_contact,map,btn,web_box,imgGrid,sarahEffect,box,cardStyle,cardFooter,icons,previousIcon,previous,next,nextIcon} from 'styles/info'
+import { info,info_photo,info_name,info_contact,map,btn,web_box,imgGrid,sarahEffect,box,cardStyle,cardFooter,icons,previousIcon,previous,next,nextIcon} from '@styles/contact'
 
 const ReactTypingEffect = dynamic(()=>import('react-typing-effect'),{ssr:false})
 /* <------------------------------------ **** DEPENDENCE IMPORT END **** ------------------------------------ */

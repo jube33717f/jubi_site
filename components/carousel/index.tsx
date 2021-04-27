@@ -6,14 +6,17 @@
  */
 /* <------------------------------------ **** DEPENDENCE IMPORT START **** ------------------------------------ */
 /** This section will include all the necessary dependence for this tsx file */
-import { Carousel,Card  } from 'antd';
+
 import Badge from '@components/badge'
-import {card,carouselStyle,meta} from './style'
+
 import Image from 'next/image'
+
+import { Carousel,Card  } from 'antd';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import AttachFileIcon from '@material-ui/icons/AttachFile';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import EmailIcon from '@material-ui/icons/Email';
+import {card,carouselStyle,meta} from './style'
 const { Meta } = Card;
 /* <------------------------------------ **** DEPENDENCE IMPORT END **** ------------------------------------ */
 /* <------------------------------------ **** FUNCTION COMPONENT START **** ------------------------------------ */
