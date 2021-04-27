@@ -24,7 +24,7 @@ npm run dev
 
 
     ┣ ...
-    ┣ components/  # Components
+    ┣ components/  # [Components]
     ┃       ┣ badge/             # badge (in contact page)
     ┃       ┃ ┣ index.tsx
     ┃       ┃ ┗ style.ts
@@ -54,35 +54,35 @@ npm run dev
     ┃       ┗ writingList/       # portfolio list component (in works web/phone views component)
     ┃       ┣ index.tsx
     ┃       ┗ style.ts
-    ┣ layouts/  #Page container
+    ┣ layouts/  # [Page container]
     ┃       ┣ page/              # main route page container (container for home/portfolio/writing/contact)
     ┃       ┃ ┣ index.tsx
     ┃       ┃ ┗ style.ts
     ┃       ┗ post/              # articles page container (container for every single articles)
     ┃       ┣ index.tsx
     ┃       ┗ style.ts
-    ┣ pages/    #Pages(route file system)
+    ┣ pages/    # [Pages(route file system)]
     ┃       ┣ [id].tsx           # articles page
     ┃       ┣ _app.tsx           # entry file
     ┃       ┣ contact.tsx        # contact page
     ┃       ┣ index.tsx          # home page
     ┃       ┣ portfolio.tsx      # portfolio page
     ┃       ┗ writing.tsx        # writing page
-    ┣ services/ # For firebase
+    ┣ services/ # [For firebase]
     ┃       ┗ firebase.ts        # firebase setting
     ┣ shared/   # Global files
     ┃       ┣ get-post.ts        # firebase fetch related functions
     ┃       ┗ globals.ts         # global styles
-    ┣ styles/  # Main pages styles
+    ┣ styles/  # [Main pages styles]
     ┃       ┗...
-    ┣ public/  #Images
+    ┣ public/  # [Images]
     ┃       ┗...
-    ┣ config.ts  # SEO content
-    ┣ next-env.d.ts # Ensures Next.js types are picked up by the TypeScript compiler
-    ┣ next-config.ts # Modules export
-    ┣ tsconfig.json  # Specifies the root files and the compiler options required to compile the project
-    ┣ package.json  # Required packages
-    ┣ .babelrc # JavaScript transpiler presets setting
+    ┣ config.ts          # SEO content
+    ┣ next-env.d.ts      # Ensures Next.js types are picked up by the TypeScript compiler
+    ┣ next-config.ts     # Modules export
+    ┣ tsconfig.json      # Specifies the root files and the compiler options required to compile the project
+    ┣ package.json       # Required packages
+    ┣ .babelrc           # JavaScript transpiler presets setting
     ┗ ...
 
 
