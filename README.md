@@ -7,17 +7,32 @@
 >
 > Link on [here](https://jubi.vercel.app/)
 
-# Installation / Usage
-```
-npm install
-npm run dev
-```
+
+
+# Tech/framework used
+Frontend tech stack:
+* Next JS
+* React JS
+* Emotion CSS
+* Typescript
+* Babel
+* SSR / SEO
+
+Storage tech:
+* Friebase
 
 # Features
 * Use next.js to create SEO environment
 * Use next.js to enable routing with file system
 * Use next/image to implement automatically image optimization
 * Use next.js getInitialProps to enable SSR in a page to do initial data population
+
+# Installation / Usage
+```
+$cd jubi_site
+$npm install
+$npm run dev
+```
 
 # Roadmap
 ```
