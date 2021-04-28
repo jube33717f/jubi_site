@@ -1,7 +1,7 @@
 # Jubi's Site
 > Author: Jubi
 > 
-> Last edit date: 2021.4.27
+> Last edit date: 2021.4.28
 >
 > Description: personal website: portfolio/writings/contact
 >
