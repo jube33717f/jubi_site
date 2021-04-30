@@ -1,17 +1,25 @@
 # Jubi's Site
 > Author: Jubi
 > 
-> Last edit date: 2021.4.27
+> Last edit date: 2021.4.28
 >
-> Description: My personal website: portfolio/writings/contact
+> Description: personal website: portfolio/writings/contact
 >
 > Link on [here](https://jubi.vercel.app/)
 
-# Installation / Usage
-```
-npm install
-npm run dev
-```
+
+
+# Tech/framework used
+Frontend tech stack:
+* Next JS
+* React JS
+* Emotion CSS
+* Typescript
+* Babel
+* SSR / SEO
+
+Storage tech:
+* Friebase
 
 # Features
 * Use next.js to create SEO environment
@@ -19,12 +27,19 @@ npm run dev
 * Use next/image to implement automatically image optimization
 * Use next.js getInitialProps to enable SSR in a page to do initial data population
 
+# Installation / Usage
+```
+$cd jubi_site
+$npm install
+$npm run dev
+```
+
 # Roadmap
 ```
 
 
     ┣ ...
-    ┣ components/  # Components
+    ┣ components/  # [Components]
     ┃       ┣ badge/             # badge (in contact page)
     ┃       ┃ ┣ index.tsx
     ┃       ┃ ┗ style.ts
@@ -54,35 +69,35 @@ npm run dev
     ┃       ┗ writingList/       # portfolio list component (in works web/phone views component)
     ┃       ┣ index.tsx
     ┃       ┗ style.ts
-    ┣ layouts/  #Page container
+    ┣ layouts/  # [Page container]
     ┃       ┣ page/              # main route page container (container for home/portfolio/writing/contact)
     ┃       ┃ ┣ index.tsx
     ┃       ┃ ┗ style.ts
     ┃       ┗ post/              # articles page container (container for every single articles)
     ┃       ┣ index.tsx
     ┃       ┗ style.ts
-    ┣ pages/    #Pages(route file system)
+    ┣ pages/    # [Pages(route file system)]
     ┃       ┣ [id].tsx           # articles page
     ┃       ┣ _app.tsx           # entry file
     ┃       ┣ contact.tsx        # contact page
     ┃       ┣ index.tsx          # home page
     ┃       ┣ portfolio.tsx      # portfolio page
     ┃       ┗ writing.tsx        # writing page
-    ┣ services/ # For firebase
+    ┣ services/ # [For firebase]
     ┃       ┗ firebase.ts        # firebase setting
     ┣ shared/   # Global files
     ┃       ┣ get-post.ts        # firebase fetch related functions
     ┃       ┗ globals.ts         # global styles
-    ┣ styles/  # Main pages styles
+    ┣ styles/  # [Main pages styles]
     ┃       ┗...
-    ┣ public/  #Images
+    ┣ public/  # [Images]
     ┃       ┗...
-    ┣ config.ts  # SEO content
-    ┣ next-env.d.ts # Ensures Next.js types are picked up by the TypeScript compiler
-    ┣ next-config.ts # Modules export
-    ┣ tsconfig.json  # Specifies the root files and the compiler options required to compile the project
-    ┣ package.json  # Required packages
-    ┣ .babelrc # JavaScript transpiler presets setting
+    ┣ config.ts          # SEO content
+    ┣ next-env.d.ts      # Ensures Next.js types are picked up by the TypeScript compiler
+    ┣ next-config.ts     # Modules export
+    ┣ tsconfig.json      # Specifies the root files and the compiler options required to compile the project
+    ┣ package.json       # Required packages
+    ┣ .babelrc           # JavaScript transpiler presets setting
     ┗ ...
 
 
