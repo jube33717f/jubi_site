@@ -2,7 +2,7 @@
  * @file Page Wrapper
  * @date 2020-04-01
  * @author Jubi
- * @lastModify Jubi 2020-04-26
+ * @lastModify Jubi 2020-04-30
  */
 /* <------------------------------------ **** DEPENDENCE IMPORT START **** ------------------------------------ */
 /** This section will include all the necessary dependence for this tsx file */
@@ -32,7 +32,7 @@ const Page = ({ meta, children }: PageProps) => (
         <title>
             <SEO title="Jubi Chen" />
         </title>
-        <link rel="shortcut icon" href="https://avatars.githubusercontent.com/u/39979025?s=400&u=7927353954ae03d6f8bd4053d9fc567769e9753b&v=4" type="image/x-icon"></link>
+        <link rel="shortcut icon" href="/tinkerbell.png" type="image/x-icon"></link>
         <link rel="preconnect" href="https://fonts.gstatic.com"/>
         <link href="https://fonts.googleapis.com/css2?family=Caveat&family=Manrope&display=swap" rel="stylesheet"/>
     </Head>
