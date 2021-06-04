@@ -17,6 +17,7 @@ const ContactForm = ()=>{
     /************* This section will include this component HOOK function *************/ 
     const [email,setEmail] = useState('')
     const [name, setName] = useState('')
+    const [message, setMessage] = useState('')
     const [feedback, setFeedBack] = useState('')
     /* <------------------------------------ **** HOOKS END **** ------------------------------------ */
     /* <------------------------------------ **** FUNCTION START **** ------------------------------------ */
@@ -34,7 +35,7 @@ const ContactForm = ()=>{
         const sender = name+'(Email:'+ email+")";
         
         sendFeedback(templateId, {
-            message_html: feedback, 
+            message_html: message, 
             from_name: sender , 
             from_email:email, 
             reply_to: "jubi33717f@gmail.com"})
@@ -75,9 +76,9 @@ const ContactForm = ()=>{
           fullWidth
           multiline
           rows={5}
-          value={feedback}
+          value={message}
           onChange={(e)=>{
-              setFeedBack(e.target.value)
+              setMessage(e.target.value)
           }}
           variant="outlined"
         />
