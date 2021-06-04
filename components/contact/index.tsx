@@ -17,7 +17,7 @@ const ContactForm = ()=>{
     /************* This section will include this component HOOK function *************/ 
     const [email,setEmail] = useState('')
     const [name, setName] = useState('')
-    const [feedback, setFeedback] = useState('')
+    const [feedback, setFeedBack] = useState('')
     /* <------------------------------------ **** HOOKS END **** ------------------------------------ */
     /* <------------------------------------ **** FUNCTION START **** ------------------------------------ */
     /************* This section will include this component general function *************/
@@ -77,7 +77,7 @@ const ContactForm = ()=>{
           rows={5}
           value={feedback}
           onChange={(e)=>{
-              setFeedback(e.target.value)
+              setFeedBack(e.target.value)
           }}
           variant="outlined"
         />
