@@ -75,9 +75,9 @@ const ContactForm = ()=>{
           fullWidth
           multiline
           rows={5}
-          value={email}
+          value={feedback}
           onChange={(e)=>{
-              setEmail(e.target.value)
+              setFeedback(e.target.value)
           }}
           variant="outlined"
         />
