@@ -17,7 +17,7 @@ const ContactForm = ()=>{
     /************* This section will include this component HOOK function *************/ 
     const [email,setEmail] = useState('')
     const [name, setName] = useState('')
-    const [feedback, setFeedBack] = useState('')
+    const [feedback, setFeedback] = useState('')
     /* <------------------------------------ **** HOOKS END **** ------------------------------------ */
     /* <------------------------------------ **** FUNCTION START **** ------------------------------------ */
     /************* This section will include this component general function *************/
