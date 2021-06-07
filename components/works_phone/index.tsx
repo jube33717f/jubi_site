@@ -53,9 +53,9 @@ const portfolios = [
         title:'Weather App',
         date:'2020.2',
         img:'weatherapp2.jpg',
-        link:'https://weather-rho.now.sh',
-        github:'https://github.com/jubi33717f/weather',
-        info:'Forecast 5 days weather condition on your location.',
+        link:'https://i.imgur.com/rngGrnw.jpg',
+        github:'https://github.com/jubi33717f/weather_widget',
+        info:'Forecast 7 days weather condition.',
         tech:'Fontend: React, Redux, SCSS'
     },
     {

@@ -1,8 +1,8 @@
 /**
  * @file Portfolio List component  - for computer view
- * @date 2020-04-01
+ * @date 2021-04-01
  * @author Jubi
- * @lastModify Jubi 2020-04-26
+ * @lastModify Jubi-04-26
  */
 /* <------------------------------------ **** DEPENDENCE IMPORT START **** ------------------------------------ */
 /** This section will include all the necessary dependence for this tsx file */
@@ -56,9 +56,9 @@ const portfolios = [
         title:'Weather App',
         date:'2021.6',
         img:'weatherapp.jpg',
-        link:'https://i.imgur.com/rngGrnw.jpg',
+        link:'vigorous-darwin-40f203.netlify.app/',
         github:'https://github.com/jubi33717f/weather_widget',
-        info:'Forecast 5 days weather condition on your location.',
+        info:'Forecast 7 days weather condition..',
         tech:'Fontend: React, Redux, SCSS'
     },
     {

@@ -1,8 +1,8 @@
 /**
  * @file Writing List component - for phone view
- * @date 2020-04-01
+ * @date 2021-04-01
  * @author Jubi
- * @lastModify Jubi 2020-04-26
+ * @lastModify Jubi 2021-06-06
  */
 /* <------------------------------------ **** DEPENDENCE IMPORT START **** ------------------------------------ */
 /** This section will include all the necessary dependence for this tsx file */
