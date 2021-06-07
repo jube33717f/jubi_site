@@ -4,7 +4,7 @@
   <img src="https://i.imgur.com/RB3dtBP.gif" alt="weather forecast logo" title="weather forecast logo" width="100">
   <br>
 </h1>
-<p align="center" style="font-size: 1.2rem;">🧚🏼‍♂️Personal website|✍🏼Portfolio</p>
+<p align="center" style="font-size: 1.2rem;">🧚🏼‍♂️Personal website | ✍🏼Portfolio</p>
 
 > Author: Jubi
 > 
