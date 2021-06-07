@@ -54,10 +54,10 @@ const portfolios = [
     },
     {
         title:'Weather App',
-        date:'2020.2',
+        date:'2021.6',
         img:'weatherapp.jpg',
-        link:'https://weather-rho.now.sh',
-        github:'https://github.com/jubi33717f/weather',
+        link:'https://i.imgur.com/rngGrnw.jpg',
+        github:'https://github.com/jubi33717f/weather_widget',
         info:'Forecast 5 days weather condition on your location.',
         tech:'Fontend: React, Redux, SCSS'
     },
