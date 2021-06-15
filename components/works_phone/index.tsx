@@ -1,8 +1,8 @@
 /**
  * @file Portfolio List component - for phone view
- * @date 2020-04-01
+ * @date 2021-04-01
  * @author Jubi
- * @lastModify Jubi 2020-04-26
+ * @lastModify Jubi 2021-04-26
  */
 /* <------------------------------------ **** DEPENDENCE IMPORT START **** ------------------------------------ */
 /** This section will include all the necessary dependence for this tsx file */
@@ -11,6 +11,33 @@ import {title_h1,scroll,box,cases,img_display,description,intro1,intro2} from '.
 /* <------------------------------------ **** DEPENDENCE IMPORT END **** ------------------------------------ */
 
 const portfolios = [
+    {
+        title:'Stock info',
+        date:'2021.6',
+        img:'stockInfo2.jpg',
+        link:'https://stock-info-client.vercel.app',
+        github:'https://github.com/jubi33717f/Stock_Info',
+        info:'Search and Subscribe Stocks Info',
+        tech:'Frontend: React, Typescript, SASS | Database: GraphQL'
+    },
+    {
+        title:'Weather App',
+        date:'2021.6',
+        img:'weatherapp2.jpg',
+        link:'vigorous-darwin-40f203.netlify.app/',
+        github:'https://github.com/jubi33717f/weather_widget',
+        info:'Forecast 7 days weather condition..',
+        tech:'Fontend: React, Redux, SCSS'
+    },
+    {
+        title:'Photo Match',
+        date:'2021.6',
+        img:'photoMatch2.jpg',
+        link:'https://photo-match.vercel.app/',
+        github:'https://github.com/jubi33717f/photo-match',
+        info:'photo match',
+        tech:'react'
+    },
     {
         title:'MY website',
         date:'2021.3',
@@ -25,20 +52,20 @@ const portfolios = [
         title:'Film Finder',
         date:'2020.10',
         img:'filmFinder2.jpg',
-        link:'',
+        link:null,
         github:'https://github.com/unsw-cse-capstone-project/capstone-project-comp9900-h18b-galahad',
         info:'Film score system based on TMDB api + personal recommendation based on our own machine learning system. Backend part did not deploy. You can still run it locally follow the github Readme introduction.',
         tech:'Fontend: React, Redux, Webpack, SCSS | Backend: Python-Flask | Database: Mongodb'
 
     },
     {
-        title:'Airtasker',
-        date:'2020.5',
-        img:'airtasker2.jpg',
-        link:'https://ataker.now.sh',
-        github:'https://bitbucket.org/soniahou/xyz.frontend',
-        info:'Community marketplace for people to outsource task, find local services or complete flexible jobs to earn money.',
-        tech:'Fontend: React, Redux, Google Map api, SCSS | Backend: Node-Koa | Database: Mongodb'
+        title:'Hr Management',
+        date:'2020.8',
+        img:'hrManagement2.jpg',
+        link:'https://hr-management-eight.vercel.app',
+        github:'https://github.com/jubi33717f/hrManagement',
+        info:'HR management system, Admin system + Employee system. Test account could be found in github Readme file.',
+        tech:'Fontend: React, Redux, SCSS Backend: Node-Koa | Database: Mongodb'
     },
     {
         title:'Unihelp chatbot',
@@ -50,32 +77,23 @@ const portfolios = [
         tech:'Fontend: React, Redux, SCSS Backend: Python-Flask | Database: Dynamodb'
     },
     {
-        title:'Weather App',
-        date:'2020.2',
-        img:'weatherapp2.jpg',
-        link:'https://i.imgur.com/rngGrnw.jpg',
-        github:'https://github.com/jubi33717f/weather_widget',
-        info:'Forecast 7 days weather condition.',
-        tech:'Fontend: React, Redux, SCSS'
-    },
+        title:'Airtasker',
+        date:'2020.5',
+        img:'airtasker2.jpg',
+        link:'https://ataker.now.sh',
+        github:'https://bitbucket.org/soniahou/xyz.frontend',
+        info:'Community marketplace for people to outsource task, find local services or complete flexible jobs to earn money.',
+        tech:'Fontend: React, Redux, Google Map api, SCSS | Backend: Node-Koa | Database: Mongodb'
+    }, 
     {
         title:'Seddit App',
         date:'2019.12',
         img:'seddit2.jpg',
-        link:'',
+        link:null,
         github:'https://github.com/jubi33717f/weather',
         info:' =>Reddit ',
         tech:'Fontend: Pure Js, CSS3'
     },
-    {
-        title:'Hr Management',
-        date:'2020.8',
-        img:'hrManagement2.jpg',
-        link:'https://hr-management-eight.vercel.app',
-        github:'https://github.com/jubi33717f/hrManagement',
-        info:'HR management system, Admin system + Employee system. Test account could be found in github Readme file.',
-        tech:'Fontend: React, Redux, SCSS Backend: Node-Koa | Database: Mongodb'
-    }
 ]
 
 /* <------------------------------------ **** FUNCTION COMPONENT START **** ------------------------------------ */
