@@ -56,7 +56,7 @@ const portfolios = [
         title:'Weather App',
         date:'2021.6',
         img:'weatherapp.jpg',
-        link:'vigorous-darwin-40f203.netlify.app/',
+        link:'https://vigorous-darwin-40f203.netlify.app/',
         github:'https://github.com/jubi33717f/weather_widget',
         info:'Forecast 7 days weather condition..',
         tech:'Fontend: React, Redux, SCSS'
@@ -66,7 +66,7 @@ const portfolios = [
         date:'2019.12',
         img:'seddit.jpg',
         link:'',
-        github:'https://github.com/jubi33717f/weather',
+        github:'https://github.com/jubi33717f/reddit',
         info:' =>Reddit ',
         tech:'Fontend: Pure Js, CSS3'
     },

@@ -2,7 +2,7 @@
  * @file Portfolio List component - for phone view
  * @date 2021-04-01
  * @author Jubi
- * @lastModify Jubi 2021-04-26
+ * @lastModify Jubi 2021-06-16
  */
 /* <------------------------------------ **** DEPENDENCE IMPORT START **** ------------------------------------ */
 /** This section will include all the necessary dependence for this tsx file */
@@ -77,6 +77,7 @@ const portfolios = [
         tech:'Fontend: React, Redux, SCSS Backend: Python-Flask | Database: Dynamodb'
     },
     {
+
         title:'Airtasker',
         date:'2020.5',
         img:'airtasker2.jpg',
