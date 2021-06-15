@@ -18,7 +18,7 @@ const showcase=css`
     flex-direction: row;
     flex-wrap: nowrap;   
     height:100vh;
-    width:560vh;
+    width:720vh;
 `
 const cases = css`  
     position:relative;
