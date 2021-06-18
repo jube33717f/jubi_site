@@ -121,12 +121,14 @@ const WorksPhone = ()=>{
                                 
                                 <a href={item.github}>
                                     <div css={img_display} >
+                                        <a href={item.github}>
                                             <Image 
                                                 src={path}
                                                 layout="fill"
                                                 loading='lazy'
                                                 quality={100}
                                             />
+                                        </a>
                                     </div>
                                 </a>
                                 <div css={description} style={{ right: '0px'}}>
