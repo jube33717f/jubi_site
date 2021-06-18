@@ -136,12 +136,14 @@ const Works = ()=>{
                             {/** image top & introduction bottom */}
                                 <div css={displayImg}>
                                     <Popover style={{fontFamily:'Manrope!important'}} content={content(`${item.link}`,`${item.github}`,`${item.info}`,`${item.tech}`)} placement="bottom" title={title(`${item.title}`)} trigger="hover">
-                                        <Image 
+                                        <a href={item.github}>
+                                            <Image 
                                             src={path}
                                             layout="fill"
                                             loading='lazy'
                                             quality={100}
                                         />
+                                        </a>
                                     </Popover>
                                 </div>
                             
@@ -163,12 +165,14 @@ const Works = ()=>{
                             {/** introduction top & image bottom */}
                             <div css={displayImg2}>
                                 <Popover css = {contentStyle} content={content(`${item.link}`,`${item.github}`,`${item.info}`,`${item.tech}`)} placement="top" title={title(`${item.title}`)} trigger="hover">
+                                    <a href={item.github}>
                                     <Image 
                                         src={path}
                                         layout="fill"
                                         loading='lazy'
                                         quality={100}
                                     />
+                                    </a>
                                 </Popover>
                             </div>
                             <div css={displayIntro2}>
