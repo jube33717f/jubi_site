@@ -1,8 +1,8 @@
 /**
  * @file Home Page
  * @date 2021-04-01
- * @author Jubi
- * @lastModify Jubi 2021-04-26
+ * @author Jube
+ * @lastModify Jube 2021-04-26
  */
 /* <------------------------------------ **** DEPENDENCE IMPORT START **** ------------------------------------ */
 /** This section will include all the necessary dependence for this tsx file */
@@ -51,7 +51,7 @@ const Home=()=> {
                                 {/* <------------------------------------ **** SECTION 3 START **** ------------------------------------ */}
                                 {/** title */}
                                 <div>
-                                    <h3>JUBI <span>CHEN</span></h3>
+                                    <h3>JUBE <span>CHEN</span></h3>
                                     <p>    INTERESTING FREE ENTHUSIASTIC NAIVE</p>
                                 </div>
                                 {/* <------------------------------------ **** SECTION 3 END **** ------------------------------------ */}
