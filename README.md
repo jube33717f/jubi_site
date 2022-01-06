@@ -1,18 +1,18 @@
 <h1 align="center">
-  Jubi's Site
+  Jube's Site
   <br>
   <img src="https://i.imgur.com/RB3dtBP.gif" alt="weather forecast logo" title="weather forecast logo" width="100">
   <br>
 </h1>
 <p align="center" style="font-size: 1.2rem;">🧚🏼‍♂️Personal website | ✍🏼Portfolio</p>
 
-> Author: Jubi
+> Author: Jube
 > 
 > Last edit date: 2021.6.7
 >
 > Description: personal website: portfolio/writings/contact
 >
-> Link on [here](https://jubi.vercel.app/)
+> Link on [here](https://jube.vercel.app/)
 
 
 
