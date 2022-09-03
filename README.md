@@ -110,16 +110,4 @@ $npm run dev
 
 ```
 
-# Demo
-### web view
-* Home page
-![Home](https://images.pexels.com/photos/7665953/pexels-photo-7665953.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260)
-* Portfolio page
-![Portfolio](https://images.pexels.com/photos/7665951/pexels-photo-7665951.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500)
-* Writing page
-![Writing](https://images.pexels.com/photos/7665950/pexels-photo-7665950.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260)
-* Contact page
-![Contact](https://images.pexels.com/photos/7665954/pexels-photo-7665954.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500)
-
-### phone view
 
